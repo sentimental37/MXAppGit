@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                 CloseWhenBackgroundIsClicked="True"
+                 HasSystemPadding="False"
+             x:Class="MXApp.Views.EditLoadDetailsPopup">
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="EntryStyle" TargetType="Entry">
+                <Setter Property="PlaceholderColor" Value="#9cdaf1" />
+                <Setter Property="TextColor" Value="#7dbbe6" />
+            </Style>
+        </ResourceDictionary>
+    </pages:PopupPage.Resources>
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+      PositionIn="Bottom"
+      PositionOut="Center"
+      ScaleIn="1"
+      ScaleOut="0.7"
+      DurationIn="700"
+      EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <ScrollView
+        HorizontalOptions="StartAndExpand"
+        Margin="20"
+        VerticalOptions="StartAndExpand">
+        <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+            <Frame
+                x:Name="FrameContainer"
+                HorizontalOptions="Center"
+                BackgroundColor="White"
+                IsClippedToBounds="False">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout IsClippedToBounds="True" Padding="10, 5" Spacing="3">
+                        <Label Text="MBOLPalletCount:" VerticalOptions="Center" HorizontalOptions="Center"/>
+                        <Entry x:Name="txtQTY" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="50" Text="{Binding MBOLPalletCount}"/>
+                        <Label Text="MBOLShipComments:" VerticalOptions="Center" HorizontalOptions="Center"/>
+                        <Editor
+                            HorizontalOptions="Center"
+                            WidthRequest="200"
+                            HeightRequest="100"
+                            Text="{Binding MBOLShipComments}" BackgroundColor="#f2efef">
+                           
+                        </Editor>
+                        <Button
+                            BackgroundColor="#227FC8"
+                            HorizontalOptions="Fill"
+                            TextColor="White"
+                            WidthRequest="200"
+                            Command="{Binding UpdateCommand}"
+                            Text="Save">
+                            <Button.HeightRequest>
+                                <OnPlatform x:TypeArguments="x:Double" Android="50" iOS="30" WinPhone="30" />
+                            </Button.HeightRequest>
+                        </Button>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</pages:PopupPage>
+    

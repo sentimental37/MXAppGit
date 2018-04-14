@@ -1,0 +1,1046 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SkyNetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Accounts">
+          <Key>
+            <PropertyRef Name="Vendor #" />
+          </Key>
+          <Property Name="Vendor #" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ModType" Type="int" />
+          <Property Name="Vendor Name" Type="nvarchar" MaxLength="30" />
+          <Property Name="Phone #" Type="nvarchar" MaxLength="13" />
+          <Property Name="Street" Type="nvarchar" MaxLength="35" />
+          <Property Name="City" Type="nvarchar" MaxLength="35" />
+          <Property Name="State" Type="nvarchar" MaxLength="2" />
+          <Property Name="Zip Code" Type="nvarchar" MaxLength="10" />
+          <Property Name="Vendor Manager" Type="nvarchar" MaxLength="35" />
+          <Property Name="WHS" Type="nvarchar" MaxLength="4" />
+          <Property Name="CO" Type="nvarchar" MaxLength="50" />
+          <Property Name="AcctBillingName" Type="varchar" MaxLength="80" />
+          <Property Name="AcctBillingName2" Type="varchar" MaxLength="80" />
+          <Property Name="AcctBillingAddress1" Type="varchar" MaxLength="80" />
+          <Property Name="AcctBillingAddress2" Type="varchar" MaxLength="80" />
+          <Property Name="AcctBillingCity" Type="varchar" MaxLength="80" />
+          <Property Name="AcctBillingState" Type="varchar" MaxLength="8" />
+          <Property Name="AcctBillingPostal" Type="varchar" MaxLength="50" />
+          <Property Name="Manufacturer" Type="varchar" MaxLength="12" />
+          <Property Name="FreezInv" Type="bit" />
+          <Property Name="EDIAccount" Type="bit" />
+          <Property Name="EDIWAVEAccount" Type="bit" />
+          <Property Name="BillingMiscInfo1" Type="varchar" MaxLength="50" />
+          <Property Name="BillingMiscInfo2" Type="varchar" MaxLength="50" />
+          <Property Name="BillingMiscInfo3" Type="varchar" MaxLength="50" />
+          <Property Name="Need944" Type="bit" />
+          <Property Name="Need856" Type="bit" />
+          <Property Name="MapPath944" Type="varchar" MaxLength="400" />
+          <Property Name="MapPath856" Type="varchar" MaxLength="400" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="FilePath944" Type="varchar" MaxLength="400" />
+          <Property Name="FilePath856" Type="varchar" MaxLength="400" />
+          <Property Name="SKUAllocType" Type="varchar" MaxLength="50" />
+          <Property Name="acc_billing_email" Type="varchar" MaxLength="50" />
+          <Property Name="acc_inventory_email" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="EDIAppTable">
+          <Key>
+            <PropertyRef Name="EDIAPPID" />
+          </Key>
+          <Property Name="EDIAPPID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PickUp_LoadNum" Type="varchar" MaxLength="70" />
+          <Property Name="IsLTL" Type="bit" />
+          <Property Name="WHS" Type="varchar" MaxLength="50" />
+          <Property Name="PUDate" Type="datetime" />
+          <Property Name="PUTime" Type="datetime" />
+          <Property Name="Carrier" Type="varchar" MaxLength="50" />
+          <Property Name="SCAC" Type="varchar" MaxLength="50" />
+          <Property Name="SealNumber" Type="varchar" MaxLength="50" />
+          <Property Name="CarryOverNextDay" Type="bit" />
+          <Property Name="IsShipped" Type="bit" />
+          <Property Name="IsVoided" Type="bit" />
+          <Property Name="IsPrint" Type="bit" />
+          <Property Name="UPSFedEx" Type="bit" />
+          <Property Name="AppIDComments" Type="varchar" MaxLength="255" />
+          <Property Name="DepartingDoor" Type="varchar" MaxLength="50" />
+          <Property Name="LoadPalletCount" Type="int" />
+        </EntityType>
+        <EntityType Name="EDIAppTable_Child">
+          <Key>
+            <PropertyRef Name="ChildAPPID" />
+          </Key>
+          <Property Name="ChildAPPID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EDIAPPID" Type="int" Nullable="false" />
+          <Property Name="MBOL" Type="varchar" MaxLength="50" />
+          <Property Name="MBOLVICS" Type="varchar" MaxLength="50" />
+          <Property Name="CTNCount" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Account" Type="varchar" MaxLength="50" />
+          <Property Name="TotalWeight" Type="float" />
+          <Property Name="TotalCube" Type="float" />
+          <Property Name="FullPickUp" Type="bit" />
+          <Property Name="PartialPickUp" Type="bit" />
+          <Property Name="FailToPickUp" Type="bit" />
+          <Property Name="Void" Type="bit" />
+          <Property Name="AccountDivName" Type="varchar" MaxLength="50" />
+          <Property Name="ShipTo" Type="varchar" MaxLength="50" />
+          <Property Name="BOLDocumentPath" Type="varchar" MaxLength="255" />
+          <Property Name="POD_DOC_Vics" Type="varchar" MaxLength="50" />
+          <Property Name="MBOLPalletCount" Type="int" />
+          <Property Name="MBOLShipComments" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="login">
+          <Key>
+            <PropertyRef Name="LoginID" />
+          </Key>
+          <Property Name="LoginID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="80" />
+          <Property Name="Password" Type="nvarchar" MaxLength="80" />
+          <Property Name="ModuleAccess" Type="nvarchar" MaxLength="80" />
+          <Property Name="ECOM" Type="bit" />
+          <Property Name="SUPERVISOR" Type="bit" />
+          <Property Name="ReadWrite" Type="bit" />
+          <Property Name="INVADJUSTMENTS" Type="bit" />
+          <Property Name="FullName" Type="varchar" MaxLength="50" />
+          <Property Name="WHS" Type="varchar" MaxLength="50" />
+          <Property Name="RF" Type="bit" />
+          <Property Name="DESKTOP" Type="bit" />
+          <Property Name="DESKTOP_Receiving" Type="bit" />
+          <Property Name="DESKTOP_Inventory" Type="bit" />
+          <Property Name="DESKTOP_Production" Type="bit" />
+          <Property Name="DESKTOP_Shipping" Type="bit" />
+          <Property Name="DESKTOP_Billing" Type="bit" />
+          <Property Name="DESKTOP_Management" Type="bit" />
+          <Property Name="RF_Receiving" Type="bit" />
+          <Property Name="RF_Inventory" Type="bit" />
+          <Property Name="RF_Production" Type="bit" />
+          <Property Name="RF_Shipping" Type="bit" />
+          <Property Name="RF_AddedValue" Type="bit" />
+          <Property Name="RF_Management" Type="bit" />
+          <Property Name="isActive" Type="bit" />
+          <Property Name="DESKTOP_Allocation" Type="bit" />
+          <Property Name="login_email" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="POD_Repository">
+          <Key>
+            <PropertyRef Name="PODID" />
+          </Key>
+          <Property Name="PODID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PODKey" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PODDescription" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PODLink" Type="varchar" MaxLength="777" Nullable="false" />
+          <Property Name="PODBorn" Type="datetime" Nullable="false" />
+          <Property Name="PODCreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RefCode">
+          <Key>
+            <PropertyRef Name="CodeID" />
+          </Key>
+          <Property Name="CodeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReferencePullID" Type="int" />
+          <Property Name="BillCode" Type="int" />
+          <Property Name="QTY" Type="int" />
+          <Property Name="BillComments" Type="nvarchar" MaxLength="255" />
+          <Property Name="Account" Type="nvarchar" MaxLength="50" />
+          <Property Name="CodeByMonthlyBill" Type="bit" />
+          <Property Name="StaticOutboundRate" Type="float" />
+          <Property Name="BillCodeDescription" Type="varchar" MaxLength="50" />
+          <Property Name="RefBillReady" Type="bit" />
+        </EntityType>
+        <EntityType Name="WMS_Explorer">
+          <Key>
+            <PropertyRef Name="WMS_ID" />
+          </Key>
+          <Property Name="WMS_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WMS_Application_Icon" Type="image" />
+          <Property Name="WMS_Application_Backround" Type="image" />
+          <Property Name="WMS_Application_Welcome" Type="varchar" MaxLength="200" />
+          <Property Name="WMS_Warehousemen_TermsConditions" Type="varchar" MaxLength="200" />
+          <Property Name="WMS_PODShareDrivePath" Type="nvarchar(max)" />
+          <Property Name="WMS_Mail_UserEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="WMS_Mail_Password" Type="nvarchar" MaxLength="100" />
+          <Property Name="WMS_Mail_HostName" Type="nvarchar" MaxLength="100" />
+          <Property Name="WMS_Mail_Port" Type="int" />
+          <Property Name="WMS_Mail_EnableSSL" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SkyNet.dbo.View-WHS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="View-WHS">
+          <Key>
+            <PropertyRef Name="WHS" />
+          </Key>
+          <Property Name="WHS" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_EDIAppTable_Child_EDIAppTable">
+          <End Role="EDIAppTable" Type="Self.EDIAppTable" Multiplicity="1" />
+          <End Role="EDIAppTable_Child" Type="Self.EDIAppTable_Child" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EDIAppTable">
+              <PropertyRef Name="EDIAPPID" />
+            </Principal>
+            <Dependent Role="EDIAppTable_Child">
+              <PropertyRef Name="EDIAPPID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="sp_mob_AddProdWODetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Account" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_mob_AppendProdWODetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Account" Type="nvarchar" Mode="In" />
+          <Parameter Name="REFNUM" Type="nvarchar" Mode="In" />
+          <Parameter Name="BILLID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_mob_ConfirmProdWODetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="REFNUM" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_mob_DeleteProdWODetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodeID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_mob_GetWorkOrderReportHeader" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="REFNUM" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_mob_ListProdWODetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="REFNUM" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_mob_OpenProdWO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_mob_prod_WOHourDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="REFNUM" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_mob_ship_loadshow_yesno_confirm" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LOADNUM" Type="varchar" Mode="In" />
+          <Parameter Name="type" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_mob_ship_loadshow_yesno_confirmdetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MBOLVICS" Type="varchar" Mode="In" />
+          <Parameter Name="type" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_mob_ship_loadshow_yesno_confirmmaster" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="type" Type="int" Mode="In" />
+          <Parameter Name="EDIAPPID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_mob_ship_viewloaddetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EDIAPPID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_mob_ship_viewloads" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="WHS" Type="varchar" Mode="In" />
+          <Parameter Name="DATE" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_mob_ship_viewloads_locations" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LOADNUM" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_mob_TimeTrack_ClockIn_Out_Employee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="REFNUM" Type="int" Mode="In" />
+          <Parameter Name="BADGEID" Type="int" Mode="In" />
+          <Parameter Name="type" Type="int" Mode="In" />
+          <Parameter Name="temp" Type="int" Mode="In" />
+          <Parameter Name="WoNuMID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_mob_TimeTrack_ClockoutAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="REFNUM" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_mob_TimeTrack_GetClockedInEmployees" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="REFNUM" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_mob_TimeTrack_ListEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_mob_UpdateProdWODetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodeID" Type="int" Mode="In" />
+          <Parameter Name="QTY" Type="int" Mode="In" />
+          <Parameter Name="BillComments" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_mob_UpdateWOStart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="REFNUM" Type="int" Mode="In" />
+        </Function>
+        <Function Name="tf_mob_prod_CalcWOHours" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="REFNUM" Type="int" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="ReferencePullID" Type="int" />
+                <Property Name="EmployeeCount" Type="int" />
+                <Property Name="WOHours" Type="int" />
+                <Property Name="WOMinutes" Type="int" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <EntityContainer Name="SkyNetModelStoreContainer">
+          <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EDIAppTable" EntityType="Self.EDIAppTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EDIAppTable_Child" EntityType="Self.EDIAppTable_Child" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="login" EntityType="Self.login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="POD_Repository" EntityType="Self.POD_Repository" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RefCode" EntityType="Self.RefCode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WMS_Explorer" EntityType="Self.WMS_Explorer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="View-WHS" EntityType="Self.View-WHS" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View-WHS].[WHS] AS [WHS]
+    FROM [dbo].[View-WHS] AS [View-WHS]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_EDIAppTable_Child_EDIAppTable" Association="Self.FK_EDIAppTable_Child_EDIAppTable">
+            <End Role="EDIAppTable" EntitySet="EDIAppTable" />
+            <End Role="EDIAppTable_Child" EntitySet="EDIAppTable_Child" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SkyNetModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SkyNetEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="sp_mob_OpenProdWO" ReturnType="Collection(SkyNetModel.sp_mob_OpenProdWO_Result)" />
+          <FunctionImport Name="sp_mob_UpdateWOStart">
+          <Parameter Name="REFNUM" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_mob_AddProdWODetails" ReturnType="Collection(SkyNetModel.sp_mob_AddProdWODetails_Result)">
+          <Parameter Name="Account" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_mob_ListProdWODetails" ReturnType="Collection(SkyNetModel.sp_mob_ListProdWODetails_Result)">
+          <Parameter Name="REFNUM" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_mob_DeleteProdWODetails">
+          <Parameter Name="CodeID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_mob_UpdateBillCode">
+            <Parameter Name="REFNUM" Mode="In" Type="Int32" />
+            <Parameter Name="BillCode" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_mob_UpdateProdWODetails">
+            <Parameter Name="CodeID" Mode="In" Type="Int32" />
+            <Parameter Name="QTY" Mode="In" Type="Int32" />
+            <Parameter Name="BillComments" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_mob_ConfirmProdWODetails">
+          <Parameter Name="REFNUM" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_mob_AppendProdWODetails">
+            <Parameter Name="Account" Mode="In" Type="String" />
+            <Parameter Name="REFNUM" Mode="In" Type="String" />
+            <Parameter Name="BILLID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="Accounts" EntityType="SkyNetModel.Account" />
+          <EntitySet Name="WMS_Explorer" EntityType="SkyNetModel.WMS_Explorer" />
+          <FunctionImport Name="sp_mob_TimeTrack_ClockIn_Out_Employee">
+            <Parameter Name="REFNUM" Mode="In" Type="Int32" />
+            <Parameter Name="BADGEID" Mode="In" Type="Int32" />
+            <Parameter Name="type" Mode="In" Type="Int32" />
+            <Parameter Name="temp" Mode="In" Type="Int32" />
+            <Parameter Name="WoNuMID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_mob_TimeTrack_ListEmployee" ReturnType="Collection(SkyNetModel.sp_mob_TimeTrack_ListEmployee_Result)" />
+          <EntitySet Name="POD_Repository" EntityType="SkyNetModel.POD_Repository" />
+          <FunctionImport Name="sp_mob_GetWorkOrderReportHeader" ReturnType="Collection(SkyNetModel.sp_mob_GetWorkOrderReportHeader_Result)">
+          <Parameter Name="REFNUM" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="RefCodes" EntityType="SkyNetModel.RefCode" />
+          <FunctionImport Name="sp_mob_ship_loadshow_yesno_confirm">
+            <Parameter Name="LOADNUM" Mode="In" Type="String" />
+            <Parameter Name="type" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_mob_ship_loadshow_yesno_confirmdetail">
+            <Parameter Name="MBOLVICS" Mode="In" Type="String" />
+            <Parameter Name="type" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_mob_ship_loadshow_yesno_confirmmaster">
+            <Parameter Name="type" Mode="In" Type="Int32" />
+            <Parameter Name="EDIAPPID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_mob_ship_viewloaddetails" ReturnType="Collection(SkyNetModel.sp_mob_ship_viewloaddetails_Result)">
+          <Parameter Name="EDIAPPID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_mob_ship_viewloads" ReturnType="Collection(SkyNetModel.sp_mob_ship_viewloads_Result)">
+            <Parameter Name="WHS" Mode="In" Type="String" />
+            <Parameter Name="DATE" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <EntitySet Name="View_WHS" EntityType="SkyNetModel.View_WHS" />
+          <EntitySet Name="EDIAppTables" EntityType="SkyNetModel.EDIAppTable" />
+          <EntitySet Name="EDIAppTable_Child" EntityType="SkyNetModel.EDIAppTable_Child" />
+          <AssociationSet Name="FK_EDIAppTable_Child_EDIAppTable" Association="SkyNetModel.FK_EDIAppTable_Child_EDIAppTable">
+            <End Role="EDIAppTable" EntitySet="EDIAppTables" />
+            <End Role="EDIAppTable_Child" EntitySet="EDIAppTable_Child" />
+          </AssociationSet>
+          <FunctionImport Name="sp_mob_ship_viewloads_locations" ReturnType="Collection(SkyNetModel.sp_mob_ship_viewloads_locations_Result)">
+          <Parameter Name="LOADNUM" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_mob_prod_WOHourDetails" ReturnType="Collection(SkyNetModel.sp_mob_prod_WOHourDetails_Result)">
+          <Parameter Name="REFNUM" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="tf_mob_prod_CalcWOHours" IsComposable="true" ReturnType="Collection(SkyNetModel.tf_mob_prod_CalcWOHours_Result)">
+          <Parameter Name="REFNUM" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_mob_TimeTrack_GetClockedInEmployees" ReturnType="Collection(SkyNetModel.sp_mob_TimeTrack_GetClockedInEmployees_Result)">
+          <Parameter Name="REFNUM" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="logins" EntityType="SkyNetModel.login" />
+          <FunctionImport Name="sp_mob_TimeTrack_ClockoutAll">
+          <Parameter Name="REFNUM" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="sp_mob_OpenProdWO_Result">
+          <Property Type="Int32" Name="ReferencePullID" Nullable="false" />
+          <Property Type="String" Name="Ship_To" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Account" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Vendor_Name" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="Author" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Ship_Date" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="Cancel_Date" Nullable="true" Precision="16" />
+          <Property Type="String" Name="Comments" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="PullDate" Nullable="true" Precision="16" />
+          <Property Type="Boolean" Name="REFNUMNotBilled" Nullable="true" />
+          <Property Type="Int32" Name="InvoiceNo" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_mob_AddProdWODetails_Result">
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="255" />
+          <Property Type="Int32" Name="CODE_" Nullable="false" />
+          <Property Type="String" Name="Account_" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="BillID" Nullable="false" />
+          <Property Type="Double" Name="Price" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_mob_ListProdWODetails_Result">
+          <Property Type="Int32" Name="CodeID" Nullable="false" />
+          <Property Type="Int32" Name="ReferencePullID" Nullable="true" />
+          <Property Type="String" Name="BillCodeDescription" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="QTY" Nullable="true" />
+          <Property Type="String" Name="BillComments" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="BillCode" Nullable="true" />
+          <Property Type="String" Name="Account" Nullable="true" MaxLength="50" />
+          <Property Type="Double" Name="StaticOutboundRate" Nullable="true" />
+          <Property Type="Boolean" Name="RefBillReady" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="Vendor__" />
+          </Key>
+          <Property Name="Vendor__" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ModType" Type="Int32" />
+          <Property Name="Vendor_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Phone__" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="Street" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="Zip_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Vendor_Manager" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+          <Property Name="WHS" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="CO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AcctBillingName" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="AcctBillingName2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="AcctBillingAddress1" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="AcctBillingAddress2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="AcctBillingCity" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="AcctBillingState" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="AcctBillingPostal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Manufacturer" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="FreezInv" Type="Boolean" />
+          <Property Name="EDIAccount" Type="Boolean" />
+          <Property Name="EDIWAVEAccount" Type="Boolean" />
+          <Property Name="BillingMiscInfo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BillingMiscInfo2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BillingMiscInfo3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Need944" Type="Boolean" />
+          <Property Name="Need856" Type="Boolean" />
+          <Property Name="MapPath944" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="MapPath856" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="FilePath944" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="FilePath856" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="SKUAllocType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="acc_billing_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="acc_inventory_email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="WMS_Explorer">
+          <Key>
+            <PropertyRef Name="WMS_ID" />
+          </Key>
+          <Property Name="WMS_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WMS_Application_Icon" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="WMS_Application_Backround" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="WMS_Application_Welcome" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="WMS_Warehousemen_TermsConditions" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="WMS_PODShareDrivePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WMS_Mail_UserEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="WMS_Mail_Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="WMS_Mail_HostName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="WMS_Mail_Port" Type="Int32" />
+          <Property Name="WMS_Mail_EnableSSL" Type="Boolean" />
+        </EntityType>
+        <ComplexType Name="sp_mob_TimeTrack_ListEmployee_Result">
+          <Property Type="Int32" Name="WOEmployeeID" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Lastname" Nullable="false" MaxLength="50" />
+          <Property Type="Double" Name="HourlyRate" Nullable="false" />
+          <Property Type="Boolean" Name="Deactivate" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="POD_Repository">
+          <Key>
+            <PropertyRef Name="PODID" />
+          </Key>
+          <Property Name="PODID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PODKey" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PODDescription" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PODLink" Type="String" Nullable="false" MaxLength="777" FixedLength="false" Unicode="false" />
+          <Property Name="PODBorn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PODCreatedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <ComplexType Name="sp_mob_GetWorkOrderReportHeader_Result">
+          <Property Type="Int32" Name="ReferencePullID" Nullable="false" />
+          <Property Type="String" Name="AccountName" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="RefNumShipTo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="RefNumRef1" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="RefNumRef2" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="ESD_ShipDate" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="ESD_CancelDate" Nullable="true" Precision="16" />
+          <Property Type="String" Name="ProductionCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="RefNumComments" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <EntityType Name="RefCode">
+          <Key>
+            <PropertyRef Name="CodeID" />
+          </Key>
+          <Property Name="CodeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReferencePullID" Type="Int32" />
+          <Property Name="BillCode" Type="Int32" />
+          <Property Name="QTY" Type="Int32" />
+          <Property Name="BillComments" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CodeByMonthlyBill" Type="Boolean" />
+          <Property Name="StaticOutboundRate" Type="Double" />
+          <Property Name="BillCodeDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RefBillReady" Type="Boolean" />
+        </EntityType>
+        <ComplexType Name="sp_mob_ship_viewloaddetails_Result">
+          <Property Type="Int32" Name="EDIAPPID" Nullable="false" />
+          <Property Type="String" Name="MBOLVICS" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="CTNCount" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="Account" Nullable="true" MaxLength="50" />
+          <Property Type="Double" Name="TotalWeight" Nullable="true" />
+          <Property Type="Double" Name="TotalCube" Nullable="true" />
+          <Property Type="Boolean" Name="FullPickUp" Nullable="true" />
+          <Property Type="Boolean" Name="FailToPickUp" Nullable="true" />
+          <Property Type="Boolean" Name="PartialPickUp" Nullable="true" />
+          <Property Type="String" Name="AccountDivName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ShipTo" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="MBOLPalletCount" Nullable="true" />
+          <Property Type="String" Name="MBOLShipComments" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="ChildAPPID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_mob_ship_viewloads_Result">
+          <Property Type="Int32" Name="EDIAPPID" Nullable="false" />
+          <Property Type="String" Name="PickUp_LoadNum" Nullable="true" MaxLength="70" />
+          <Property Type="Boolean" Name="IsLTL" Nullable="true" />
+          <Property Type="String" Name="WHS" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="PUDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="PUTime" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Carrier" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SCAC" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SealNumber" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="CarryOverNextDay" Nullable="true" />
+          <Property Type="Boolean" Name="IsShipped" Nullable="true" />
+          <Property Type="Boolean" Name="IsVoided" Nullable="true" />
+          <Property Type="Boolean" Name="IsPrint" Nullable="true" />
+          <Property Type="Boolean" Name="UPSFedEx" Nullable="true" />
+          <Property Type="String" Name="AppIDComments" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="DepartingDoor" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="LoadPalletCount" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="View_WHS">
+          <Key>
+            <PropertyRef Name="WHS" />
+          </Key>
+          <Property Name="WHS" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EDIAppTable">
+          <Key>
+            <PropertyRef Name="EDIAPPID" />
+          </Key>
+          <Property Name="EDIAPPID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PickUp_LoadNum" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="IsLTL" Type="Boolean" />
+          <Property Name="WHS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PUDate" Type="DateTime" Precision="3" />
+          <Property Name="PUTime" Type="DateTime" Precision="3" />
+          <Property Name="Carrier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SCAC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SealNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CarryOverNextDay" Type="Boolean" />
+          <Property Name="IsShipped" Type="Boolean" />
+          <Property Name="IsVoided" Type="Boolean" />
+          <Property Name="IsPrint" Type="Boolean" />
+          <Property Name="UPSFedEx" Type="Boolean" />
+          <Property Name="AppIDComments" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DepartingDoor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LoadPalletCount" Type="Int32" />
+          <NavigationProperty Name="EDIAppTable_Child" Relationship="SkyNetModel.FK_EDIAppTable_Child_EDIAppTable" FromRole="EDIAppTable" ToRole="EDIAppTable_Child" />
+        </EntityType>
+        <EntityType Name="EDIAppTable_Child">
+          <Key>
+            <PropertyRef Name="ChildAPPID" />
+          </Key>
+          <Property Name="ChildAPPID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EDIAPPID" Type="Int32" Nullable="false" />
+          <Property Name="MBOL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MBOLVICS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CTNCount" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TotalWeight" Type="Double" />
+          <Property Name="TotalCube" Type="Double" />
+          <Property Name="FullPickUp" Type="Boolean" />
+          <Property Name="PartialPickUp" Type="Boolean" />
+          <Property Name="FailToPickUp" Type="Boolean" />
+          <Property Name="Void" Type="Boolean" />
+          <Property Name="AccountDivName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ShipTo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BOLDocumentPath" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="POD_DOC_Vics" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MBOLPalletCount" Type="Int32" />
+          <Property Name="MBOLShipComments" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="EDIAppTable" Relationship="SkyNetModel.FK_EDIAppTable_Child_EDIAppTable" FromRole="EDIAppTable_Child" ToRole="EDIAppTable" />
+        </EntityType>
+        <Association Name="FK_EDIAppTable_Child_EDIAppTable">
+          <End Type="SkyNetModel.EDIAppTable" Role="EDIAppTable" Multiplicity="1" />
+          <End Type="SkyNetModel.EDIAppTable_Child" Role="EDIAppTable_Child" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EDIAppTable">
+              <PropertyRef Name="EDIAPPID" />
+            </Principal>
+            <Dependent Role="EDIAppTable_Child">
+              <PropertyRef Name="EDIAPPID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="sp_mob_ship_viewloads_locations_Result">
+          <Property Type="String" Name="PickUp_Load_Num" Nullable="true" MaxLength="70" />
+          <Property Type="String" Name="TATTLETALE" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="WAVELocation" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="MBOLVics" Nullable="true" MaxLength="80" />
+        </ComplexType>
+        <ComplexType Name="sp_mob_prod_WOHourDetails_Result">
+          <Property Type="Int32" Name="ReferencePullID" Nullable="true" />
+          <Property Type="String" Name="EmployeeID" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="InTimeStamp" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="OutTimeStamp" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="WOHours" Nullable="true" />
+          <Property Type="Int32" Name="WOMinutes" Nullable="true" />
+          <Property Type="String" Name="FirstName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Lastname" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="tf_mob_prod_CalcWOHours_Result">
+          <Property Type="Int32" Name="ReferencePullID" Nullable="true" />
+          <Property Type="Int32" Name="EmployeeCount" Nullable="true" />
+          <Property Type="Int32" Name="WOHours" Nullable="true" />
+          <Property Type="Int32" Name="WOMinutes" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="login">
+          <Key>
+            <PropertyRef Name="LoginID" />
+          </Key>
+          <Property Name="LoginID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="ModuleAccess" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="ECOM" Type="Boolean" />
+          <Property Name="SUPERVISOR" Type="Boolean" />
+          <Property Name="ReadWrite" Type="Boolean" />
+          <Property Name="INVADJUSTMENTS" Type="Boolean" />
+          <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="WHS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RF" Type="Boolean" />
+          <Property Name="DESKTOP" Type="Boolean" />
+          <Property Name="DESKTOP_Receiving" Type="Boolean" />
+          <Property Name="DESKTOP_Inventory" Type="Boolean" />
+          <Property Name="DESKTOP_Production" Type="Boolean" />
+          <Property Name="DESKTOP_Shipping" Type="Boolean" />
+          <Property Name="DESKTOP_Billing" Type="Boolean" />
+          <Property Name="DESKTOP_Management" Type="Boolean" />
+          <Property Name="RF_Receiving" Type="Boolean" />
+          <Property Name="RF_Inventory" Type="Boolean" />
+          <Property Name="RF_Production" Type="Boolean" />
+          <Property Name="RF_Shipping" Type="Boolean" />
+          <Property Name="RF_AddedValue" Type="Boolean" />
+          <Property Name="RF_Management" Type="Boolean" />
+          <Property Name="isActive" Type="Boolean" />
+          <Property Name="DESKTOP_Allocation" Type="Boolean" />
+          <Property Name="login_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <ComplexType Name="sp_mob_TimeTrack_GetClockedInEmployees_Result">
+          <Property Type="Int32" Name="WOEmployeeID" Nullable="false" />
+          <Property Type="Int32" Name="ReferencePullID" Nullable="true" />
+          <Property Type="String" Name="EmployeeStatus" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="EmployeeID" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="EmployeeTime" Nullable="true" Precision="23" />
+          <Property Type="Boolean" Name="NonCompliant" Nullable="true" />
+          <Property Type="DateTime" Name="InTimeStamp" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="OutTimeStamp" Nullable="true" Precision="23" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SkyNetModelStoreContainer" CdmEntityContainer="SkyNetEntities">
+          <FunctionImportMapping FunctionImportName="sp_mob_OpenProdWO" FunctionName="SkyNetModel.Store.sp_mob_OpenProdWO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_OpenProdWO_Result">
+                <ScalarProperty Name="ReferencePullID" ColumnName="ReferencePullID" />
+                <ScalarProperty Name="Ship_To" ColumnName="Ship To" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Vendor_Name" ColumnName="Vendor Name" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Ship_Date" ColumnName="Ship Date" />
+                <ScalarProperty Name="Cancel_Date" ColumnName="Cancel Date" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="PullDate" ColumnName="PullDate" />
+                <ScalarProperty Name="REFNUMNotBilled" ColumnName="REFNUMNotBilled" />
+                <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_mob_UpdateWOStart" FunctionName="SkyNetModel.Store.sp_mob_UpdateWOStart" />
+          <FunctionImportMapping FunctionImportName="sp_mob_AddProdWODetails" FunctionName="SkyNetModel.Store.sp_mob_AddProdWODetails">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_AddProdWODetails_Result">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CODE_" ColumnName="CODE#" />
+                <ScalarProperty Name="Account_" ColumnName="Account#" />
+                <ScalarProperty Name="BillID" ColumnName="BillID" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_mob_ListProdWODetails" FunctionName="SkyNetModel.Store.sp_mob_ListProdWODetails">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_ListProdWODetails_Result">
+                <ScalarProperty Name="CodeID" ColumnName="CodeID" />
+                <ScalarProperty Name="ReferencePullID" ColumnName="ReferencePullID" />
+                <ScalarProperty Name="BillCodeDescription" ColumnName="BillCodeDescription" />
+                <ScalarProperty Name="QTY" ColumnName="QTY" />
+                <ScalarProperty Name="BillComments" ColumnName="BillComments" />
+                <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="StaticOutboundRate" ColumnName="StaticOutboundRate" />
+                <ScalarProperty Name="RefBillReady" ColumnName="RefBillReady" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_mob_DeleteProdWODetails" FunctionName="SkyNetModel.Store.sp_mob_DeleteProdWODetails" />
+          <FunctionImportMapping FunctionImportName="sp_mob_UpdateProdWODetails" FunctionName="SkyNetModel.Store.sp_mob_UpdateProdWODetails" />
+          <FunctionImportMapping FunctionImportName="sp_mob_ConfirmProdWODetails" FunctionName="SkyNetModel.Store.sp_mob_ConfirmProdWODetails" />
+          <FunctionImportMapping FunctionImportName="sp_mob_AppendProdWODetails" FunctionName="SkyNetModel.Store.sp_mob_AppendProdWODetails" />
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="SkyNetModel.Account">
+              <MappingFragment StoreEntitySet="Accounts">
+                <ScalarProperty Name="acc_inventory_email" ColumnName="acc_inventory_email" />
+                <ScalarProperty Name="acc_billing_email" ColumnName="acc_billing_email" />
+                <ScalarProperty Name="SKUAllocType" ColumnName="SKUAllocType" />
+                <ScalarProperty Name="FilePath856" ColumnName="FilePath856" />
+                <ScalarProperty Name="FilePath944" ColumnName="FilePath944" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="MapPath856" ColumnName="MapPath856" />
+                <ScalarProperty Name="MapPath944" ColumnName="MapPath944" />
+                <ScalarProperty Name="Need856" ColumnName="Need856" />
+                <ScalarProperty Name="Need944" ColumnName="Need944" />
+                <ScalarProperty Name="BillingMiscInfo3" ColumnName="BillingMiscInfo3" />
+                <ScalarProperty Name="BillingMiscInfo2" ColumnName="BillingMiscInfo2" />
+                <ScalarProperty Name="BillingMiscInfo1" ColumnName="BillingMiscInfo1" />
+                <ScalarProperty Name="EDIWAVEAccount" ColumnName="EDIWAVEAccount" />
+                <ScalarProperty Name="EDIAccount" ColumnName="EDIAccount" />
+                <ScalarProperty Name="FreezInv" ColumnName="FreezInv" />
+                <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+                <ScalarProperty Name="AcctBillingPostal" ColumnName="AcctBillingPostal" />
+                <ScalarProperty Name="AcctBillingState" ColumnName="AcctBillingState" />
+                <ScalarProperty Name="AcctBillingCity" ColumnName="AcctBillingCity" />
+                <ScalarProperty Name="AcctBillingAddress2" ColumnName="AcctBillingAddress2" />
+                <ScalarProperty Name="AcctBillingAddress1" ColumnName="AcctBillingAddress1" />
+                <ScalarProperty Name="AcctBillingName2" ColumnName="AcctBillingName2" />
+                <ScalarProperty Name="AcctBillingName" ColumnName="AcctBillingName" />
+                <ScalarProperty Name="CO" ColumnName="CO" />
+                <ScalarProperty Name="WHS" ColumnName="WHS" />
+                <ScalarProperty Name="Vendor_Manager" ColumnName="Vendor Manager" />
+                <ScalarProperty Name="Zip_Code" ColumnName="Zip Code" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="Phone__" ColumnName="Phone #" />
+                <ScalarProperty Name="Vendor_Name" ColumnName="Vendor Name" />
+                <ScalarProperty Name="ModType" ColumnName="ModType" />
+                <ScalarProperty Name="Vendor__" ColumnName="Vendor #" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WMS_Explorer">
+            <EntityTypeMapping TypeName="SkyNetModel.WMS_Explorer">
+              <MappingFragment StoreEntitySet="WMS_Explorer">
+                <ScalarProperty Name="WMS_Mail_EnableSSL" ColumnName="WMS_Mail_EnableSSL" />
+                <ScalarProperty Name="WMS_Mail_Port" ColumnName="WMS_Mail_Port" />
+                <ScalarProperty Name="WMS_Mail_HostName" ColumnName="WMS_Mail_HostName" />
+                <ScalarProperty Name="WMS_Mail_Password" ColumnName="WMS_Mail_Password" />
+                <ScalarProperty Name="WMS_Mail_UserEmail" ColumnName="WMS_Mail_UserEmail" />
+                <ScalarProperty Name="WMS_PODShareDrivePath" ColumnName="WMS_PODShareDrivePath" />
+                <ScalarProperty Name="WMS_Warehousemen_TermsConditions" ColumnName="WMS_Warehousemen_TermsConditions" />
+                <ScalarProperty Name="WMS_Application_Welcome" ColumnName="WMS_Application_Welcome" />
+                <ScalarProperty Name="WMS_Application_Backround" ColumnName="WMS_Application_Backround" />
+                <ScalarProperty Name="WMS_Application_Icon" ColumnName="WMS_Application_Icon" />
+                <ScalarProperty Name="WMS_ID" ColumnName="WMS_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_mob_TimeTrack_ClockIn_Out_Employee" FunctionName="SkyNetModel.Store.sp_mob_TimeTrack_ClockIn_Out_Employee" />
+          <FunctionImportMapping FunctionImportName="sp_mob_TimeTrack_ListEmployee" FunctionName="SkyNetModel.Store.sp_mob_TimeTrack_ListEmployee">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_TimeTrack_ListEmployee_Result">
+                <ScalarProperty Name="WOEmployeeID" ColumnName="WOEmployeeID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="HourlyRate" ColumnName="HourlyRate" />
+                <ScalarProperty Name="Deactivate" ColumnName="Deactivate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="POD_Repository">
+            <EntityTypeMapping TypeName="SkyNetModel.POD_Repository">
+              <MappingFragment StoreEntitySet="POD_Repository">
+                <ScalarProperty Name="PODCreatedBy" ColumnName="PODCreatedBy" />
+                <ScalarProperty Name="PODBorn" ColumnName="PODBorn" />
+                <ScalarProperty Name="PODLink" ColumnName="PODLink" />
+                <ScalarProperty Name="PODDescription" ColumnName="PODDescription" />
+                <ScalarProperty Name="PODKey" ColumnName="PODKey" />
+                <ScalarProperty Name="PODID" ColumnName="PODID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_mob_GetWorkOrderReportHeader" FunctionName="SkyNetModel.Store.sp_mob_GetWorkOrderReportHeader">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_GetWorkOrderReportHeader_Result">
+                <ScalarProperty Name="ReferencePullID" ColumnName="ReferencePullID" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="RefNumShipTo" ColumnName="RefNumShipTo" />
+                <ScalarProperty Name="RefNumRef1" ColumnName="RefNumRef1" />
+                <ScalarProperty Name="RefNumRef2" ColumnName="RefNumRef2" />
+                <ScalarProperty Name="ESD_ShipDate" ColumnName="ESD_ShipDate" />
+                <ScalarProperty Name="ESD_CancelDate" ColumnName="ESD_CancelDate" />
+                <ScalarProperty Name="ProductionCode" ColumnName="ProductionCode" />
+                <ScalarProperty Name="RefNumComments" ColumnName="RefNumComments" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="RefCodes">
+            <EntityTypeMapping TypeName="SkyNetModel.RefCode">
+              <MappingFragment StoreEntitySet="RefCode">
+                <ScalarProperty Name="RefBillReady" ColumnName="RefBillReady" />
+                <ScalarProperty Name="BillCodeDescription" ColumnName="BillCodeDescription" />
+                <ScalarProperty Name="StaticOutboundRate" ColumnName="StaticOutboundRate" />
+                <ScalarProperty Name="CodeByMonthlyBill" ColumnName="CodeByMonthlyBill" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="BillComments" ColumnName="BillComments" />
+                <ScalarProperty Name="QTY" ColumnName="QTY" />
+                <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+                <ScalarProperty Name="ReferencePullID" ColumnName="ReferencePullID" />
+                <ScalarProperty Name="CodeID" ColumnName="CodeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_mob_ship_loadshow_yesno_confirm" FunctionName="SkyNetModel.Store.sp_mob_ship_loadshow_yesno_confirm" />
+          <FunctionImportMapping FunctionImportName="sp_mob_ship_loadshow_yesno_confirmdetail" FunctionName="SkyNetModel.Store.sp_mob_ship_loadshow_yesno_confirmdetail" />
+          <FunctionImportMapping FunctionImportName="sp_mob_ship_loadshow_yesno_confirmmaster" FunctionName="SkyNetModel.Store.sp_mob_ship_loadshow_yesno_confirmmaster" />
+          <FunctionImportMapping FunctionImportName="sp_mob_ship_viewloaddetails" FunctionName="SkyNetModel.Store.sp_mob_ship_viewloaddetails">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_ship_viewloaddetails_Result">
+                <ScalarProperty Name="EDIAPPID" ColumnName="EDIAPPID" />
+                <ScalarProperty Name="MBOLVICS" ColumnName="MBOLVICS" />
+                <ScalarProperty Name="CTNCount" ColumnName="CTNCount" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
+                <ScalarProperty Name="TotalCube" ColumnName="TotalCube" />
+                <ScalarProperty Name="FullPickUp" ColumnName="FullPickUp" />
+                <ScalarProperty Name="FailToPickUp" ColumnName="FailToPickUp" />
+                <ScalarProperty Name="PartialPickUp" ColumnName="PartialPickUp" />
+                <ScalarProperty Name="AccountDivName" ColumnName="AccountDivName" />
+                <ScalarProperty Name="ShipTo" ColumnName="ShipTo" />
+                <ScalarProperty Name="MBOLPalletCount" ColumnName="MBOLPalletCount" />
+                <ScalarProperty Name="MBOLShipComments" ColumnName="MBOLShipComments" />
+                <ScalarProperty Name="ChildAPPID" ColumnName="ChildAPPID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_mob_ship_viewloads" FunctionName="SkyNetModel.Store.sp_mob_ship_viewloads">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_ship_viewloads_Result">
+                <ScalarProperty Name="EDIAPPID" ColumnName="EDIAPPID" />
+                <ScalarProperty Name="PickUp_LoadNum" ColumnName="PickUp_LoadNum" />
+                <ScalarProperty Name="IsLTL" ColumnName="IsLTL" />
+                <ScalarProperty Name="WHS" ColumnName="WHS" />
+                <ScalarProperty Name="PUDate" ColumnName="PUDate" />
+                <ScalarProperty Name="PUTime" ColumnName="PUTime" />
+                <ScalarProperty Name="Carrier" ColumnName="Carrier" />
+                <ScalarProperty Name="SCAC" ColumnName="SCAC" />
+                <ScalarProperty Name="SealNumber" ColumnName="SealNumber" />
+                <ScalarProperty Name="CarryOverNextDay" ColumnName="CarryOverNextDay" />
+                <ScalarProperty Name="IsShipped" ColumnName="IsShipped" />
+                <ScalarProperty Name="IsVoided" ColumnName="IsVoided" />
+                <ScalarProperty Name="IsPrint" ColumnName="IsPrint" />
+                <ScalarProperty Name="UPSFedEx" ColumnName="UPSFedEx" />
+                <ScalarProperty Name="AppIDComments" ColumnName="AppIDComments" />
+                <ScalarProperty Name="DepartingDoor" ColumnName="DepartingDoor" />
+                <ScalarProperty Name="LoadPalletCount" ColumnName="LoadPalletCount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="View_WHS">
+            <EntityTypeMapping TypeName="SkyNetModel.View_WHS">
+              <MappingFragment StoreEntitySet="View-WHS">
+                <ScalarProperty Name="WHS" ColumnName="WHS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EDIAppTables">
+            <EntityTypeMapping TypeName="SkyNetModel.EDIAppTable">
+              <MappingFragment StoreEntitySet="EDIAppTable">
+                <ScalarProperty Name="LoadPalletCount" ColumnName="LoadPalletCount" />
+                <ScalarProperty Name="DepartingDoor" ColumnName="DepartingDoor" />
+                <ScalarProperty Name="AppIDComments" ColumnName="AppIDComments" />
+                <ScalarProperty Name="UPSFedEx" ColumnName="UPSFedEx" />
+                <ScalarProperty Name="IsPrint" ColumnName="IsPrint" />
+                <ScalarProperty Name="IsVoided" ColumnName="IsVoided" />
+                <ScalarProperty Name="IsShipped" ColumnName="IsShipped" />
+                <ScalarProperty Name="CarryOverNextDay" ColumnName="CarryOverNextDay" />
+                <ScalarProperty Name="SealNumber" ColumnName="SealNumber" />
+                <ScalarProperty Name="SCAC" ColumnName="SCAC" />
+                <ScalarProperty Name="Carrier" ColumnName="Carrier" />
+                <ScalarProperty Name="PUTime" ColumnName="PUTime" />
+                <ScalarProperty Name="PUDate" ColumnName="PUDate" />
+                <ScalarProperty Name="WHS" ColumnName="WHS" />
+                <ScalarProperty Name="IsLTL" ColumnName="IsLTL" />
+                <ScalarProperty Name="PickUp_LoadNum" ColumnName="PickUp_LoadNum" />
+                <ScalarProperty Name="EDIAPPID" ColumnName="EDIAPPID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EDIAppTable_Child">
+            <EntityTypeMapping TypeName="SkyNetModel.EDIAppTable_Child">
+              <MappingFragment StoreEntitySet="EDIAppTable_Child">
+                <ScalarProperty Name="MBOLShipComments" ColumnName="MBOLShipComments" />
+                <ScalarProperty Name="MBOLPalletCount" ColumnName="MBOLPalletCount" />
+                <ScalarProperty Name="POD_DOC_Vics" ColumnName="POD_DOC_Vics" />
+                <ScalarProperty Name="BOLDocumentPath" ColumnName="BOLDocumentPath" />
+                <ScalarProperty Name="ShipTo" ColumnName="ShipTo" />
+                <ScalarProperty Name="AccountDivName" ColumnName="AccountDivName" />
+                <ScalarProperty Name="Void" ColumnName="Void" />
+                <ScalarProperty Name="FailToPickUp" ColumnName="FailToPickUp" />
+                <ScalarProperty Name="PartialPickUp" ColumnName="PartialPickUp" />
+                <ScalarProperty Name="FullPickUp" ColumnName="FullPickUp" />
+                <ScalarProperty Name="TotalCube" ColumnName="TotalCube" />
+                <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="CTNCount" ColumnName="CTNCount" />
+                <ScalarProperty Name="MBOLVICS" ColumnName="MBOLVICS" />
+                <ScalarProperty Name="MBOL" ColumnName="MBOL" />
+                <ScalarProperty Name="EDIAPPID" ColumnName="EDIAPPID" />
+                <ScalarProperty Name="ChildAPPID" ColumnName="ChildAPPID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_mob_ship_viewloads_locations" FunctionName="SkyNetModel.Store.sp_mob_ship_viewloads_locations">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_ship_viewloads_locations_Result">
+                <ScalarProperty Name="PickUp_Load_Num" ColumnName="PickUp_Load_Num" />
+                <ScalarProperty Name="TATTLETALE" ColumnName="TATTLETALE" />
+                <ScalarProperty Name="WAVELocation" ColumnName="WAVELocation" />
+                <ScalarProperty Name="MBOLVics" ColumnName="MBOLVics" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_mob_prod_WOHourDetails" FunctionName="SkyNetModel.Store.sp_mob_prod_WOHourDetails">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_prod_WOHourDetails_Result">
+                <ScalarProperty Name="ReferencePullID" ColumnName="ReferencePullID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="InTimeStamp" ColumnName="InTimeStamp" />
+                <ScalarProperty Name="OutTimeStamp" ColumnName="OutTimeStamp" />
+                <ScalarProperty Name="WOHours" ColumnName="WOHours" />
+                <ScalarProperty Name="WOMinutes" ColumnName="WOMinutes" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="tf_mob_prod_CalcWOHours" FunctionName="SkyNetModel.Store.tf_mob_prod_CalcWOHours">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SkyNetModel.tf_mob_prod_CalcWOHours_Result">
+                <ScalarProperty Name="ReferencePullID" ColumnName="ReferencePullID" />
+                <ScalarProperty Name="EmployeeCount" ColumnName="EmployeeCount" />
+                <ScalarProperty Name="WOHours" ColumnName="WOHours" />
+                <ScalarProperty Name="WOMinutes" ColumnName="WOMinutes" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_mob_TimeTrack_GetClockedInEmployees" FunctionName="SkyNetModel.Store.sp_mob_TimeTrack_GetClockedInEmployees" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_TimeTrack_GetClockedInEmployees_Result">
+                <ScalarProperty Name="WOEmployeeID" ColumnName="WOEmployeeID" />
+                <ScalarProperty Name="ReferencePullID" ColumnName="ReferencePullID" />
+                <ScalarProperty Name="EmployeeStatus" ColumnName="EmployeeStatus" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="EmployeeTime" ColumnName="EmployeeTime" />
+                <ScalarProperty Name="NonCompliant" ColumnName="NonCompliant" />
+                <ScalarProperty Name="InTimeStamp" ColumnName="InTimeStamp" />
+                <ScalarProperty Name="OutTimeStamp" ColumnName="OutTimeStamp" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="logins">
+            <EntityTypeMapping TypeName="SkyNetModel.login">
+              <MappingFragment StoreEntitySet="login">
+                <ScalarProperty Name="login_email" ColumnName="login_email" />
+                <ScalarProperty Name="DESKTOP_Allocation" ColumnName="DESKTOP_Allocation" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="RF_Management" ColumnName="RF_Management" />
+                <ScalarProperty Name="RF_AddedValue" ColumnName="RF_AddedValue" />
+                <ScalarProperty Name="RF_Shipping" ColumnName="RF_Shipping" />
+                <ScalarProperty Name="RF_Production" ColumnName="RF_Production" />
+                <ScalarProperty Name="RF_Inventory" ColumnName="RF_Inventory" />
+                <ScalarProperty Name="RF_Receiving" ColumnName="RF_Receiving" />
+                <ScalarProperty Name="DESKTOP_Management" ColumnName="DESKTOP_Management" />
+                <ScalarProperty Name="DESKTOP_Billing" ColumnName="DESKTOP_Billing" />
+                <ScalarProperty Name="DESKTOP_Shipping" ColumnName="DESKTOP_Shipping" />
+                <ScalarProperty Name="DESKTOP_Production" ColumnName="DESKTOP_Production" />
+                <ScalarProperty Name="DESKTOP_Inventory" ColumnName="DESKTOP_Inventory" />
+                <ScalarProperty Name="DESKTOP_Receiving" ColumnName="DESKTOP_Receiving" />
+                <ScalarProperty Name="DESKTOP" ColumnName="DESKTOP" />
+                <ScalarProperty Name="RF" ColumnName="RF" />
+                <ScalarProperty Name="WHS" ColumnName="WHS" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="INVADJUSTMENTS" ColumnName="INVADJUSTMENTS" />
+                <ScalarProperty Name="ReadWrite" ColumnName="ReadWrite" />
+                <ScalarProperty Name="SUPERVISOR" ColumnName="SUPERVISOR" />
+                <ScalarProperty Name="ECOM" ColumnName="ECOM" />
+                <ScalarProperty Name="ModuleAccess" ColumnName="ModuleAccess" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_mob_TimeTrack_ClockoutAll" FunctionName="SkyNetModel.Store.sp_mob_TimeTrack_ClockoutAll" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

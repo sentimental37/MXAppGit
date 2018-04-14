@@ -1,0 +1,2954 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfDiagram.XForms</name>
+    </assembly>
+    <members>
+        <member name="M:Syncfusion.SfDiagram.XForms.MindMapLayout.#ctor">
+            <summary>
+            Initializes a new instance of the DirectedTreeLayout class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.MindMapLayout.MindMapOrientation">
+            <summary>
+            Gets or sets Orientation
+            </summary>
+            <value>Gets or sets the Orientation of the Layout.</value>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.MindMapLayout.MindMapOrientationProperty">
+            <summary>
+            Represents the bindable property of TreeOrientatation.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.MindMapLayout.UpdateLayout">
+            <summary>
+            Oveeride UpdateLayout method from its base class
+            </summary>
+            <value>Oveeride UpdateLayout method from its base class</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.PageSettings">
+            <summary>
+            Represents the page settings of the diagram
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.PageSettings.PageWidthProperty">
+            <summary>
+            Gets or sets the color. This is a bindable property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.PageSettings.PageWidth">
+            <summary>
+            Gets or sets the width of the page.
+            </summary>
+            <value>The width of the page.</value>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.PageSettings.PageHeightProperty">
+            <summary>
+            Gets or sets the color. This is a bindable property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.PageSettings.PageHeight">
+            <summary>
+            Gets or sets the height of the page.
+            </summary>
+            <value>The height of the page.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.PageSettings.PageBackGround">
+            <summary>
+            Gets or sets the background color of the page.
+            </summary>
+            <value>The background color of the page.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.NodeCollection">
+            <summary>
+            Represents a collection of node.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.NodeCollection.UpdateNodeName(Syncfusion.SfDiagram.XForms.Node)">
+            <summary>
+            Updates the node name table.
+            </summary>
+            <param name="node">Node.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.NodeCollection.Add(Syncfusion.SfDiagram.XForms.Node)">
+            <summary>
+            Add the specified node into this collection.
+            </summary>
+            <param name="node">Node to be added</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.NodeCollection.Remove(Syncfusion.SfDiagram.XForms.Node)">
+            <summary>
+            Remove the specified node from the collection.
+            </summary>
+            <param name="node">Node to be removed.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.NodeCollection.RemoveAt(System.Int32)">
+            <summary>
+            Remove the node at the specified index from the collection.
+            </summary>
+            <param name="index">Index of the node to be removed</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.NodeCollection.Count">
+            <summary>
+            Count this instance.
+            </summary>
+            <returns>Gets the nodecollection count.</returns>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.NodeCollection.Clear">
+            <summary>
+            Clear all the nodes from this collection
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.NodeCollection.Insert(System.Int32,Syncfusion.SfDiagram.XForms.Node)">
+            <summary>
+            Insert the specified node at the specified index.
+            </summary>
+            <param name="index">Index where the node to be inserted</param>
+            <param name="node">Node to be inserted</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.NodeCollection.IndexOf(Syncfusion.SfDiagram.XForms.Node)">
+            <summary>
+            Returns the index of the specified node in the collection.
+            </summary>
+            <param name="node">Node to be searched.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.NodeCollection.GetEnumerator">
+            <summary>
+            Gets the IEnumerator collection of Node.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.NodeCollection.Item(System.Int32)">
+            <summary>
+            Gets the <see cref="T:Syncfusion.SfDiagram.XForms.Node"/> at the specified index.
+            </summary>
+            <param name="index">The index.</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.ConnectorCollection">
+            <summary>
+            Represents a connector collection.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.ConnectorCollection.Add(Syncfusion.SfDiagram.XForms.Connector)">
+            <summary>
+            Add the specified connector into this collection.
+            </summary>
+            <param name="connector">Connector to be added</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.ConnectorCollection.Remove(Syncfusion.SfDiagram.XForms.Connector)">
+            <summary>
+            Remove the specified connector from the collection.
+            </summary>
+            <param name="connector">Connector to be removed.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.ConnectorCollection.RemoveAt(System.Int32)">
+            <summary>
+            Remove the connector at the specified index from the collection.
+            </summary>
+            <param name="index">Index of the connector to be removed</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.ConnectorCollection.Count">
+            <summary>
+            Count this instance.
+            </summary>
+            <returns>Gets the connectorcollection count.</returns>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.ConnectorCollection.Clear">
+            <summary>
+            Clear all the connectors from this collection
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.ConnectorCollection.Contains(Syncfusion.SfDiagram.XForms.Connector)">
+            <summary>
+            Check the collection has corresponding element
+            </summary>
+            <param name="connector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.ConnectorCollection.Insert(System.Int32,Syncfusion.SfDiagram.XForms.Connector)">
+            <summary>
+            Insert the specified connector at the specified index.
+            </summary>
+            <param name="index">Index where the node to be inserted</param>
+            <param name="connector">Connector to be inserted</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.ConnectorCollection.IndexOf(Syncfusion.SfDiagram.XForms.Connector)">
+            <summary>
+            Returns the index of the specified connector in the collection.
+            </summary>
+            <param name="connector">Connector to be searched.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.ConnectorCollection.GetEnumerator">
+            <summary>
+            Gets the IEnumerator collection of Connector.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.ConnectorCollection.UpdateConnectorName(Syncfusion.SfDiagram.XForms.Connector)">
+            <summary>
+            Updates the connector name table.
+            </summary>
+            <param name="connector">Node.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.ConnectorCollection.Item(System.Int32)">
+            <summary>
+            Gets the <see cref="T:Syncfusion.SfDiagram.XForms.Connector"/> at the specified index.
+            </summary>
+            <param name="index">The index.</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.PortCollection">
+             <summary>
+            Represents a collection of port.
+             </summary>   
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.PortCollection.Add(Syncfusion.SfDiagram.XForms.Port)">
+            <summary>
+            Add the specified port into this collection.
+            </summary>
+            <param name="port">Port to be added</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.PortCollection.Remove(Syncfusion.SfDiagram.XForms.Port)">
+            <summary>
+            Remove the specified port from the collection.
+            </summary>
+            <param name="port">m_formports to be removed.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.PortCollection.RemoveAt(System.Int32)">
+            <summary>
+            Remove the port at the specified index from the collection.
+            </summary>
+            <param name="index">Index of the port to be removed</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.PortCollection.Count">
+            <summary>
+            Count this instance.
+            </summary>
+            <returns>Gets the portcollection count.</returns>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.PortCollection.Clear">
+            <summary>
+            Clear all the ports from this collection
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.PortCollection.Insert(System.Int32,Syncfusion.SfDiagram.XForms.Port)">
+            <summary>
+            Insert the specified port at the specified index.
+            </summary>
+            <param name="index">Index where the port to be inserted</param>
+            <param name="port">Port to be inserted</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.PortCollection.IndexOf(Syncfusion.SfDiagram.XForms.Port)">
+            <summary>
+            Returns the index of the specified port in the collection.
+            </summary>
+            <param name="port">Port to be searched.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.PortCollection.GetEnumerator">
+            <summary>
+            Gets the IEnumerator collection of Port.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.PortCollection.Item(System.Int32)">
+            <summary>
+            Gets the <see cref="T:Syncfusion.SfDiagram.XForms.Port"/> at the specified index.
+            </summary>
+            <param name="index">The index.</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.AnnotationCollection">
+            <summary>
+            Represents a collection of annotation for diagram elements.
+            </summary>  
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.AnnotationCollection.Add(Syncfusion.SfDiagram.XForms.Annotation)">
+            <summary>
+            Add the specified annotation into this collection.
+            </summary>
+            <param name="annotation">Annotation to be added</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.AnnotationCollection.Remove(Syncfusion.SfDiagram.XForms.Annotation)">
+            <summary>
+            Remove the specified annotation from the collection.
+            </summary>
+            <param name="annotation">Annotation to be removed.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.AnnotationCollection.RemoveAt(System.Int32)">
+            <summary>
+            Remove the Annotation at the specified index from the collection.
+            </summary>
+            <param name="index">Index of the annotation to be removed</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.AnnotationCollection.Count">
+            <summary>
+            Count this instance.
+            </summary>
+            <returns>Gets the annotationcollection count.</returns>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.AnnotationCollection.Clear">
+            <summary>
+            Clear all the annotations from this collection
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.AnnotationCollection.Insert(System.Int32,Syncfusion.SfDiagram.XForms.Annotation)">
+            <summary>
+            Insert the specified annotation at the specified index.
+            </summary>
+            <param name="index">Index where the annotation to be inserted</param>
+            <param name="annotation">Annotation to be inserted</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.AnnotationCollection.IndexOf(Syncfusion.SfDiagram.XForms.Annotation)">
+            <summary>
+            Returns the index of the specified annotation in the collection.
+            </summary>
+            <param name="annotation">Annotation to be searched.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.AnnotationCollection.GetEnumerator">
+            <summary>
+            Gets the IEnumerator collection of Annotation.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.AnnotationCollection.Item(System.Int32)">
+            <summary>
+            Gets the <see cref="T:Syncfusion.SfDiagram.XForms.Annotation"/> at the specified index.
+            </summary>
+            <param name="index">The index.</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.Geometry">
+            <summary>
+            Represents the base type of all geometry objects
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.RectGeometry">
+            <summary>
+            Represents a two-dimensional rectangle
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.RectGeometry.Bounds">
+            <summary>
+            Gets or sets the bounds of the rectangle geometry
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.RectGeometry.X">
+            <summary>
+            Gets or sets the X position of the rectangle
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.RectGeometry.Y">
+            <summary>
+            Gets or sets the Y position of the rectangle
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.RectGeometry.Width">
+            <summary>
+            Gets or sets the width of the rectangle
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.RectGeometry.Height">
+            <summary>
+            Gets or sets the height of the rectangle
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.RectGeometry.CornerWidth">
+            <summary>
+            Gets or sets the corner width of the rectangle. This property is used to draw rounded corner rectangle.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.RectGeometry.CornerHeight">
+            <summary>
+            Gets or sets the corner height of the rectangle. This property is used to draw rounded corner rectangle.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.RectGeometry.Pen">
+            <summary>
+            Represents how the outline of the rectangle is drawn
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.LineGeometry">
+            <summary>
+            Represents a line geometry
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.LineGeometry.Points">
+            <summary>
+            Gets or sets the collection of points in the line.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.LineGeometry.Pen">
+            <summary>
+            Represents how the outline of the line is drawn
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.EllipseGeometry">
+            <summary>
+            Represents the geometry of a circle or ellipse
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.EllipseGeometry.Bounds">
+            <summary>
+            Represents the bounds of the Ellipse
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.EllipseGeometry.X">
+            <summary>
+            Gets or sets the X position of the ellipse.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.EllipseGeometry.Y">
+            <summary>
+            Gets or sets the Y position of the ellipse.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.EllipseGeometry.Width">
+            <summary>
+            Gets or sets the width of the ellipse
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.EllipseGeometry.Height">
+            <summary>
+            Gets or sets the height of the ellipse
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.EllipseGeometry.Pen">
+            <summary>
+            Represents how the outline of the line is drawn
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.ArcGeometry">
+            <summary>
+            Represents an arc geometry
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.ArcGeometry.X">
+            <summary>
+            Gets or sets the X position of Arc
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.ArcGeometry.Y">
+            <summary>
+            Gets or sets the Y position of Arc
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.ArcGeometry.Width">
+            <summary>
+            Gets or sets the width of the Arc.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.ArcGeometry.Height">
+            <summary>
+            Gets or sets the height of the Arc.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.ArcGeometry.StartAngle">
+            <summary>
+            Gets or sets the starting angle
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.ArcGeometry.SweepAngle">
+            <summary>
+            Gets or sets the sweep angle
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.ArcGeometry.Pen">
+            <summary>
+            Represents how the outline of the arc is drawn
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.BezierGeometry">
+            <summary>
+            Represents a bezier geometry.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.BezierGeometry.Pen">
+            <summary>
+            Represents how the outline of the curve is drawn
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.BezierGeometry.X1">
+            <summary>
+            Gets or sets the X position of first control point
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.BezierGeometry.Y1">
+            <summary>
+            Gets or sets the Y position of first control point
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.BezierGeometry.X2">
+            <summary>
+            Gets or sets the X position of second control point
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.BezierGeometry.Y2">
+            <summary>
+            Gets or sets the Y position of second control point
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.BezierGeometry.X3">
+            <summary>
+            Gets or sets the X position of third control point
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.BezierGeometry.Y3">
+            <summary>
+            Gets or sets the Y position of third control point
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.Pen">
+            <summary>
+            Describes how a shape is outlined.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Pen.StrokeWidth">
+            <summary>
+            Gets or sets the width of the stroke.
+            </summary>
+            <value>The width of the stroke.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Pen.Brush">
+            <summary>
+            Gets or sets the fill the outline produced by this Pen.
+            </summary>
+            <value>The color of the fill.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Pen.StrokeBrush">
+            <summary>
+            Gets or sets the color of the stroke.
+            </summary>
+            <value>The color of the stroke.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.Segment">
+            <summary>
+            Represents the abstract for all types of segment
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.RectSegment">
+            <summary>
+            Represents a rectangle segment
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.RectSegment.Bounds">
+            <summary>
+            Represents the bounds of the rectangle segment
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.RectSegment.X">
+            <summary>
+            Gets or sets the X position of the rectangle
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.RectSegment.Y">
+            <summary>
+            Gets or sets the Y position of the rectangle
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.RectSegment.Width">
+            <summary>
+            Gets or sets the width of the rectangle segment
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.RectSegment.Height">
+            <summary>
+            Gets or sets the height of the rectangle segment
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.RectSegment.CornerWidth">
+            <summary>
+            Gets or sets the corner width of the rectangle
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.RectSegment.CornerHeight">
+            <summary>
+            Gets or sets the corner height of the rectangle
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.StartSegment">
+            <summary>
+            Represents the starting segment
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.StartSegment.X">
+            <summary>
+            Gets or sets the initial X position
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.StartSegment.Y">
+            <summary>
+            Gets or sets the initial Y position
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.LineSegment">
+            <summary>
+            Represents a line segment
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.LineSegment.Points">
+            <summary>
+            Gets or sets the collection of points.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.EllipseSegment">
+            <summary>
+            Represents an ellipse segment
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.EllipseSegment.Bounds">
+            <summary>
+            Represents the bounds of the ellipse
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.EllipseSegment.X">
+            <summary>
+            Gets or sets the X position of the ellipse
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.EllipseSegment.Y">
+            <summary>
+            Gets or sets the Y position of the ellipse
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.EllipseSegment.Width">
+            <summary>
+            Gets or sets the width of the ellipse
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.EllipseSegment.Height">
+            <summary>
+            Gets or sets the height of the ellipse
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.ArcSegment">
+            <summary>
+            Represents an Arc segment
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.ArcSegment.X">
+            <summary>
+            Gets or sets the X position of the Arc
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.ArcSegment.Y">
+            <summary>
+            Gets or sets the Y position of the Arc
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.ArcSegment.Width">
+            <summary>
+            Gets or sets the width of the Arc
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.ArcSegment.Height">
+            <summary>
+            Gets or sets the height of the Arc
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.ArcSegment.StartAngle">
+            <summary>
+            Gets or sets the starting angle of the Arc
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.ArcSegment.SweepAngle">
+            <summary>
+            Gets or sets the sweep angle of the Arc
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.BezierSegment">
+            <summary>
+            Represents a bezier segment
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.BezierSegment.X1">
+            <summary>
+            Gets or sets the X position first control points
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.BezierSegment.Y1">
+            <summary>
+            Gets or sets the Y position first control points
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.BezierSegment.X2">
+            <summary>
+            Gets or sets the X position second control points
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.BezierSegment.Y2">
+            <summary>
+            Gets or sets the Y position second control points
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.BezierSegment.X3">
+            <summary>
+            Gets or sets the X position third control points
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.BezierSegment.Y3">
+            <summary>
+            Gets or sets the Y position third control points
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.SfGraphics">
+            <summary>
+            Represents drawing graphics for creating custom shapes.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfGraphics.DrawRectangle(Syncfusion.SfDiagram.XForms.Pen,Xamarin.Forms.Rectangle)">
+            <summary>
+            Draws a rectangle specified by a Rectangle structure
+            </summary>
+            <param name="pen">A pen that determines the color, width, and style of the rectangle</param>
+            <param name="rect">A Rectangle structure that represents the rectangle to draw.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfGraphics.DrawLines(Syncfusion.SfDiagram.XForms.Pen,System.Collections.Generic.IList{Xamarin.Forms.Point})">
+            <summary>
+            Draws a series of line segments that connect a collection of Point structures.
+            </summary>
+            <param name="pen">A Pen that determines the color, width, and style of the line segments.</param>
+            <param name="points">Collection of Point structures that represent the points to connect</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfGraphics.DrawEllipse(Syncfusion.SfDiagram.XForms.Pen,Xamarin.Forms.Rectangle)">
+            <summary>
+            Draws an ellipse specified by a bounding Rectangle structure.
+            </summary>
+            <param name="pen">Pen that determines the color, width, and style of the ellipse.</param>
+            <param name="rect">Rectangle structure that defines the boundaries of the ellipse.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfGraphics.DrawCubicBezier(Syncfusion.SfDiagram.XForms.Pen,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Draws a B�zier cubic defined by three ordered pairs of coordinates that represent points.
+            </summary>
+            <param name="pen">Pen that determines the color, width, and style of the curve.</param>
+            <param name="x1">The x-coordinate of the first control point of the curve.</param>
+            <param name="y1">The y-coordinate of the first control point of the curve.</param>
+            <param name="x2">The x-coordinate of the second control point of the curve.</param>
+            <param name="y2">The y-coordinate of the second control point of the curve.</param>
+            <param name="x3">The x-coordinate of the ending point of the curve.</param>
+            <param name="y3">The y-coordinate of the ending point of the curve.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfGraphics.DrawQuadraticBezier(Syncfusion.SfDiagram.XForms.Pen,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Draws a quadratic bezier defined by three ordered pairs of coordinates that represent points.
+            </summary>
+            <param name="pen">Pen that determines the color, width, and style of the curve.</param>
+            <param name="x1">The x-coordinate of the first control point of the curve.</param>
+            <param name="y1">The y-coordinate of the first control point of the curve.</param>
+            <param name="x2">The x-coordinate of the second control point of the curve.</param>
+            <param name="y2">The y-coordinate of the second control point of the curve.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfGraphics.DrawArc(Syncfusion.SfDiagram.XForms.Pen,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Draws an arc representing a portion of an ellipse specified by a pair of coordinates, a width, and a height.
+            </summary>
+            <param name="pen">Pen that determines the color, width, and style of the arc.</param>
+            <param name="x">The x-coordinate of the upper-left corner of the rectangle that defines the ellipse.</param>
+            <param name="y">The y-coordinate of the upper-left corner of the rectangle that defines the ellipse.</param>
+            <param name="width">Width of the rectangle that defines the ellipse.</param>
+            <param name="height">Height of the rectangle that defines the ellipse</param>
+            <param name="startAngle">Angle in degrees measured clockwise from the x-axis to the starting point of the arc.</param>
+            <param name="sweepAngle">Angle in degrees measured clockwise from the startAngle parameter to ending point of the arc.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SfGraphics.GeometryGroup">
+            <summary>
+            Represents the collection of geometry.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfGraphics.DrawPath(Syncfusion.SfDiagram.XForms.SfGraphicsPath)">
+            <summary>
+            Draws a specified graphical path.
+            </summary>
+            <param name="path">Graphical path to draw</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.SfGraphicsPath">
+            <summary>
+            Represents a series of connected lines and curves.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SfGraphicsPath.SegmentGroup">
+            <summary>
+            Represents the collection of graphical segments
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SfGraphicsPath.IsClosePath">
+            <summary>
+            Gets or sets the value whether it is a closepath or not
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfGraphicsPath.AddRect(Xamarin.Forms.Rectangle)">
+            <summary>
+            Adds a rectangle to this path.
+            </summary>
+            <param name="rect">A Rectangle that represents the rectangle to add.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfGraphicsPath.AddRoundRect(Xamarin.Forms.Rectangle,System.Double,System.Double)">
+            <summary>
+            Adds a round rectangle to this path.
+            </summary>
+            <param name="rect">A Rectangle that represents the rectangle to add.</param>
+            <param name="cornerwidth">Corner width of the round corner rectangle</param>
+            <param name="cornerheight">Corner height of the round corner rectangle</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfGraphicsPath.AddEllipse(Xamarin.Forms.Rectangle)">
+            <summary>
+            Adds the ellipse.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfGraphicsPath.AddArc(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Adds an ellipse to the current path.
+            </summary>
+            <param name="x">The x-coordinate of the upper-left corner of the rectangular region that defines the ellipse from which the arc is drawn.</param>
+            <param name="y">The y-coordinate of the upper-left corner of the rectangular region that defines the ellipse from which the arc is drawn.</param>
+            <param name="width">The width of the rectangular region that defines the ellipse from which the arc is drawn.</param>
+            <param name="height">The height of the rectangular region that defines the ellipse from which the arc is drawn.</param>
+            <param name="startangle">The starting angle of the arc, measured in degrees clockwise from the x-axis</param>
+            <param name="sweepangle">The angle between startAngle and the end of the arc.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfGraphicsPath.AddLines(Xamarin.Forms.Point[])">
+            <summary>
+            Appends a series of connected line segments to the current path
+            </summary>
+            <param name="points">An array of Point structures that represents the points that define the line segments to add.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfGraphicsPath.ArcTo(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Arcs to.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfGraphicsPath.CubicTo(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Cubics to.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfGraphicsPath.LineTo(System.Single,System.Single)">
+            <summary>
+            Add the line to the position
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfGraphicsPath.MoveTo(System.Single,System.Single)">
+            <summary>
+            Move the current point.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfGraphicsPath.QuadTo(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Draw the quadratic curve
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.Stencil">
+            <summary>
+            Represents the stencil which holds a list of symbols that is displayed over a diagram.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.Stencil.#ctor">
+            <summary>
+            Initializes a new instance of the Stencil class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Stencil.SymbolGroups">
+            <summary>
+            Gets or sets the symbol groups in the Stencil.
+            </summary>
+            <value>It defines the symbol groups.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Stencil.BackgroundColor">
+            <summary>
+            Gets or sets the background color of the stencil.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Stencil.BorderColor">
+            <summary>
+            Gets or sets the border color of the stencil.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Stencil.SymbolStyle">
+            <summary>
+            Gets or sets the symbol style.
+            </summary>
+            <value>The symbol style.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Stencil.WidthRequest">
+            <summary>
+            Gets or set the Width of the stencil
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Stencil.HeightRequest">
+            <summary>
+            Gets or set the height of the stencil
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.SymbolCollection">
+            <summary>
+            Represents the collection of symbols to be placed in the stencil.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.SymbolGroup">
+            <summary>
+            Represents a group of symbols in the symbol groups.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SymbolGroup.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.XForms.SymbolGroup"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SymbolGroup.HeaderStyle">
+            <summary>
+            Gets or sets the style of the symbol group header.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SymbolGroup.HeaderName">
+            <summary>
+            Gets or sets the MappingName for the SymbolGroupProvider. This is a bindable property.
+            </summary>
+            <value>This property take string.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SymbolGroup.SymbolSource">
+            <summary>
+            Gets or sets the SymbolSource for the Stencil. This is a bindable property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SymbolGroup.IsExpand">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfDiagram.XForms(Portable).SymbolGroup"/> is expand.
+            </summary>
+            <value><c>true</c> if is expand; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.SymbolGroups">
+            <summary>
+            ISymbol
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.DecoratorStyle">
+            <summary>
+            Represents the decorator style of a straight or an orthogonal connector.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.DecoratorStyle.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.XForms(Portable).DecoratorStyle"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.DecoratorStyle.Width">
+            <summary>
+            Gets or sets the Width for the DecoratorStyle. This is a bindable property.
+            </summary>
+            <value>This property take double.</value>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.DecoratorStyle.WidthProperty">
+            <summary>
+            Represents the bindable property of Width.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.DecoratorStyle.Height">
+            <summary>
+            Gets or sets the Height for the DecoratorStyle. This is a bindable property.
+            </summary>
+            <value>This property take double.</value>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.DecoratorStyle.HeightProperty">
+            <summary>
+            Represents the bindable property of Height.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.DecoratorStyle.Fill">
+            <summary>
+            Gets or sets the Fill for the DecoratorStyle. This is a bindable property.
+            </summary>
+            <value>This property take color.</value>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.DecoratorStyle.FillProperty">
+            <summary>
+            Represents the bindable property of Fill.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.DecoratorStyle.Stroke">
+            <summary>
+            Gets or sets the Stroke for the DecoratorStyle. This is a bindable property.
+            </summary>
+            <value>This property take color.</value>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.DecoratorStyle.StrokeProperty">
+            <summary>
+            Represents the bindable property of Stroke.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.DecoratorStyle.StrokeThickness">
+            <summary>
+            Gets or sets the StrokeThickness for the DecoratorStyle. This is a bindable property.
+            </summary>
+            <value>This property take double.</value>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.DecoratorStyle.StrokeThicknessProperty">
+            <summary>
+            Represents the bindable property of StrokeThickness.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.HeaderStyle">
+            <summary>
+            Represents the header style of a symbolgroup.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.HeaderStyle.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.Android.HeaderStyle"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.HeaderStyle.FontSize">
+            <summary>
+            Gets or sets the size of the font.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.HeaderStyle.HorizontalAlignment">
+            <summary>
+            Gets or sets the horizontal alignment of the header text.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.HeaderStyle.FontStyle">
+            <summary>
+            Gets or sets the font style of the header text.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.HeaderStyle.FontFamily">
+            <summary>
+            Gets or sets the font name of the textual data in the symbol group header.
+            </summary>
+            <value>A string that represents the font family name.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.HeaderStyle.TextBrush">
+            <summary>
+            Gets or sets the text brush of the textual data in the symbol group header.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.HeaderStyle.Fill">
+            <summary>
+            Gets or sets the fill color of header.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.SymbolStyle">
+            <summary>
+            Represents the SymbolStyle class which modified the style of the stencil symbols.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SymbolStyle.Width">
+            <summary>
+            Gets or sets the Width for the SymbolStyle. This is a bindable property.
+            </summary>
+            <value>This property take double.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SymbolStyle.Height">
+            <summary>
+            Gets or sets the Height for the SymbolStyle. This is a bindable property.
+            </summary>
+            <value>This property take double.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SymbolStyle.BorderThickness">
+            <summary>
+            Gets or sets the BorderThickness for the SymbolStyle. This is a bindable property.
+            </summary>
+            <value>This property take double.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SymbolStyle.Background">
+            <summary>
+            Gets or sets the Background for the SymbolStyle. This is a bindable property.
+            </summary>
+            <value>This property take color.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SymbolStyle.BorderBrush">
+            <summary>
+            Gets or sets the BorderBrush for the SymbolStyle. This is a bindable property.
+            </summary>
+            <value>This property take color.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.NodeClickEventHandler">
+            <summary>
+            Represents the method that will handle NodeClick event
+            </summary>
+            <param name="sender">The source of the event</param>
+            <param name="args">A NodeClickedEventArgs that contains the event data</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.ConnectorClickEventHandler">
+            <summary>
+            Represents the method that will handle ConnectorClick event.
+            </summary>
+            <param name="sender">The source of the event</param>
+            <param name="args">A ConnectorClickedEventArgs that contains the event data</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.BeginNodeRenderEventHandler">
+            <summary>
+            Represents the method that will handle the BeginNodeRender event
+            </summary>
+            <param name="sender">The source of the event</param>
+            <param name="args">A BeginNodeRenderEventArgs that contains the event data</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.BeginNodeLayoutEventHandler">
+            <summary>
+            Represents the method that will handle BeginNodeLayout event
+            </summary>
+            <param name="sender">The source of the event</param>
+            <param name="args">A BeginNodeLayoutEventArgs that contains the event data</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.DiagramObjectDeletedEventHandler">
+            <summary>
+            Represents the method that will handle DiagramObjectDeleted event.
+            </summary>
+            <param name="sender">The source of the event</param>
+            <param name="args">A DiagramObjectDeletedEventArgs that contains the event data</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.DiagramObjectDroppedEventHandler">
+             <summary>
+            Represents the method that will handle DiagramObjectDropped event.
+             </summary>
+             <param name="sender">The source of the event</param>
+             <param name="args">A DiagramObjectDroppedEventArgs that contains the event data</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.ItemAddedEventHandler">
+            <summary>
+            Represents the method that will handle ItemAdded event.
+            </summary>
+            <param name="sender">The source of the event</param>
+            <param name="args">A ItemAddedEventArgs that contains the event data</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.DragEndEventHandler">
+            <summary>
+            Represents the method that will handle DragEndEvent event.
+            </summary>
+            <param name="sender">The source of the event</param>
+            <param name="args">A DragEndEventArgs that contains the event data</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.ResizeEndEventHandler">
+            <summary>
+            Represents the method that will handle ResizeEndEvent event.
+            </summary>
+            <param name="sender">The source of the event</param>
+            <param name="args">A ResizeEndEventArgs that contains the event data</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.RotateEndEventHandler">
+            <summary>
+            Represents the method that will handle RotateEndEvent event
+            </summary>
+            <param name="sender">The source of the event</param>
+            <param name="args">A RotateEndEventArgs that contains the event data</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.SymbolGroupExpandCollapseEventHandler">
+            <summary>
+            Represents the method that will handle SymbolGroupExpandCollapse event
+            </summary>
+            <param name="sender">The source of the event</param>
+            <param name="args">A SymbolGroupExpandCollapseEventArgs that contains the event data</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.OnTextEditEventHandler">
+            <summary>
+            Represents the method that will handle OnTextEdit event.
+            </summary>
+            <param name="sender">The source of the event</param>
+            <param name="args">A OnTextEditEventArgs that contains the event data</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.TextChangedEventHandler">
+            <summary>
+            Represents the method that will handle TextChanged event.
+            </summary>
+            <param name="sender">The source of the event</param>
+            <param name="args">A TextChangedEventArgs that contains the event data</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.DiagramClickEventHandler">
+            <summary>
+            Represents the method that will handle DiagramClicked event.
+            </summary>
+            <param name="sender">The source of the event</param>
+            <param name="args">A DiagramClickedEventArgs that contains the event data</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.ItemLongPressedEventHandler">
+            <summary>
+            Represents the method that will handle Item long pressed event.
+            </summary>
+            <param name="sender">The source of the event</param>
+            <param name="args">A ItemLongPressedEventArgs that contains the event data</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.DiagramLoadedEventHandler">
+            <summary>
+            Represents the method that will handle Diagram loaded event.
+            <param name="sender">The source of the event</param>
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.UserHandleClickedEventHandler">
+            <summary>
+            User handle clicked event handler.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.SfDiagram">
+            <summary>
+            Represents a diagram.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.XForms(Portable).SfDiagram"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SfDiagram.Nodes">
+            <summary>
+            Sets the Nodecollection of the SfDiagram.
+            </summary>
+            <value>Sfdaigram Node collection.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SfDiagram.Connectors">
+            <summary>
+            Gets the connector collection from diagram.
+            </summary>
+            <value>sfdiagram Connector collection</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SfDiagram.PageSettings">
+            <summary>
+            Gets the page settings.
+            </summary>
+            <value>The page settings.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SfDiagram.NodeTemplate">
+            <summary>
+            Gets or sets the node template.
+            </summary>
+            <value>Assign the template for node</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SfDiagram.DataSourceSettings">
+            <summary>
+            Gets or sets the DataSource settings for automatic layouting of diagram like Organizational chart.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SfDiagram.LayoutManager">
+            <summary>
+            Sets the LayoutManager of the SfDiagram.
+            </summary>
+            <value>Layout the sfdiagram node and connectors</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SfDiagram.Stencil">
+            <summary>
+            Gets or sets the stencil.
+            </summary>
+            <value>Stencil for Sfdiagram</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SfDiagram.EnableSelectors">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfDiagram.iOS.SfDiagram"/> enable selectors.
+            </summary>
+            <value><c>true</c> if enable selectors; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SfDiagram.EnableZoomAndPan">
+            <summary>
+            Gets or sets a value indicating whether zooming and panning operations are enabled or not.
+            </summary>
+            <value><c>true</c> if is enable zoom and pan; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SfDiagram.EnableRotation">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfDiagram.Android.SfDiagram"/> is rotation enabled.
+            </summary>
+            <value><c>true</c> if is rotation enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SfDiagram.EnableResize">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfDiagram.Android.SfDiagram"/> is resizing enabled.
+            </summary>
+            <value><c>true</c> if is resizing enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SfDiagram.EnableDrag">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfDiagram.Android.SfDiagram"/> is dragging enabled.
+            </summary>
+            <value><c>true</c> if is dragging enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SfDiagram.EnableTextEditing">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfDiagram.Android.SfDiagram"/> is text editing enabled.
+            </summary>
+            <value><c>true</c> if is text editing enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.XForms.SfDiagram.DiagramClicked">
+            <summary>
+            Occurs when a click action happened in diagram.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.XForms.SfDiagram.NodeClicked">
+            <summary>
+            Occurs when node is clicked.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.XForms.SfDiagram.ConnectorClicked">
+            <summary>
+            Occurs when connector is clicked.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.XForms.SfDiagram.BeginNodeRender">
+            <summary>
+            Occurs when a node starts to render in the diagram control.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.XForms.SfDiagram.BeginNodeLayout">
+            <summary>
+            Occurs when a node starts to layout.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.XForms.SfDiagram.DiagramObjectDeleted">
+            <summary>
+            Occurs when diagram object is deleted.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.XForms.SfDiagram.DiagramObjectDropped">
+            <summary>
+            Occurs when diagram object is dropped.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.XForms.SfDiagram.ItemAdded">
+            <summary>
+            Occurs when a diagram element is added.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.XForms.SfDiagram.DragEnd">
+            <summary>
+            Occurs when a diagram object, completed its dragging.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.XForms.SfDiagram.ResizeEnd">
+            <summary>
+            Occurs when a diagram object is resized.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.XForms.SfDiagram.RotateEnd">
+            <summary>
+            Occurs when a node is rotated.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.XForms.SfDiagram.SymbolGroupExpandCollapse">
+            <summary>
+            Occurs when a symbol group is expanded or collapsed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.XForms.SfDiagram.OnTextEdit">
+            <summary>
+            Occurs when a text data is edited.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.XForms.SfDiagram.TextChanged">
+            <summary>
+            Occurs when a text is changed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.XForms.SfDiagram.ItemLongPressed">
+            <summary>
+            Occurs when item long pressed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.XForms.SfDiagram.Loaded">
+            <summary>
+            Occurs when diagram loaded.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.XForms.SfDiagram.UserHandleClicked">
+            <summary>
+            Occurs when user handle clicked.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.AddNode(Syncfusion.SfDiagram.XForms.Node)">
+            <summary>
+            Add the Node to the diagram view
+            </summary>
+            <param name="node">Add the node to diagram.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.RemoveNode(Syncfusion.SfDiagram.XForms.Node)">
+            <summary>
+            Removes the node.
+            </summary>
+            <param name="node">Remove the Node from diagram</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.AddConnector(Syncfusion.SfDiagram.XForms.Connector)">
+            <summary>
+            Adds a specified Connector to the diagram view
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.RemoveConnector(Syncfusion.SfDiagram.XForms.Connector)">
+            <summary>
+            Removes the specified Connector from the diagram view
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.LoadFromJson(System.String)">
+            <summary>
+            Loads the JSON saved file into Diagram
+            </summary>
+            <param name="JsonFileLocation"></param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.SaveAsJson">
+            <summary>
+            Save Sfdiagram as JSON data
+            </summary>
+            <returns>Save the sfdiagram in JSON format</returns>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.SaveAsImage">
+             <summary>
+             Save the SfDiagram into image. Its using default format .png 
+            File Name - its generated automatically by using the Current Date and Time.
+             </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.SaveAsImage(Syncfusion.SfDiagram.XForms.ImageFormat)">
+            <summary>
+            Save the sfdiagram as image in specific format.
+            </summary>
+            <param name="imageFormat">Save image in provided format</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.Clear">
+            <summary>
+            Clears the Node collection and Connector collection from the Diagram
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.OnDiagramClicked(Syncfusion.SfDiagram.XForms.DiagramClickedEventArgs)">
+            <summary>
+            Ons the diagram clicked.
+            </summary>
+            <param name="sender">Sender.</param>
+            <param name="e">E.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.OnNodeClicked(Syncfusion.SfDiagram.XForms.NodeClickedEventArgs)">
+            <summary>
+            Ons the node clicked.
+            </summary>
+            <param name="sender">Sender.</param>
+            <param name="e">E.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.OnConnectorClicked(Syncfusion.SfDiagram.XForms.ConnectorClickedEventArgs)">
+            <summary>
+            Ons the connector clicked.
+            </summary>
+            <param name="sender">Sender.</param>
+            <param name="e">E.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.OnBeginNodeRenderChanged(Syncfusion.SfDiagram.XForms.BeginNodeRenderEventArgs)">
+            <summary>
+            Occurs when property changed.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.OnBeginNodeLayout(Syncfusion.SfDiagram.XForms.BeginNodeLayoutEventArgs)">
+            <summary>
+            Occurs when property changed.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.Undo">
+            <summary>
+            Undo the latest selected item in SfDiagram.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.Redo">
+            <summary>
+            Redo the latest selected item in SfDiagram.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.Cut">
+            <summary>
+            Cuts the latest selected item in SfDiagram.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.Copy">
+            <summary>
+            Copies the latest selected item in SfDiagram.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.Paste">
+            <summary>
+            Paste the copied item to the SfDiagram.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.Delete">
+            <summary>
+            Removes the latest selected item in SfDiagram.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.BringToFront">
+            <summary>
+            Bring Front the selected instance.
+            </summary>
+            <value> Execute the Cut commands</value>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.SendToBack">
+            <summary>
+            Send Back the selected instance.
+            </summary>
+            <value> Execute the Cut commands</value>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.BringForward">
+            <summary>
+            Bring Forward if the selected instance is intersects with othe instance.
+            </summary>
+            <value> Execute the Cut commands</value>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.SendBackward">
+            <summary>
+            Send Backward if the selected instance is intersects with othe instance.
+            </summary>
+            <value> Execute the Cut commands</value>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.ShowSelectorHandle(System.Boolean,Syncfusion.SfDiagram.XForms.SelectorPosition)">
+            <summary>
+            Changes the visibility of specified user handle
+            </summary>
+            <param name="visible"></param>
+            <param name="position"></param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SfDiagram.BringToView(Syncfusion.SfDiagram.XForms.DiagramBaseItem)">
+            <summary>
+            Brings the specified object to visisble region
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.Style">
+            <summary>
+            Represents the style instance of the diagram elements
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.Style.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.XForms(Portable).Style"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Style.Brush">
+            <summary>
+            Gets or set the brush for this style instance
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Style.StrokeBrush">
+            <summary>
+            Gets or sets the stroke brush for this style instance
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Style.StrokeWidth">
+            <summary>
+            Gets or sets the width of the stroke.
+            </summary>
+            <value>The width of the stroke.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Style.StrokeStyle">
+            <summary>
+            Gets or sets the stroke style.
+            </summary>
+            <value>The stroke style.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.Brush">
+            <summary>
+            Brush style
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.SolidBrush">
+            <summary>
+            Represents a solid Brush
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SolidBrush.#ctor(Xamarin.Forms.Color)">
+            <summary>
+            Initialize the new instance of the solidbrush
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SolidBrush.FillColor">
+            <summary>
+            Gets or sets the fill color.
+            </summary>
+            <value>The color of the fil.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.LinearGradientBrush">
+            <summary>
+            Represents a linear gradient brush
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.LinearGradientBrush.#ctor(System.Single,System.Single,System.Single,System.Single,Xamarin.Forms.Color[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.Android.LinearGradientBrush"/> class.
+            </summary>
+            <param name="startX">X coordinate of the starting point.</param>
+            <param name="startY">Y coordinate of the starting point.</param>
+            <param name="endX">X coordinate of the ending point.</param>
+            <param name="endY">Y coordinate of the ending point..</param>
+            <param name="colors">Colors.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.LinearGradientBrush.#ctor(Xamarin.Forms.Color[],System.Single[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.Android.LinearGradientBrush"/> class.
+            </summary>
+            <param name="colors">Colors.</param>
+            <param name="positions">position for each color</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.LinearGradientBrush.Colors">
+            <summary>
+            Gets or sets the colors for gradient brush.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.LinearGradientBrush.Positions">
+            <summary>
+            Gets or sets the position for gradient brush color
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.LinearGradientBrush.StartX">
+            <summary>
+            Gets or sets the X coordinates of the starting point.
+            </summary>
+            <value>The start x.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.LinearGradientBrush.StartY">
+            <summary>
+            Gets or sets the Y coordinates of the starting point.
+            </summary>
+            <value>The start y.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.LinearGradientBrush.EndX">
+            <summary>
+            Gets or sets the X coordinates of the ending point.
+            </summary>
+            <value>The end x.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.LinearGradientBrush.EndY">
+            <summary>
+            Gets or sets the Y coordinates of the ending point.
+            </summary>
+            <value>The end y.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.ShapeType">
+            <summary>
+            Shape types.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ShapeType.Default">
+            <summary>
+            The rectangle shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ShapeType.Rectangle">
+            <summary>
+            The rectangle shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ShapeType.RoundedRectangle">
+            <summary>
+            The rectangle with the rounded corners.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ShapeType.Ellipse">
+            <summary>
+            The ellipse shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ShapeType.Circle">
+            <summary>
+            The circle shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ShapeType.Star">
+            <summary>
+            The star shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ShapeType.Pentagon">
+            <summary>
+            The pentagon shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ShapeType.Hexagon">
+            <summary>
+            The Hexagon shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ShapeType.Triangle">
+            <summary>
+            The Triangle shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ShapeType.RightAngleTriangle">
+            <summary>
+            The RightAngled Triangle shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ShapeType.Diamond">
+            <summary>
+            The Diamond shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ShapeType.Parallelogram">
+            <summary>
+            The Parallelogram shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ShapeType.Trapezoid">
+            <summary>
+            The Trapezoid shape
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ShapeType.Plus">
+            <summary>
+            The Plus shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ShapeType.Octagon">
+            <summary>
+            The Octagon shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ShapeType.Heptagon">
+            <summary>
+            The Heptagon shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ShapeType.Decagon">
+            <summary>
+            The Decagon shape.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.StrokeStyle">
+            <summary>
+            Stroke style.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.StrokeStyle.Default">
+            <summary>
+            The default stroke style.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.StrokeStyle.Dashed">
+            <summary>
+            Stroke style Dashed.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.StrokeStyle.Dotted">
+            <summary>
+            Stroke style Dotted.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.HorizontalAlignment">
+            <summary>
+            Specifies how an object or text in a control is horizontally aligned relative to an element of the control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.HorizontalAlignment.Center">
+            <summary>		
+            The object or text is aligned in the centre of the control element.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.HorizontalAlignment.Left">
+            <summary>
+            The object or text is aligned on the left of the control element.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.HorizontalAlignment.Right">
+            <summary>
+            The object or text is aligned on the right of the control element.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.VerticalAlignment">
+            <summary>
+            Specifies how an object or text in a control is vertically aligned relative to an element of the control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.VerticalAlignment.Center">
+            <summary>
+            The object or text is aligned in the center of the control element.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.VerticalAlignment.Top">
+            <summary>
+            The object or text is aligned on the top of the control element.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.VerticalAlignment.Bottom">
+            <summary>
+            The object or text is aligned on the bottom of the control element.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.SegmentType">
+            <summary>
+            Segment type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.SegmentType.OrthoSegment">
+            <summary>
+            Segment type OrthoSegment.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.SegmentType.StraightSegment">
+            <summary>
+            Segment type Straight.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.DecoratorType">
+            <summary>
+            Decorator.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.DecoratorType.None">
+            <summary>
+            Decorator.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.DecoratorType.Filled45Arrow">
+            <summary>
+            Decorator.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.DecoratorType.Circle">
+            <summary>
+            Decorator.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.DecoratorType.Diamond">
+            <summary>
+            Decorator.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.DecoratorType.Square">
+            <summary>
+            Decorator.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.Orientation">
+            <summary>
+            Orientation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Orientation.Horizontal">
+            <summary>
+            Control or layout should be horizontally oriented..
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Orientation.Vertical">
+            <summary>
+            Control or layout should be vertically oriented..
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.TreeOrientation">
+            <summary>
+            Initialize enum class TreeOrientation
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.TreeOrientation.LeftToRight">
+            <summary>
+             Layout the diagram from Left to Right.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.TreeOrientation.RightToLeft">
+            <summary>
+            Layout the diagram from Right to Left.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.TreeOrientation.TopToBottom">
+            <summary>
+            Layout the diagram from Top to Bottom.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.TreeOrientation.BottomToTop">
+            <summary>
+            Layout the diagram from Bottom to Top
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.LayoutType">
+            <summary>
+            Initialize enum class LayoutType
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.LayoutType.Hierarchical">
+             <summary>
+            Layout the data as hierachical diagram 
+             </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.LayoutType.Organization">
+            <summary>
+            Layout the data as organization diagram 
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.ChartType">
+            <summary>
+            Chart type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ChartType.Left">
+            <summary>
+            Enable or Disable Left behavior
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ChartType.Right">
+            <summary>
+            Enable or Disable Right behavior
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ChartType.Alternate">
+            <summary>
+            Enable or Disable Alternate behavior
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ChartType.Center">
+            <summary>
+            Enable or Disable Center behavior
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.ImageFormat">
+            <summary>
+            Image format.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ImageFormat.Png">
+            <summary>
+            Defines the png.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.ImageFormat.Jpeg">
+            <summary>
+            Defines the JPEG.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.UserHandlePosition">
+            <summary>
+            User handle position.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.SelectorPosition">
+            <summary>
+            Selector Handle Position
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.FontStyle">
+            <summary>
+            Represents enumeration for Font Style.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.FontStyle.Normal">
+            <summary>
+            Normal font style.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.FontStyle.Bold">
+            <summary>
+            Bold font style.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.FontStyle.Italic">
+            <summary>
+            Italic font style.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.FontStyle.BoldItalic">
+            <summary>
+            Bold italic font style.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.Port">
+            <summary>
+            Represents a connection point in the node.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.Port.#ctor">
+            <summary>
+            Initializes a new instance of the Port class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Port.NodeOffsetX">
+            <summary>
+            Gets or sets the X co-ordiante of the port, relative from the node's (x,y) position.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Port.NodeOffsetY">
+            <summary>
+            Gets or sets the Y co-ordiante of the port, relative from the node's (x,y) position.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Port.Width">
+            <summary>
+            Gets or sets the width of the port.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Port.Height">
+            <summary>
+            Gets or sets the height of the port.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Port.ShapeType">
+            <summary>
+            Specifies the shape type of the port.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Port.Style">
+            <summary>
+            Gets or sets the style of the port.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Port.IsVisible">
+            <summary>
+            Gets or sets the value which indicates whether the port is visible or not.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.Annotation">
+            <summary>
+            Represents an annotation for a diagram element. It can be text, image or any view object
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.Annotation.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.XForms(Portable).Annotation"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Annotation.Content">
+            <summary>
+            Gets or sets the content of the annotation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Annotation.ContentProperty">
+            <summary>
+            Represents the bindable property of content.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Annotation.FontFamily">
+            <summary>
+            Gets or sets the font name for the textual data in the annotation.
+            </summary>
+            <value>A string that represents font family name.</value>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Annotation.FontFamilyProperty">
+            <summary>
+            Represents the bindable property of FontFamily.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Annotation.FontSize">
+            <summary>
+            Gets or sets the size of the font.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Annotation.FontSizeProperty">
+            <summary>
+            Represents the bindable property of FontSize.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Annotation.TextBrush">
+            <summary>
+            Gets or sets the text brush for the textual data in the annotation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Annotation.TextBrushProperty">
+            <summary>
+            Represents the bindable property of TextBrush.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Annotation.HorizontalAlignment">
+            <summary>
+            Gets or sets the horizontal alignment of the annotation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Annotation.HorizontalAlignmentProperty">
+            <summary>
+            Represents the bindable property of HorizontalAlignment.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Annotation.VerticalAlignment">
+            <summary>
+            Gets or sets the vertical Alignment of the annotation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Annotation.VerticalAlignmentProperty">
+            <summary>
+            Represents the bindable property of VerticalAlignment.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.Connector">
+            <summary>
+            Represents a Connector which is used to represent a relation between nodes.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.Connector.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SfDiagram.XForms(Portable).Connector"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.Connector.OnBindingContextChanged">
+            <summary>
+            Override the method from base class to execute an action when the BindingContext changes.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Connector.SourcePoint">
+            <summary>
+            Gets or sets the source point from which the connector starts.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Connector.SourcePointProperty">
+            <summary>
+            Represents the bindable property of SourcePoint.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Connector.TargetPoint">
+            <summary>
+            Gets or sets the target point where the connector ends.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Connector.TargetPointProperty">
+            <summary>
+            Represents the bindable property of TargetPoint.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Connector.SourceNode">
+            <summary>
+            Gets or sets the source node from which the connector starts.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Connector.SourceNodeProperty">
+            <summary>
+            Represents the bindable property of SourceNode.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Connector.TargetNode">
+            <summary>
+            Gets or sets the target node where the connector ends.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Connector.TargetNodeProperty">
+            <summary>
+            Represents the bindable property of TargetNode.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Connector.SourceNodeNameProperty">
+            <summary>
+            Represents the bindable property of SourceNodeName.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Connector.TargetNodeNameProperty">
+            <summary>
+            Represents the bindable property of TargetNodeName.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Connector.SourcePort">
+            <summary>
+            Gets or sets the source port from which the connector starts.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Connector.SourcePortProperty">
+            <summary>
+            Represents the bindable property of SourcePort.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Connector.TargetPort">
+            <summary>
+            Gets or sets the target port where the connector ends.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Connector.TargetPortProperty">
+            <summary>
+            Represents the bindable property of TargetPort.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Connector.Style">
+            <summary>
+            Gets or sets the Style property for the connector. This is a bindable property.
+            </summary>
+            <value> The style value</value>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Connector.StyleProperty">
+            <summary>
+            Represents the bindable property of Style.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Connector.SourceDecoratorType">
+            <summary>
+            Gets or sets the head (source) decorator type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Connector.SourceDecoratorTypeProperty">
+            <summary>
+            Represents the bindable property of SourceDecoratorType.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Connector.TargetDecoratorType">
+            <summary>
+            Gets or sets the tail (target) decorator type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Connector.TargetDecoratorTypeProperty">
+            <summary>
+            Represents the bindable property of TargetDecoratorType.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Connector.SourceDecoratorStyle">
+            <summary>
+            Gets or sets the style of the source (head) decorator.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Connector.SourceDecoratorStyleProperty">
+            <summary>
+            Represents the bindable property of SourceDecoratorStyle.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Connector.TargetDecoratorStyle">
+            <summary>
+            Gets or sets the style of target (tail) decorator.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Connector.TargetDecoratorStyleProperty">
+            <summary>
+            Represents the bindable property of TargetDecoratorStyle.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Connector.SegmentType">
+            <summary>
+            Gets or sets the type of the segment.
+            </summary>
+            <value>It defines the segmenttype of the connector</value>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Connector.SegmentTypeProperty">
+            <summary>
+            Represents the bindable property of SegmentType.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Connector.Opacity">
+            <summary>
+            Gets or sets the opacity. This is a bindable property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Connector.OpacityProperty">
+            <summary>
+            Represents the bindable property of Opacity.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Connector.Annotations">
+            <summary>
+            Gets or sets the annotation collection.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.Connector.AnnotationsProperty">
+            <summary>
+            Represents the bindable property of Annotations.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.DataSourceSettings">
+            <summary>
+            Represents the class for retrieving DataSourceSettings.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.DataSourceSettings.#ctor">
+            <summary>
+            Initializes a new instance of the DataSourceSettings class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.DataSourceSettings.OnBindingContextChanged">
+            <summary>
+            Override the method from base class to execute an action when the BindingContext changes.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.DataSourceSettings.DataSource">
+            <summary>
+            Gets or sets the DataSource for the DataSourceSetting. This is a bindable property.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.DataSourceSettings.DataSourceProperty">
+            <summary>
+            Represents the bindable property of DataSource.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.DataSourceSettings.Id">
+            <summary>
+            Gets or sets the Id for the DataSourceSetting. This is a bindable property.
+            </summary>
+            <value>The string value</value>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.DataSourceSettings.IdProperty">
+            <summary>
+            Represents the bindable property of Id.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.DataSourceSettings.ParentId">
+            <summary>
+            Gets or sets the ParentId for the DataSourceSetting. This is a bindable property.
+            </summary>
+            <value>The string value</value>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.DataSourceSettings.ParentIdProperty">
+            <summary>
+            Represents the bindable property of ParentId.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.DataSourceSettings.Root">
+            <summary>
+            Gets or sets the Root element for the DataSourceSetting. This is a bindable property.
+            </summary>
+            <value>The string value</value>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.DataSourceSettings.RootProperty">
+            <summary>
+            Represents the bindable property of Root.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.DataSourceSettingsController">
+            <summary>
+            DataSourceSettingsController derived from DataSourceSettings
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.DataSourceSettingsController.#ctor(Syncfusion.SfDiagram.XForms.DataSourceSettings,Syncfusion.SfDiagram.XForms.SfDiagram)">
+             <summary>
+            Initializes a new instance of the <see cref="T:DataSourceSettingsController"/> class.
+             </summary>
+             <value> Initializes a new instance of the DataSourceSettingscontroller.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.LayoutManager">
+            <summary>
+            Represents a layout manager class
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.LayoutManager.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:Syncfusion.SfDiagram.XForms.LayoutManager"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.LayoutManager.Layout">
+            <summary>
+            Gets or sets Layout
+            </summary>
+            <value>Gets or sets the Layout.</value>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.LayoutManager.LayoutProperty">
+            <summary>
+            Represents the bindable proeprty of Layout.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.LayoutBase">
+            <summary>
+            Layout Base class
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.LayoutBase.UpdateLayout">
+            <summary>
+            Initialize Abstract method UpdateLayout with parameter
+            </summary>
+            <param name="fixedNode"></param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.LayoutBase.Margin">
+            <summary>
+            Gets or sets the Margin for the LayouBase. This is a bindable property.
+            </summary>
+            <value>The float value</value>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.LayoutBase.MarginProperty">
+            <summary>
+            Represents the bindable property of Margin.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.TreeLayoutBase">
+            <summary>
+            Layout Base class
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.TreeLayoutBase.HorizontalSpacing">
+            <summary>
+            Gets or sets the HorizontalSpacing for the TreeLayout. This is a bindable property.
+            </summary>
+            <value>The double value</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.TreeLayoutBase.VerticalSpacing">
+            <summary>
+            Gets or sets the VerticalSpacing for the TreeLayout. This is a bindable property.
+            </summary>
+            <value>The double value</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.DirectedTreeLayout">
+            <summary>
+            DirectedTree Layout class
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.DirectedTreeLayout.#ctor">
+            <summary>
+            Initializes a new instance of the DirectedTreeLayout class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.DirectedTreeLayout.TreeOrientation">
+            <summary>
+            Gets or sets Orientation
+            </summary>
+            <value>Gets or sets the Orientation of the Layout.</value>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.DirectedTreeLayout.TreeOrientationProperty">
+            <summary>
+            Represents the bindable property of TreeOrientatation.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.DirectedTreeLayout.Type">
+            <summary>
+            Gets or sets Type
+            </summary>
+            <value>Gets or sets the layout type.</value> 
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.DirectedTreeLayout.TypeProperty">
+            <summary>
+            Represents the bindable property of Type.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.DirectedTreeLayout.UpdateLayout">
+            <summary>
+            Oveeride UpdateLayout method from its base class
+            </summary>
+            <value>Oveeride UpdateLayout method from its base class</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.BeginNodeRenderEventArgs">
+            <summary>
+            BeginNodeRender Event Arguments
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.BeginNodeRenderEventArgs.#ctor(Syncfusion.SfDiagram.XForms.Node)">
+            <summary>
+            Initializes a new instance of the BeginNodeRenderEventArgs class.
+            </summary>
+            <value>Initializes a new instance of the BeginNodeRenderEventArgs.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.BeginNodeRenderEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.BeginNodeLayoutEventArgs">
+            <summary>
+            BeginNodeLayout Event Arguments
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.BeginNodeLayoutEventArgs.HasChildNodes">
+            <summary>
+            Gets or sets whether child nodes or not.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.BeginNodeLayoutEventArgs.Type">
+            <summary>
+            Gets or sets the ChartType
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.BeginNodeLayoutEventArgs.Node">
+            <summary>
+            Gets or sets the Item
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.BeginNodeLayoutEventArgs.Orientation">
+            <summary>
+            Gets or sets the Orientation
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.BeginNodeLayoutEventArgs.#ctor(Syncfusion.SfDiagram.XForms.Node,Syncfusion.SfDiagram.XForms.ChartType,Syncfusion.SfDiagram.XForms.Orientation,System.Boolean)">
+            <summary>
+            Initializes a new instance of the BeginNodeLayout class.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.ConnectorClickedEventArgs">
+            <summary>
+            Connector clicked event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.ConnectorClickedEventArgs.#ctor(Syncfusion.SfDiagram.XForms.Connector)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.XForms(Portable).ConnectorClickedEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.ConnectorClickedEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.NodeClickedEventArgs">
+            <summary>
+            Node clicked event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.NodeClickedEventArgs.#ctor(Syncfusion.SfDiagram.XForms.Node)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.XForms(Portable).NodeClickedEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.NodeClickedEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.DiagramObjectDeletedEventArgs">
+            <summary>
+            Diagram object deleted event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.DiagramObjectDeletedEventArgs.#ctor(Syncfusion.SfDiagram.XForms.DiagramBaseItem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.XForms(Portable).DiagramObjectDeletedEventArgs"/> class.
+            </summary>
+            <param name="DeletedItem">Deleted item.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.DiagramObjectDeletedEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.DiagramObjectDroppedEventArgs">
+            <summary>
+            Diagram object dropped event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.DiagramObjectDroppedEventArgs.#ctor(Syncfusion.SfDiagram.XForms.DiagramBaseItem)">
+            <summary>
+            Events trigger on Dropping the element.
+            </summary>
+            <param name="DroppedItem"></param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.DiagramObjectDroppedEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.ItemAddedEventArgs">
+            <summary>
+            Item added event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.ItemAddedEventArgs.#ctor(Syncfusion.SfDiagram.XForms.DiagramBaseItem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.XForms(Portable).ItemAddedEventArgs"/> class.
+            </summary>
+            <param name="Item">Item.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.ItemAddedEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.DragEndEventArgs">
+            <summary>
+            Drag end event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.DragEndEventArgs.#ctor(Syncfusion.SfDiagram.XForms.DiagramBaseItem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.XForms(Portable).DragEndEventArgs"/> class.
+            </summary>
+            <param name="Item">Item.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.DragEndEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.ResizeEndEventArgs">
+            <summary>
+            Resize drag end event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.ResizeEndEventArgs.#ctor(Syncfusion.SfDiagram.XForms.Node)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.XForms(Portable).ResizeEndEventArgs"/> class.
+            </summary>
+            <param name="Item">Item.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.ResizeEndEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.RotateEndEventArgs">
+            <summary>
+            Rotate drag end event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.RotateEndEventArgs.#ctor(Syncfusion.SfDiagram.XForms.Node)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.XForms(Portable).RotateEndEventArgs"/> class.
+            </summary>
+            <param name="Item">Item.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.RotateEndEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.SymbolGroupExpandCollapseEventArgs">
+            <summary>
+            Symbol group expand collapse event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.SymbolGroupExpandCollapseEventArgs.#ctor(System.Boolean,Syncfusion.SfDiagram.XForms.SymbolGroup)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.XForms(Portable).SymbolGroupExpandCollapseEventArgs"/> class.
+            </summary>
+            <param name="isexpand">If set to <c>true</c> isexpand.</param>
+            <param name="symbolgroup">Represents the instance of SymbolGroup.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SymbolGroupExpandCollapseEventArgs.IsExpand">
+            <summary>
+            Gets a value indicating whether this <see cref="T:Syncfusion.SfDiagram.XForms(Portable).SymbolGroupExpandCollapseEventArgs"/>
+            is item.
+            </summary>
+            <value><c>true</c> if item; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.SymbolGroupExpandCollapseEventArgs.SymbolGroup">
+            <summary>
+            Gets the instance of symbol group of the currnet event. Read-only.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.OnTextEditEventArgs">
+            <summary>
+            On text edit event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.OnTextEditEventArgs.#ctor(Syncfusion.SfDiagram.XForms.Annotation,Syncfusion.SfDiagram.XForms.DiagramBaseItem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.XForms(Portable).OnTextEditEventArgs"/> class.
+            </summary>
+            <param name="Annotation">Annotation.</param>
+            <param name="element">Element.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.OnTextEditEventArgs.Item">
+            <summary>
+            Gets the item of the annotation.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.OnTextEditEventArgs.Source">
+            <summary>
+            Gets the source.
+            </summary>
+            <value>The source.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.TextChangedEventArgs">
+            <summary>
+            Text changed event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.TextChangedEventArgs.#ctor(Syncfusion.SfDiagram.XForms.Annotation,Syncfusion.SfDiagram.XForms.DiagramBaseItem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.XForms(Portable).TextChangedEventArgs"/> class.
+            </summary>
+            <param name="Annotation">Annotation.</param>
+            <param name="element">Element.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.TextChangedEventArgs.Item">
+            <summary>
+            
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.TextChangedEventArgs.Source">
+            <summary>
+            Gets the source.
+            </summary>
+            <value>The source.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.DiagramClickedEventArgs">
+            <summary>
+            SfDiagram clicked event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.DiagramClickedEventArgs.#ctor(Syncfusion.SfDiagram.XForms.SfDiagram)">
+            <summary>
+            Initializes a new instance of the DiagramClickedEventArgs class
+            </summary>
+            <param name="Item">Represents an item in SfDiagram.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.DiagramClickedEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.ItemLongPressedEventArgs">
+            <summary>
+            Item long pressed event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.ItemLongPressedEventArgs.#ctor(Syncfusion.SfDiagram.XForms.DiagramBaseItem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.XForms.ItemLongPressedEventArgs"/> class.
+            </summary>
+            <param name="Item">Item.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.ItemLongPressedEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.UserHandleClickedEventArgs">
+            <summary>
+            User handle clicked event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.UserHandleClickedEventArgs.#ctor(Syncfusion.SfDiagram.XForms.UserHandle)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.Forms.UserHandleClickedEventArgs"/> class.
+            </summary>
+            <param name="handle">Handle.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.UserHandleClickedEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+            <value>The item.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.Node">
+            <summary>
+            Represents a node/shape in the diagram 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.Node.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SfDiagram.XForms(Portable).Node"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.Node.#ctor(System.Single,System.Single)">
+            <summary>
+            Create the Node instance with specified width and height.
+            </summary>
+            <param name="width">Width of the node</param>
+            <param name="height">Height of the node</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.Node.#ctor(System.Single,System.Single,Syncfusion.SfDiagram.XForms.ShapeType)">
+            <summary>
+            Create the Node instance with specified width, height and type of shape
+            </summary>
+            <param name="width">Width of the node</param>
+            <param name="height">Height of the node</param>
+            <param name="shapeType">Type of the shape</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.Node.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Create the Node instance with specified Offset X,Y,width and height
+            </summary>
+            <param name="offsetX">X Position</param>
+            <param name="offsetY">Y Position</param>
+            <param name="width">Width of the node</param>
+            <param name="height">Height of the node</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.Node.#ctor(System.Single,System.Single,System.Single,System.Single,Syncfusion.SfDiagram.XForms.ShapeType)">
+            <summary>
+            Create the Node instance with specified Offset X,Y,width,height and shape type.
+            </summary>
+            <param name="offsetX">X Position</param>
+            <param name="offsetY">Y Position</param>
+            <param name="width">Width of the node</param>
+            <param name="height">Height of the node</param>
+            <param name="shapeType">Type of the shape</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.Node.init">
+            <summary>
+            Initialize the node instance
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.Node.UpdateSfGraphics(Syncfusion.SfDiagram.XForms.SfGraphics)">
+            <summary>
+            Updates or renders the specified graphics element as node
+            </summary>
+            <param name="graphics"></param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Node.Width">
+            <summary>
+            Gets or sets the width of the node.
+            </summary>
+            <value>Defines Node width</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Node.Height">
+            <summary>
+            Gets or sets the height of the node.
+            </summary>
+            <value>Defines Node Height</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Node.OffsetX">
+            <summary>
+            Gets or sets the offset X of the node.
+            </summary>
+            <value>Defines Node OffsetX</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Node.OffsetY">
+            <summary>
+            Gets or sets the offset Y of the node.
+            </summary>
+            <value>Defines Node OffsetY</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Node.ShapeType">
+            <summary>
+            Gets or sets the type of the shape.
+            </summary>
+            <value>Defines the type of shape.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Node.Content">
+            <summary>
+            Gets or sets the content of the node.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Node.Style">
+            <summary>
+            Gets or sets the Style for the Node. This is a bindable property.
+            </summary>
+            <value>The style value</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Node.RotationAngle">
+            <summary>
+            Gets or sets the value which indicates the rotated angle.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Node.Ports">
+            <summary>
+            Represents the collection of ports (points where the connector are meant to be connected).
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Node.Annotations">
+            <summary>
+            Represents the collection of annotation that this node contains.
+            </summary>
+            <value>Defines the Node Annotation Collection.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Node.IsExpanded">
+            <summary>
+            Gets or sets a value that indicates whether the node is in expand state if the node has children.
+            </summary>
+            <value>Expand or collapse the connected child</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Node.Template">
+            <summary>
+            Gets or sets the Template for the Node. This is a bindable property.
+            </summary>
+            <value>The DataTemplate value</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Node.IsLocked">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfDiagram.XForms(Portable).Node"/> is locked.
+            </summary>
+            <value><c>true</c> if is locked; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Node.EnableResize">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfDiagram.XForms(Portable).Node"/> can be resized or not.
+            </summary>
+            <value><c>true</c> if is resizing enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Node.EnableRotation">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfDiagram.XForms(Portable).Node"/> can be rotated or not.
+            </summary>
+            <value><c>true</c> if is rotation enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Node.EnableDrag">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfDiagram.XForms(Portable).Node"/> can be dragged or not.
+            </summary>
+            <value><c>true</c> if is dragging enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Node.EnableTextEditing">
+            <summary>
+            Gets or sets a value indicating whether the text within this <see cref="T:Syncfusion.SfDiagram.XForms(Portable).Node"/> can be edited or not.
+            </summary>
+            <value><c>true</c> if is text editing enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.Node.Opacity">
+            <summary>
+            Gets or sets the opacity. This is a bindable property.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.XForms.DiagramBaseItem">
+            <summary>
+            Represents the base class of all the diagram elements
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.DiagramBaseItem.Name">
+             <summary>
+            Gets or sets the Name of the item.
+             </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.DiagramBaseItem.NameProperty">
+            <summary>
+            Represents the bindable property of Name.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.DiagramBaseItem.OnBindingContextChanged">
+            <summary>
+            Override the method from base class to execute an action when the BindingContext changes.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.UserHandle.Name">
+             <summary>
+            Gets or sets the Name of the userhandle.
+             </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.UserHandle.NameProperty">
+            <summary>
+            Represents the bindable property of Name.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.UserHandle.Visible">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Syncfusion.SfDiagram.XForms.UserHandle"/> is visible.
+            </summary>
+            <value><c>true</c> if visible; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.UserHandle.VisibleProperty">
+            <summary>
+            Represents the bindable property of visible.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.UserHandle.Position">
+            <summary>
+            Gets or sets the position.
+            </summary>
+            <value>The position.</value>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.XForms.UserHandle.PositionProperty">
+            <summary>
+            The position property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.UserHandle.Content">
+            <summary>
+            Gets or sets the content of the node.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.UserHandle.BackgroundColor">
+            <summary>
+            Gets or sets the color of the background.
+            </summary>
+            <value>The color of the background.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.UserHandle.Size">
+            <summary>
+            Gets or sets the size.
+            </summary>
+            <value>The size.</value>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.UserHandleCollection.Add(Syncfusion.SfDiagram.XForms.UserHandle)">
+            <summary>
+            Add the specified handle.
+            </summary>
+            <returns>The add.</returns>
+            <param name="handle">Handle.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.UserHandleCollection.Remove(Syncfusion.SfDiagram.XForms.UserHandle)">
+            <summary>
+            Remove the specified handle.
+            </summary>
+            <returns>The remove.</returns>
+            <param name="handle">Handle.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.UserHandleCollection.Count">
+            <summary>
+            Gets the count.
+            </summary>
+            <value>The count.</value>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.UserHandleCollection.GetEnumerator">
+            <summary>
+            Gets the enumerator.
+            </summary>
+            <returns>The enumerator.</returns>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.XForms.UserHandleCollection.myCollection">
+            <summary>
+            Mies the collection.
+            </summary>
+            <returns>The collection.</returns>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.XForms.UserHandleCollection.Item(System.Int32)">
+            <summary>
+            Gets the <see cref="T:Syncfusion.SfDiagram.XForms.UserHandleCollection"/> at the specified index.
+            </summary>
+            <param name="index">Index.</param>
+        </member>
+    </members>
+</doc>

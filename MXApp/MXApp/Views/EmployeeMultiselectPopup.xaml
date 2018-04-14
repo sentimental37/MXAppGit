@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+       xmlns:conv="clr-namespace:MXApp.Converters"
+    xmlns:listview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+    x:Class="MXApp.Views.EmployeeMultiselectPopup">
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+            <conv:SelectionBoolToImageConverter x:Key="BoolToImageConverter"/>
+            <DataTemplate x:Name="EmployeeItemTemplate"  x:Key="EmployeeItemTemplate">
+                <Grid x:Name="grid" RowSpacing="0" ColumnSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid RowSpacing="0" ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="50"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="userIcon.png"
+                            HeightRequest="35"
+                            WidthRequest="35"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"/>
+                        <Grid Grid.Column="1"
+                                RowSpacing="1"
+                                Padding="10,0,0,0"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Label LineBreakMode="NoWrap"
+                                   TextColor="#474747"
+                                   Text="{Binding FullName}" FontSize="20">
+                            </Label>
+                        </Grid>
+
+                        <Image Grid.Column="2"
+                            x:Name="selectionImage"
+                            Margin="10,0,10,0"
+                            HeightRequest="35"
+                            WidthRequest="35"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand"
+                            Source="{Binding Path=IsSelected, Converter={StaticResource BoolToImageConverter}}"/>
+                    </Grid>
+                  
+                </Grid>
+            </DataTemplate>
+        </ResourceDictionary>
+    </pages:PopupPage.Resources>
+    <!--You can set an animation in the xaml file or in the csharp code behind-->
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <!--You can use any elements here which are extended from Xamarin.Forms.View-->
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid
+            HeightRequest="600"
+            WidthRequest="300"
+            RowSpacing="0"
+            HorizontalOptions="Fill"
+            VerticalOptions="Center"
+            BackgroundColor="White"
+            Margin="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <listview:SfListView x:Name="lstEmployees"
+                       Grid.Row="0"
+                       SelectionGesture="Tap"
+                       SelectionMode="Multiple"
+                       SelectionChanged="lstEmployees_SelectionChanged"
+                       SelectionBackgroundColor="#E4E4E4"
+                        ItemTemplate="{StaticResource EmployeeItemTemplate}"
+                                     VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                       ItemSize="70" ItemsSource="{Binding Employees}">
+                </listview:SfListView>
+                <Button Text="Submit" Grid.Row="1" BackgroundColor="Green" FontAttributes="Bold" TextColor="White" Command="{Binding SubmitCommand}"></Button>
+                <Grid Grid.RowSpan="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" Opacity="0.5" IsVisible="{Binding IsBusy}">
+                    <ActivityIndicator VerticalOptions="Center" HorizontalOptions="Center"
+                        Color="Red"
+                        IsRunning="{Binding IsBusy}" 
+                        IsVisible="{Binding IsBusy}" >
+                        <ActivityIndicator.WidthRequest>
+                            <OnPlatform 
+                    x:TypeArguments="x:Double" 
+                    iOS="200" 
+                    Android="100"
+                    WinPhone="400" />
+                        </ActivityIndicator.WidthRequest>
+                    </ActivityIndicator>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</pages:PopupPage>

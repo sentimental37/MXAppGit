@@ -1,0 +1,40 @@
+
+
+Date:2018-03-24 00:06:08,115
+Thread:[1]
+Level:ERROR
+Logger:Microsoft.Syncfusion_VSExtension_Troubleshooter.Syncfusion_VSExtension_TroubleshooterPackage                         [(null)]
+Message:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.Syncfusion_VSExtension_Troubleshooter.Syncfusion_VSExtension_TroubleshooterPackage.GetSyncfusionReferencesList()
+
+
+Date:2018-03-24 00:15:28,459
+Thread:[1]
+Level:ERROR
+Logger:Microsoft.Syncfusion_VSExtension_Troubleshooter.Syncfusion_VSExtension_TroubleshooterPackage                         [(null)]
+Message:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.Syncfusion_VSExtension_Troubleshooter.Syncfusion_VSExtension_TroubleshooterPackage.GetSyncfusionReferencesList()
+
+
+Date:2018-03-24 00:15:45,223
+Thread:[1]
+Level:ERROR
+Logger:Microsoft.Syncfusion_VSExtension_Troubleshooter.Syncfusion_VSExtension_TroubleshooterPackage                         [(null)]
+Message:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.Syncfusion_VSExtension_Troubleshooter.Syncfusion_VSExtension_TroubleshooterPackage.GetSyncfusionReferencesList()
+
+
+Date:2018-03-24 20:13:58,096
+Thread:[1]
+Level:ERROR
+Logger:Microsoft.Syncfusion_VSExtension_Troubleshooter.Syncfusion_VSExtension_TroubleshooterPackage                         [(null)]
+Message:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.Syncfusion_VSExtension_Troubleshooter.Syncfusion_VSExtension_TroubleshooterPackage.GetSyncfusionReferencesList()
+
+
+Date:2018-03-24 20:13:59,827
+Thread:[1]
+Level:ERROR
+Logger:Microsoft.Syncfusion_VSExtension_Troubleshooter.Syncfusion_VSExtension_TroubleshooterPackage                         [(null)]
+Message:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.Syncfusion_VSExtension_Troubleshooter.Syncfusion_VSExtension_TroubleshooterPackage.queryStatusMenuCommand_BeforeQueryStatus(Object sender, EventArgs e)

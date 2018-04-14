@@ -1,0 +1,9 @@
+C:\Projects\MXApp\MXApi.Models\bin\Release\netstandard2.0\MXApi.Models.deps.json
+C:\Projects\MXApp\MXApi.Models\bin\Release\netstandard2.0\MXApi.Models.dll
+C:\Projects\MXApp\MXApi.Models\bin\Release\netstandard2.0\MXApi.Models.pdb
+C:\Projects\MXApp\MXApi.Models\obj\Release\netstandard2.0\MXApi.Models.csprojResolveAssemblyReference.cache
+C:\Projects\MXApp\MXApi.Models\obj\Release\netstandard2.0\MXApi.Models.csproj.CoreCompileInputs.cache
+C:\Projects\MXApp\MXApi.Models\obj\Release\netstandard2.0\MXApi.Models.AssemblyInfoInputs.cache
+C:\Projects\MXApp\MXApi.Models\obj\Release\netstandard2.0\MXApi.Models.AssemblyInfo.cs
+C:\Projects\MXApp\MXApi.Models\obj\Release\netstandard2.0\MXApi.Models.dll
+C:\Projects\MXApp\MXApi.Models\obj\Release\netstandard2.0\MXApi.Models.pdb

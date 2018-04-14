@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+      xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" 
+    xmlns:local="clr-namespace:MXApp.Views"
+       xmlns:helpers="clr-namespace:MXApp.Helpers"
+    CloseWhenBackgroundIsClicked="True"
+    x:Class="MXApp.Views.LoadDetailsPage">
+
+    <!--You can set an animation in the xaml file or in the csharp code behind-->
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <!--You can use any elements here which are extended from Xamarin.Forms.View-->
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid
+            HeightRequest="600"
+            WidthRequest="600"
+            RowSpacing="0"
+            HorizontalOptions="Fill"
+            VerticalOptions="Center"
+            BackgroundColor="White"
+            Margin="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <StackLayout BackgroundColor="#2196F3" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Image x:Name="btnGoBack">
+                                <Image.Source>
+                                    <helpers:OnCustomPlatform 
+                                            x:TypeArguments="ImageSource"
+                                            Android="GoBack_In.png"
+                                            iOS="GoBack_In.png"
+                                            WinPhone="Assets\GoBack_In.png"
+                                            Windows="Assets\GoBack_In.png"/>
+                                </Image.Source>
+                            </Image>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1">
+                            <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                                <Label Text="LOAD Details:" TextColor="White"></Label>
+                                <Label Text="{Binding PickupLoadNum}" TextColor="White"></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                                <Label Text="App ID:" TextColor="White"></Label>
+                                <Label Text="{Binding EDIAppID}" TextColor="White"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+                <StackLayout Grid.Row="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <SearchBar Grid.Row="0" 
+                               Placeholder="I am looking for..." 
+                               PlaceholderColor="LightGray" 
+                               HeightRequest="50" 
+                               VerticalOptions="Fill" 
+                               HorizontalOptions="Fill" 
+                               Margin="2,2,2,5" 
+                                   TextChanged="OnFilterTextChanged"
+                               x:Name="txtFilter"/>
+                        <syncfusion:SfDataGrid Grid.Row="1" 
+                                               x:Name="dgLoadDetails"
+                                               AllowEditing="False"
+                                               ColumnSizer="Auto"
+                                               VerticalOptions="FillAndExpand" 
+                                               HorizontalOptions="FillAndExpand"
+                                               SelectionMode="Multiple"
+                                               SelectedItem="{Binding ViewLoadDetail}"
+                                               SwipeStarted="DG_SwipeStarted"
+                                               SwipeEnded="DG_SwipeEnded"
+                                               AllowPullToRefresh="True"
+                                               PullToRefreshCommand="{Binding PullToRefreshCommand}"
+                                               AllowSorting="True"
+                                               AllowSwiping="True"
+                                               MaxSwipeOffset="120"
+                                               AllowDraggingColumn="False"
+                                              AllowDraggingRow="False"
+                                               GridStyle="{local:CustomGridStyle}"
+                                               SelectionChanged="dgLoadDetails_SelectionChanged"
+                                               AutoGenerateColumns="False"
+                                               ItemsSource="{Binding ViewLoadDetailsList}">
+                            <syncfusion:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
+                                <syncfusion:GridTextColumn HeaderText="EDIAPPID" 
+                                   MappingName="EDIAPPID" HeaderCellTextSize="14" CellTextSize="14" />
+                                <syncfusion:GridTextColumn HeaderText="MBOLVICS"
+                                   MappingName="MBOLVICS" HeaderCellTextSize="14" CellTextSize="14" />
+                                <syncfusion:GridTextColumn MappingName="CTNCount" HeaderCellTextSize="14" CellTextSize="14" />
+                                <syncfusion:GridTextColumn HeaderText= "Account"
+                                   MappingName="Account" HeaderCellTextSize="14" CellTextSize="14" />
+                                <syncfusion:GridTextColumn MappingName="TotalWeight" HeaderCellTextSize="14" CellTextSize="14" />
+                                <syncfusion:GridTextColumn MappingName="TotalCube" HeaderCellTextSize="14" CellTextSize="14" />
+                                <syncfusion:GridTextColumn MappingName="IsFullPickup" HeaderCellTextSize="14" CellTextSize="14" />
+                                <syncfusion:GridTextColumn MappingName="IsFailToPickUp" HeaderCellTextSize="14" CellTextSize="14" />
+                                <syncfusion:GridTextColumn MappingName="IsPartialPickUp" HeaderCellTextSize="14" CellTextSize="14" />
+                                <syncfusion:GridTextColumn MappingName="AccountDivName" HeaderCellTextSize="14" CellTextSize="14" />
+                                <syncfusion:GridTextColumn MappingName="ShipTo" HeaderCellTextSize="14" CellTextSize="14" />
+                                <syncfusion:GridTextColumn MappingName="MBOLPalletCount" HeaderCellTextSize="14" CellTextSize="14" />
+                                <syncfusion:GridTextColumn MappingName="MBOLShipComments" HeaderCellTextSize="14" CellTextSize="14" />
+                            </syncfusion:SfDataGrid.Columns>
+                            <syncfusion:SfDataGrid.LeftSwipeTemplate>
+                                <DataTemplate>
+                                    <Grid BackgroundColor="#009EDA" BindingContextChanged="leftImage_BindingContextChanged">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="50"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="150"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image Grid.Column="0"
+                  BackgroundColor="Transparent"
+                  HorizontalOptions="CenterAndExpand" WidthRequest="24" HeightRequest="24"
+                  Source="Edit.png" />
+
+                                        <Label Grid.Column="1"
+                  BackgroundColor="Transparent"
+                  LineBreakMode="NoWrap"
+                  Text="EDIT"
+                  TextColor="White"
+                  HorizontalTextAlignment ="Start"
+                  VerticalTextAlignment="Center" />
+
+
+                                    </Grid>
+                                </DataTemplate>
+                            </syncfusion:SfDataGrid.LeftSwipeTemplate>
+                        </syncfusion:SfDataGrid>
+                    </Grid>
+                </StackLayout>
+                <StackLayout Grid.Row="2">
+                    <Grid VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="Shipped_No.png" Aspect="AspectFit" HeightRequest="48" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="48" Grid.Column="0">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    NumberOfTapsRequired="1" 
+                                    Command="{Binding ShippedNoCommand}" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="Shipped_Yes.png" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="End" HeightRequest="48" WidthRequest="48" Grid.Column="1">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    NumberOfTapsRequired="1" 
+                                    Command="{Binding ShippedYesCommand}" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                </StackLayout>
+                <Grid Grid.RowSpan="3" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" Opacity="0.5" IsVisible="{Binding IsBusy}">
+                    <ActivityIndicator VerticalOptions="Center" HorizontalOptions="Center"
+                        Color="Red"
+                        IsRunning="{Binding IsBusy}" 
+                        IsVisible="{Binding IsBusy}" />
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</pages:PopupPage>

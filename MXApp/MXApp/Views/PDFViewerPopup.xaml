@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+     xmlns:sfpdfviewer="clr-namespace:Syncfusion.SfPdfViewer.XForms;assembly=Syncfusion.SfPdfViewer.XForms"
+     xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    x:Class="MXApp.Views.PDFViewerPopup">
+    
+    <!--You can set an animation in the xaml file or in the csharp code behind-->
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <!--You can use any elements here which are extended from Xamarin.Forms.View-->
+    <ContentPage.Content>
+        <Grid
+            HeightRequest="600"
+            WidthRequest="600"
+            RowSpacing="0"
+            Padding="0,20,0,0"
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill"
+            BackgroundColor="White"
+            Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" BackgroundColor="#E9E9E9" HorizontalOptions="Fill" VerticalOptions="Fill">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.5*" />
+                        <ColumnDefinition Width="0.2*" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="4*" />
+                    </Grid.ColumnDefinitions>
+                    <Entry Keyboard="Numeric" FontSize="18" x:Name="pageNumberEntry" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Grid.Column="0" VerticalOptions="Center"/>
+                    <Label Text="/" Grid.Column="1" FontSize="18" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                    <Label x:Name="pageCountLabel" Grid.Column="2" FontSize="18" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                    <Button x:Name="goToNextButton"  Grid.Column="3" BackgroundColor="Transparent" Image="PageDown.png" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                    <Button x:Name="goToPreviousButton" Grid.Column="4" BackgroundColor="Transparent" Image="PageUp.png" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                </Grid>
+                <Grid Grid.Row="1" x:Name="viewerGrid">
+                    <sfpdfviewer:SfPdfViewer x:Name="pdfViewerControl" HorizontalOptions="Fill" VerticalOptions="Fill" />
+                </Grid>
+                <Grid Grid.Row="2" >
+                    <Button Text="Close Preview" Clicked="Close_Clicked" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="80" HeightRequest="40" BackgroundColor="Red" TextColor="White" FontAttributes="Bold"></Button>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</pages:PopupPage>

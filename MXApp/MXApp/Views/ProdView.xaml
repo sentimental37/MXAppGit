@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+             xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" 
+             xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:behaviours="clr-namespace:MXApp.Behaviours"
+               xmlns:conv="clr-namespace:MXApp.Converters"
+             xmlns:styles="clr-namespace:MXApp.Styles"
+             xmlns:radialMenu="clr-namespace:Syncfusion.SfRadialMenu.XForms;assembly=Syncfusion.SfRadialMenu.XForms"
+             Title="{Binding TitleString}"
+             
+             x:Name="MainContentPage"
+             x:Class="MXApp.Views.ProdView">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <conv:FileTypeToImageConverter x:Key="FileTypeToImageConverter"></conv:FileTypeToImageConverter>
+            <DataTemplate x:Name="ItemTemplate"  x:Key="ItemTemplate">
+                <Frame OutlineColor="#b3b3b3" Margin="10,0,10,0">
+                    <Frame.HasShadow>
+                        <OnPlatform x:TypeArguments="x:Boolean" Android="True" WinPhone="True" iOS="False"/>
+                    </Frame.HasShadow>
+                    <Grid BackgroundColor="White" Padding="5" HeightRequest="75">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="75"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label x:Name="FileNameLabel" LineBreakMode="NoWrap" Text="{Binding PODFileName}" Grid.Column="0"
+                            FontAttributes="Bold" TextColor="Black">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <OnPlatform.WinPhone>
+                                        <OnIdiom x:TypeArguments="x:Double" Phone="18" Tablet="20" Desktop="20" />
+                                    </OnPlatform.WinPhone>
+                                    <OnPlatform.Android>
+                                        <OnIdiom x:TypeArguments="x:Double"
+                                 Phone="16"
+                                 Tablet="18" />
+                                    </OnPlatform.Android>
+                                    <OnPlatform.iOS>
+                                        <OnIdiom x:TypeArguments="x:Double"
+                                 Phone="16"
+                                 Tablet="18" />
+                                    </OnPlatform.iOS>
+                                </OnPlatform>
+                            </Label.FontSize>
+                        </Label>
+
+                        <Label Grid.Row="1" x:Name="DescriptionLabel" Text="{Binding PODDescription}" TextColor="Teal" Grid.Column="0">
+                            <Label.FontSize>
+                                <OnPlatform x:TypeArguments="x:Double">
+                                    <OnPlatform.WinPhone>
+                                        <OnIdiom x:TypeArguments="x:Double" Phone="12" Tablet="12" Desktop="12" />
+                                    </OnPlatform.WinPhone>
+                                    <OnPlatform.Android>
+                                        <OnIdiom x:TypeArguments="x:Double"
+                                 Phone="12"
+                                 Tablet="14" />
+                                    </OnPlatform.Android>
+                                    <OnPlatform.iOS>
+                                        <OnIdiom x:TypeArguments="x:Double"
+                                 Phone="12"
+                                 Tablet="14" />
+                                    </OnPlatform.iOS>
+                                </OnPlatform>
+                            </Label.FontSize>
+                        </Label>
+
+                        <Frame Grid.Row="2" Padding="4,2,4,2" BackgroundColor="#FFE7E8E9" HorizontalOptions="Start" VerticalOptions="End" Grid.Column="0">
+                            <Frame.HasShadow>
+                                <OnPlatform x:TypeArguments="x:Boolean" Android="True" WinPhone="True" iOS="False"/>
+                            </Frame.HasShadow>
+                            <Label x:Name="TagDate" LineBreakMode="NoWrap" Text="{Binding PODBorn}"
+                          FontSize="10" TextColor="#474747"/>
+                        </Frame>
+
+                        <Grid Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+                            <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+                                <Image x:Name="NormalImage"
+                                   HeightRequest="86"
+                                   WidthRequest="86"
+                                   Source="{Binding Path=FileType, Converter={StaticResource FileTypeToImageConverter}}"
+                                    VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer NumberOfTapsRequired="2" 
+                                                              Command="{Binding ReadDocumentCommand}" 
+                                                              CommandParameter="{Binding .}"></TapGestureRecognizer>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </StackLayout>
+
+                        </Grid>
+                    </Grid>
+                </Frame>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="searchMenu" Order="Primary" Clicked="Search_Clicked" Icon="search.png" Priority="0" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+            <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" VerticalOptions="Fill" HorizontalOptions="Fill">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <autocomplete:SfAutoComplete Grid.Row="0" HeightRequest="50" x:Name="atcBillOrders" VerticalOptions="Fill" HorizontalOptions="Fill" Margin="2,2,2,5" DataSource="{Binding BillingCodesList}" DisplayMemberPath="Description" SelectedValuePath="BillID" SelectionChanged="atcRefNum_selectionChanged" ValueChanged="atcRefNum_valueChanged" Text="{Binding BillCodeText}"
+                                     Watermark="Select Billing Code" DropDownCornerRadius="5" MaximumDropDownHeight="150" SuggestionMode="Contains"/>
+                    <Image Source="plus.png" HeightRequest="32" WidthRequest="32" Aspect="Fill" VerticalOptions="Fill" HorizontalOptions="Fill" Grid.Row="0" Grid.Column="1">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                  Command="{Binding AddBillingCodeCommand}"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70"></ColumnDefinition>
+                        <ColumnDefinition Width="70"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Image Source="WO_Start_Mob_Prod_Home.png" HeightRequest="70" WidthRequest="70" Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="MainGrid_Tapped"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="WO_POD_Mob_Prod_Home.png" HeightRequest="70" WidthRequest="70" Grid.Column="1" Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Folder_Tapped"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+
+                <StackLayout Grid.Row="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" x:Name="SecDataGrid" >
+                    <syncfusion:SfDataGrid  x:Name="dg1" 
+                                            ItemsSource="{Binding ProdWOList}" 
+                                            SwipeStarted="DataGrid_SwipeStarted"
+                                            SelectedItem="{Binding ProdWO}"
+                                            SelectionMode="SingleDeselect"
+                                            ColumnSizer="Star" 
+                                            VerticalOptions="FillAndExpand" 
+                                            HorizontalOptions="FillAndExpand" 
+                                            AutoGenerateColumns="False"
+                                            AllowSorting="True"
+                                            AllowResizingColumn="True"
+                                            AllowDraggingColumn="True"
+                                            AlternationCount="1"
+                                            HeaderRowHeight="40"
+                                            AllowPullToRefresh="True"
+                                            SwipeEnded="DataGrid_SwipeEnded"
+                                            PullToRefreshCommand="{Binding PullToRefreshCommand}"
+                                            IsBusy="{Binding IsGridBusy}"
+                                            AllowSwiping="True"
+                                            MaxSwipeOffset="120">
+                        <syncfusion:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
+                            <syncfusion:GridTextColumn MappingName="BillCodeDescription" />
+                            <syncfusion:GridTextColumn MappingName="QTY" />
+                            <syncfusion:GridTextColumn MappingName="BillComments" />
+                            <syncfusion:GridTextColumn MappingName="BillCode" />
+                            <syncfusion:GridTextColumn MappingName="Account" />
+                        </syncfusion:SfDataGrid.Columns>
+                        <syncfusion:SfDataGrid.LeftSwipeTemplate>
+                            <DataTemplate>
+                                <Grid BackgroundColor="#42A5F5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="40"/>
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <ContentView Grid.Column="0" Padding="16,0,0,0">
+                                        <ContentView.Content>
+                                            <Image Source="Edit.png"></Image>
+                                        </ContentView.Content>
+                                    </ContentView>
+                                    <ContentView Grid.Column="1" Padding="15, 0, 0, 0">
+                                        <Label BackgroundColor="Transparent"
+                                       HorizontalTextAlignment="Start"
+                                       LineBreakMode="NoWrap"
+                                       Text="EDIT"
+                                       TextColor="White"
+                                       VerticalTextAlignment="Center" />
+                                    </ContentView>
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer 
+                                    NumberOfTapsRequired="1" 
+                                            Tapped="Edit_Tapped"/>
+                                    </Grid.GestureRecognizers>
+                                </Grid>
+                            </DataTemplate>
+                        </syncfusion:SfDataGrid.LeftSwipeTemplate>
+
+                        <!--<syncfusion:SfDataGrid.RightSwipeTemplate>
+                            <DataTemplate>
+                                <Grid BackgroundColor="#EF5350">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="40" />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <ContentView Grid.Column="0" Padding="16,0,0,0">
+                                        <ContentView.Content>
+
+                                            <Image Source="Delete.png">
+
+                                            </Image>
+                                        </ContentView.Content>
+                                    </ContentView>
+                                    <ContentView Grid.Column="1" Padding="10, 0, 0, 0">
+                                        <Label BackgroundColor="Transparent"
+                                       HorizontalTextAlignment="Start"
+                                       LineBreakMode="NoWrap"
+                                       Text="DELETE"
+                                       TextColor="White"
+                                       VerticalTextAlignment="Center" />
+                                    </ContentView>
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer 
+                                    NumberOfTapsRequired="1" 
+                                            Tapped="Delete_Tapped"/>
+                                    </Grid.GestureRecognizers>
+                                </Grid>
+                            </DataTemplate>
+                        </syncfusion:SfDataGrid.RightSwipeTemplate>-->
+                    </syncfusion:SfDataGrid>
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" x:Name="FilesView" IsVisible="False" >
+                    <sync:SfListView x:Name="listView"
+                     ItemTemplate="{StaticResource ItemTemplate}"
+                     AllowSwiping="True"
+                     SelectionMode="None"
+                     IsStickyHeader="True"
+                     ItemsSource="{Binding FilesList}"
+                     ItemSpacing="0,5,0,5"
+                     BackgroundColor="#F0F0F0"
+                     SwipeStarted="ListView_SwipeStarted"
+                     SwipeEnded="ListView_SwipeEnded"
+                     ItemSize="100">
+                        <sync:SfListView.SwipeOffset>
+                            <OnIdiom x:TypeArguments="x:Double" Phone="100" Tablet="200" Desktop="200" />
+                        </sync:SfListView.SwipeOffset>
+                        <sync:SfListView.SwipeThreshold>
+                            <OnIdiom x:TypeArguments="x:Double" Phone="50" Tablet="100" Desktop="100" />
+                        </sync:SfListView.SwipeThreshold>
+                        <sync:SfListView.LeftSwipeTemplate>
+                            <DataTemplate x:Name="LeftSwipeTemplate">
+                                <Grid BackgroundColor="White" HorizontalOptions="Fill" VerticalOptions="Fill">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="ViewDocumentTapped"/>
+                                    </Grid.GestureRecognizers>
+                                    <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                                        <Image 
+                                            Grid.Column="0" 
+                                            Grid.Row="0" 
+                                            BackgroundColor="Transparent" 
+                                            Aspect="AspectFit"
+                                            HeightRequest="64" 
+                                            WidthRequest="64" 
+                                            Source="View_POD.png">
+                                        </Image>
+                                    </Grid>
+                                </Grid>
+                            </DataTemplate>
+                        </sync:SfListView.LeftSwipeTemplate>
+                        <sync:SfListView.RightSwipeTemplate>
+                            <DataTemplate x:Name="RightSwipeTemplate">
+                                <Grid BackgroundColor="White" HorizontalOptions="Fill" VerticalOptions="Fill">
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="SendMailTapped"/>
+                                    </Grid.GestureRecognizers>
+                                    <Grid VerticalOptions="Center" HorizontalOptions="Center">
+                                        <Image 
+                                            Grid.Column="0" 
+                                            Grid.Row="0" 
+                                            Aspect="AspectFit"
+                                            HeightRequest="64" 
+                                            WidthRequest="64" 
+                                            BackgroundColor="Transparent" 
+                                            Source="Mail_POD.png">
+                                        </Image>
+                                    </Grid>
+                                </Grid>
+                            </DataTemplate>
+                        </sync:SfListView.RightSwipeTemplate>
+                    </sync:SfListView>
+                </StackLayout>
+
+                <StackLayout Grid.Row="3">
+                    <Grid VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="CLOCK_Mob_Prod_Home.png" Aspect="AspectFit" HeightRequest="48" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="48" Grid.Column="0">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    NumberOfTapsRequired="1" 
+                                    Command="{Binding OpenEmployeeCheckin}" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="Camera_Mob_Prod_Home.png" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48" Grid.Column="1">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    NumberOfTapsRequired="1" 
+                                    Command="{Binding OpenCameraCommand}" />
+                            </Image.GestureRecognizers>
+                        </Image>
+
+                        <Image Source="SaveWO_Mob_Prod_Home.png" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="48" WidthRequest="48" Grid.Column="2">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    NumberOfTapsRequired="1" 
+                                    Command="{Binding ConfirmWOCommand}" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                </StackLayout>
+            </Grid>
+            <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" Opacity="0.5" IsVisible="{Binding IsBusy}">
+                <ActivityIndicator VerticalOptions="Center" HorizontalOptions="Center"
+                        Color="Red"
+                        IsRunning="{Binding IsBusy}" 
+                        IsVisible="{Binding IsBusy}" >
+                    <ActivityIndicator.WidthRequest>
+                        <OnPlatform 
+                    x:TypeArguments="x:Double" 
+                    iOS="200" 
+                    Android="100"
+                    WinPhone="400" />
+                    </ActivityIndicator.WidthRequest>
+                </ActivityIndicator>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

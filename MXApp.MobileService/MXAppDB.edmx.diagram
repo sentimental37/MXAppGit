@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c765d152715a4735a910683b553286c8" Name="Diagram1">
+        <EntityTypeShape EntityType="SkyNetModel.Account" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="SkyNetModel.WMS_Explorer" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="SkyNetModel.POD_Repository" Width="1.5" PointX="5.375" PointY="4.75" />
+        <EntityTypeShape EntityType="SkyNetModel.RefCode" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="SkyNetModel.View_WHS" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="SkyNetModel.EDIAppTable" Width="1.5" PointX="7.375" PointY="4.75" />
+        <EntityTypeShape EntityType="SkyNetModel.EDIAppTable_Child" Width="1.5" PointX="9.625" PointY="4.625" />
+        <AssociationConnector Association="SkyNetModel.FK_EDIAppTable_Child_EDIAppTable" />
+        <EntityTypeShape EntityType="SkyNetModel.login" Width="1.5" PointX="0.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

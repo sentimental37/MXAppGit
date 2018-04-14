@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+     xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    CloseWhenBackgroundIsClicked="True"
+    x:Class="MXApp.Views.PreviewBeforeUpload">
+
+    <!--You can set an animation in the xaml file or in the csharp code behind-->
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SpringIn"
+            EasingOut="SpringOut"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <!--You can use any elements here which are extended from Xamarin.Forms.View-->
+    <ContentPage.Content>
+        <Grid
+            HeightRequest="400"
+            WidthRequest="400"
+            RowSpacing="0"
+            Padding="0,20,0,0"
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill"
+            BackgroundColor="White"
+            Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="80" />
+            </Grid.RowDefinitions>
+
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Image Source="{Binding ImageSource}" VerticalOptions="FillAndExpand" Aspect="AspectFit" HorizontalOptions="FillAndExpand"></Image>
+            </StackLayout>
+
+            <Grid Grid.Row="1" VerticalOptions="Center">
+                <Grid VerticalOptions="Center" Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Text="Save" Command="{Binding SaveImageCommand}" Grid.Column="0" BackgroundColor="LimeGreen" TextColor="White" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="100" HeightRequest="50"></Button>
+                    <Button Text="Close" Clicked="Close_Click" Grid.Column="1" BackgroundColor="Red" TextColor="White" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="100" HeightRequest="50"></Button>
+                   
+                </Grid>
+            </Grid>
+            <Grid Grid.RowSpan="2" VerticalOptions="Fill" HorizontalOptions="Fill" BackgroundColor="Gray" Opacity="0.5" IsVisible="{Binding IsBusy}">
+                <ActivityIndicator VerticalOptions="Center" HorizontalOptions="Center"
+                Color="Red"
+                IsRunning="{Binding IsBusy}" 
+                IsVisible="{Binding IsBusy}" >
+                    <ActivityIndicator.WidthRequest>
+                        <OnPlatform 
+                    x:TypeArguments="x:Double" 
+                    iOS="200" 
+                    Android="100"
+                    WinPhone="400" />
+                    </ActivityIndicator.WidthRequest>
+                </ActivityIndicator>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</pages:PopupPage>

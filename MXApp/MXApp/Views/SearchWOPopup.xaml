@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms"
+    
+    x:Class="MXApp.Views.SearchWOPopup">
+
+    <!--You can set an animation in the xaml file or in the csharp code behind-->
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <!--You can use any elements here which are extended from Xamarin.Forms.View-->
+    <ContentPage.Content>
+        <Grid
+            HeightRequest="500"
+            WidthRequest="500"
+            RowSpacing="0"
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill"
+            BackgroundColor="White"
+            Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout
+                Grid.Row="0">
+                <Label    
+                    Text="Search Workorder Reference#" HorizontalOptions="Center"  FontSize="24" FontAttributes="Bold"/>
+            </StackLayout>
+            <Grid Margin="20"
+                Grid.Row="1" VerticalOptions="Fill" HorizontalOptions="Fill">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="1"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" VerticalOptions="Fill" HorizontalOptions="Fill">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <autocomplete:SfAutoComplete HeightRequest="40" x:Name="AutoComplete" DataSource="{Binding OpenProdOrders}" DisplayMemberPath="ReferencePullID" SelectedValuePath="ReferencePullID" SelectionChanged="atcRefNum_selectionChanged" Grid.Row="0" Grid.Column="0" ValueChanged="atcRefNum_valueChanged"
+                                     Watermark="Select open Ref#" DropDownCornerRadius="5" MaximumDropDownHeight="150" Text="{Binding SelectedRefText}"/>
+                    <Image Source="barcodescan.png" HeightRequest="48" WidthRequest="48" VerticalOptions="Fill" HorizontalOptions="Fill" Grid.Row="0" Grid.Column="1">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding BarcodeCommand}"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+
+                <StackLayout Grid.Row="1" BackgroundColor="MintCream" HorizontalOptions="Fill" VerticalOptions="Fill" IsVisible="{Binding IsDetailVisible}">
+                    <ScrollView VerticalOptions="Fill" HorizontalOptions="Fill">
+                        <StackLayout VerticalOptions="Fill" HorizontalOptions="Fill">
+                            <Grid VerticalOptions="Fill" HorizontalOptions="Fill">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20"></RowDefinition>
+                                    <RowDefinition Height="20"></RowDefinition>
+                                    <RowDefinition Height="20"></RowDefinition>
+                                    <RowDefinition Height="20"></RowDefinition>
+                                    <RowDefinition Height="20"></RowDefinition>
+                                    <RowDefinition Height="20"></RowDefinition>
+                                    <RowDefinition Height="20"></RowDefinition>
+                                    <RowDefinition Height="20"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="Ship To:" Grid.Row="0" Grid.Column="0" ></Label>
+                                <Label Text="Start Date:" Grid.Row="1" Grid.Column="0" ></Label>
+                                <Label Text="Cancel Date:" Grid.Row="2" Grid.Column="0" ></Label>
+                                <Label Text="Account:" Grid.Row="3" Grid.Column="0" ></Label>
+                                <Label Text="Account Name:" Grid.Row="4" Grid.Column="0" ></Label>
+                                <Label Text="Author:" Grid.Row="5" Grid.Column="0" ></Label>
+                                <Label Text="Comments:" Grid.Row="6" Grid.Column="0" ></Label>
+                                <Label Text="Pull Date:" Grid.Row="7" Grid.Column="0"></Label>
+
+
+                                <Label Text="{Binding SelectedRef.Ship_To}" Grid.Row="0" Grid.Column="1"  ></Label>
+                                <Label Text="{Binding SelectedRef.Ship_Date}" Grid.Row="1" Grid.Column="1"  ></Label>
+                                <Label Text="{Binding SelectedRef.Cancel_Date}" Grid.Row="2" Grid.Column="1"  ></Label>
+                                <Label Text="{Binding SelectedRef.Account}" Grid.Row="3" Grid.Column="1"  ></Label>
+                                <Label Text="{Binding SelectedRef.Vendor_Name}" Grid.Row="4" Grid.Column="1"  ></Label>
+                                <Label Text="{Binding SelectedRef.Author}" Grid.Row="5" Grid.Column="1"  ></Label>
+                                <Label Text="{Binding SelectedRef.Comments}" Grid.Row="6" Grid.Column="1"  ></Label>
+                                <Label Text="{Binding SelectedRef.PullDate}" Grid.Row="7" Grid.Column="1"  ></Label>
+                            </Grid>
+                        </StackLayout>
+
+                    </ScrollView>
+                </StackLayout>
+
+                <Image Source="Select_WO_ReferenceNumber.png" HeightRequest="48" WidthRequest="48" Grid.Row="2" Aspect="AspectFit" VerticalOptions="End" HorizontalOptions="End">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer 
+                                    NumberOfTapsRequired="1" 
+                                    Command="{Binding SelectRefNumCommand}" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Grid Grid.Row="3" Margin="0,-50,0,0" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+                    <Button Text="Close" Clicked="Close_Clicked" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="80" HeightRequest="40" BackgroundColor="Red" TextColor="White" FontAttributes="Bold" Grid.Column="0">
+                       
+                    </Button>
+                </Grid>
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</pages:PopupPage>

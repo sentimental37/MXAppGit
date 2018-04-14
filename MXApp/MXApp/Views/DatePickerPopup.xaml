@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             CloseWhenBackgroundIsClicked="True"
+             x:Class="MXApp.Views.DatePickerPopup">
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="EntryStyle" TargetType="Entry">
+                <Setter Property="PlaceholderColor" Value="#9cdaf1" />
+                <Setter Property="TextColor" Value="#7dbbe6" />
+            </Style>
+        </ResourceDictionary>
+    </pages:PopupPage.Resources>
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+      PositionIn="Bottom"
+      PositionOut="Center"
+      ScaleIn="1"
+      ScaleOut="0.7"
+      DurationIn="700"
+      EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <ScrollView
+        HorizontalOptions="Center"
+        Margin="20"
+        VerticalOptions="Center">
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Frame
+                x:Name="FrameContainer"
+                HorizontalOptions="Center"
+                BackgroundColor="White"
+                IsClippedToBounds="False">
+                <Grid>
+                    <StackLayout IsClippedToBounds="True" Padding="10, 5" Spacing="3">
+                        <DatePicker x:Name="dtPicker" HorizontalOptions="FillAndExpand" Date="{Binding SelectedDate}" HeightRequest="50" Format="dd/MM/yyyy"></DatePicker>
+                        <Button
+                            BackgroundColor="#227FC8"
+                            HorizontalOptions="Fill"
+                            TextColor="White"
+                            WidthRequest="200"
+                            Command="{Binding SaveDateCommand}"
+                            Text="Select Date">
+                            <Button.HeightRequest>
+                                <OnPlatform x:TypeArguments="x:Double" Android="50" iOS="30" WinPhone="30" />
+                            </Button.HeightRequest>
+                        </Button>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</pages:PopupPage>

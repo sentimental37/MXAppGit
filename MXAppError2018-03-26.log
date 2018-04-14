@@ -1,0 +1,24 @@
+
+
+Date:2018-03-26 09:51:58,893
+Thread:[1]
+Level:ERROR
+Logger:Microsoft.Syncfusion_VSExtension_Troubleshooter.Syncfusion_VSExtension_TroubleshooterPackage                         [(null)]
+Message:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.Syncfusion_VSExtension_Troubleshooter.Syncfusion_VSExtension_TroubleshooterPackage.GetSyncfusionReferencesList()
+
+
+Date:2018-03-26 09:52:14,698
+Thread:[1]
+Level:ERROR
+Logger:Microsoft.Syncfusion_VSExtension_Troubleshooter.Syncfusion_VSExtension_TroubleshooterPackage                         [(null)]
+Message:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.Syncfusion_VSExtension_Troubleshooter.Syncfusion_VSExtension_TroubleshooterPackage.GetSyncfusionReferencesList()
+
+
+Date:2018-03-26 09:59:36,735
+Thread:[1]
+Level:ERROR
+Logger:Microsoft.Syncfusion_VSExtension_Troubleshooter.Syncfusion_VSExtension_TroubleshooterPackage                         [(null)]
+Message:System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.Syncfusion_VSExtension_Troubleshooter.Syncfusion_VSExtension_TroubleshooterPackage.GetSyncfusionReferencesList()

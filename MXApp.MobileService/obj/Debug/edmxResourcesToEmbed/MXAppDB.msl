@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SkyNetModelStoreContainer" CdmEntityContainer="SkyNetEntities">
+    <FunctionImportMapping FunctionImportName="sp_mob_OpenProdWO" FunctionName="SkyNetModel.Store.sp_mob_OpenProdWO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_OpenProdWO_Result">
+          <ScalarProperty Name="ReferencePullID" ColumnName="ReferencePullID" />
+          <ScalarProperty Name="Ship_To" ColumnName="Ship To" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Vendor_Name" ColumnName="Vendor Name" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Ship_Date" ColumnName="Ship Date" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel Date" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="PullDate" ColumnName="PullDate" />
+          <ScalarProperty Name="REFNUMNotBilled" ColumnName="REFNUMNotBilled" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_mob_UpdateWOStart" FunctionName="SkyNetModel.Store.sp_mob_UpdateWOStart" />
+    <FunctionImportMapping FunctionImportName="sp_mob_AddProdWODetails" FunctionName="SkyNetModel.Store.sp_mob_AddProdWODetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_AddProdWODetails_Result">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CODE_" ColumnName="CODE#" />
+          <ScalarProperty Name="Account_" ColumnName="Account#" />
+          <ScalarProperty Name="BillID" ColumnName="BillID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_mob_ListProdWODetails" FunctionName="SkyNetModel.Store.sp_mob_ListProdWODetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_ListProdWODetails_Result">
+          <ScalarProperty Name="CodeID" ColumnName="CodeID" />
+          <ScalarProperty Name="ReferencePullID" ColumnName="ReferencePullID" />
+          <ScalarProperty Name="BillCodeDescription" ColumnName="BillCodeDescription" />
+          <ScalarProperty Name="QTY" ColumnName="QTY" />
+          <ScalarProperty Name="BillComments" ColumnName="BillComments" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="StaticOutboundRate" ColumnName="StaticOutboundRate" />
+          <ScalarProperty Name="RefBillReady" ColumnName="RefBillReady" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_mob_DeleteProdWODetails" FunctionName="SkyNetModel.Store.sp_mob_DeleteProdWODetails" />
+    <FunctionImportMapping FunctionImportName="sp_mob_UpdateProdWODetails" FunctionName="SkyNetModel.Store.sp_mob_UpdateProdWODetails" />
+    <FunctionImportMapping FunctionImportName="sp_mob_ConfirmProdWODetails" FunctionName="SkyNetModel.Store.sp_mob_ConfirmProdWODetails" />
+    <FunctionImportMapping FunctionImportName="sp_mob_AppendProdWODetails" FunctionName="SkyNetModel.Store.sp_mob_AppendProdWODetails" />
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="SkyNetModel.Account">
+        <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="acc_inventory_email" ColumnName="acc_inventory_email" />
+          <ScalarProperty Name="acc_billing_email" ColumnName="acc_billing_email" />
+          <ScalarProperty Name="SKUAllocType" ColumnName="SKUAllocType" />
+          <ScalarProperty Name="FilePath856" ColumnName="FilePath856" />
+          <ScalarProperty Name="FilePath944" ColumnName="FilePath944" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="MapPath856" ColumnName="MapPath856" />
+          <ScalarProperty Name="MapPath944" ColumnName="MapPath944" />
+          <ScalarProperty Name="Need856" ColumnName="Need856" />
+          <ScalarProperty Name="Need944" ColumnName="Need944" />
+          <ScalarProperty Name="BillingMiscInfo3" ColumnName="BillingMiscInfo3" />
+          <ScalarProperty Name="BillingMiscInfo2" ColumnName="BillingMiscInfo2" />
+          <ScalarProperty Name="BillingMiscInfo1" ColumnName="BillingMiscInfo1" />
+          <ScalarProperty Name="EDIWAVEAccount" ColumnName="EDIWAVEAccount" />
+          <ScalarProperty Name="EDIAccount" ColumnName="EDIAccount" />
+          <ScalarProperty Name="FreezInv" ColumnName="FreezInv" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="AcctBillingPostal" ColumnName="AcctBillingPostal" />
+          <ScalarProperty Name="AcctBillingState" ColumnName="AcctBillingState" />
+          <ScalarProperty Name="AcctBillingCity" ColumnName="AcctBillingCity" />
+          <ScalarProperty Name="AcctBillingAddress2" ColumnName="AcctBillingAddress2" />
+          <ScalarProperty Name="AcctBillingAddress1" ColumnName="AcctBillingAddress1" />
+          <ScalarProperty Name="AcctBillingName2" ColumnName="AcctBillingName2" />
+          <ScalarProperty Name="AcctBillingName" ColumnName="AcctBillingName" />
+          <ScalarProperty Name="CO" ColumnName="CO" />
+          <ScalarProperty Name="WHS" ColumnName="WHS" />
+          <ScalarProperty Name="Vendor_Manager" ColumnName="Vendor Manager" />
+          <ScalarProperty Name="Zip_Code" ColumnName="Zip Code" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Phone__" ColumnName="Phone #" />
+          <ScalarProperty Name="Vendor_Name" ColumnName="Vendor Name" />
+          <ScalarProperty Name="ModType" ColumnName="ModType" />
+          <ScalarProperty Name="Vendor__" ColumnName="Vendor #" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WMS_Explorer">
+      <EntityTypeMapping TypeName="SkyNetModel.WMS_Explorer">
+        <MappingFragment StoreEntitySet="WMS_Explorer">
+          <ScalarProperty Name="WMS_Mail_EnableSSL" ColumnName="WMS_Mail_EnableSSL" />
+          <ScalarProperty Name="WMS_Mail_Port" ColumnName="WMS_Mail_Port" />
+          <ScalarProperty Name="WMS_Mail_HostName" ColumnName="WMS_Mail_HostName" />
+          <ScalarProperty Name="WMS_Mail_Password" ColumnName="WMS_Mail_Password" />
+          <ScalarProperty Name="WMS_Mail_UserEmail" ColumnName="WMS_Mail_UserEmail" />
+          <ScalarProperty Name="WMS_PODShareDrivePath" ColumnName="WMS_PODShareDrivePath" />
+          <ScalarProperty Name="WMS_Warehousemen_TermsConditions" ColumnName="WMS_Warehousemen_TermsConditions" />
+          <ScalarProperty Name="WMS_Application_Welcome" ColumnName="WMS_Application_Welcome" />
+          <ScalarProperty Name="WMS_Application_Backround" ColumnName="WMS_Application_Backround" />
+          <ScalarProperty Name="WMS_Application_Icon" ColumnName="WMS_Application_Icon" />
+          <ScalarProperty Name="WMS_ID" ColumnName="WMS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_mob_TimeTrack_ClockIn_Out_Employee" FunctionName="SkyNetModel.Store.sp_mob_TimeTrack_ClockIn_Out_Employee" />
+    <FunctionImportMapping FunctionImportName="sp_mob_TimeTrack_ListEmployee" FunctionName="SkyNetModel.Store.sp_mob_TimeTrack_ListEmployee">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_TimeTrack_ListEmployee_Result">
+          <ScalarProperty Name="WOEmployeeID" ColumnName="WOEmployeeID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="HourlyRate" ColumnName="HourlyRate" />
+          <ScalarProperty Name="Deactivate" ColumnName="Deactivate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="POD_Repository">
+      <EntityTypeMapping TypeName="SkyNetModel.POD_Repository">
+        <MappingFragment StoreEntitySet="POD_Repository">
+          <ScalarProperty Name="PODCreatedBy" ColumnName="PODCreatedBy" />
+          <ScalarProperty Name="PODBorn" ColumnName="PODBorn" />
+          <ScalarProperty Name="PODLink" ColumnName="PODLink" />
+          <ScalarProperty Name="PODDescription" ColumnName="PODDescription" />
+          <ScalarProperty Name="PODKey" ColumnName="PODKey" />
+          <ScalarProperty Name="PODID" ColumnName="PODID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_mob_GetWorkOrderReportHeader" FunctionName="SkyNetModel.Store.sp_mob_GetWorkOrderReportHeader">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_GetWorkOrderReportHeader_Result">
+          <ScalarProperty Name="ReferencePullID" ColumnName="ReferencePullID" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="RefNumShipTo" ColumnName="RefNumShipTo" />
+          <ScalarProperty Name="RefNumRef1" ColumnName="RefNumRef1" />
+          <ScalarProperty Name="RefNumRef2" ColumnName="RefNumRef2" />
+          <ScalarProperty Name="ESD_ShipDate" ColumnName="ESD_ShipDate" />
+          <ScalarProperty Name="ESD_CancelDate" ColumnName="ESD_CancelDate" />
+          <ScalarProperty Name="ProductionCode" ColumnName="ProductionCode" />
+          <ScalarProperty Name="RefNumComments" ColumnName="RefNumComments" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="RefCodes">
+      <EntityTypeMapping TypeName="SkyNetModel.RefCode">
+        <MappingFragment StoreEntitySet="RefCode">
+          <ScalarProperty Name="RefBillReady" ColumnName="RefBillReady" />
+          <ScalarProperty Name="BillCodeDescription" ColumnName="BillCodeDescription" />
+          <ScalarProperty Name="StaticOutboundRate" ColumnName="StaticOutboundRate" />
+          <ScalarProperty Name="CodeByMonthlyBill" ColumnName="CodeByMonthlyBill" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="BillComments" ColumnName="BillComments" />
+          <ScalarProperty Name="QTY" ColumnName="QTY" />
+          <ScalarProperty Name="BillCode" ColumnName="BillCode" />
+          <ScalarProperty Name="ReferencePullID" ColumnName="ReferencePullID" />
+          <ScalarProperty Name="CodeID" ColumnName="CodeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_mob_ship_loadshow_yesno_confirm" FunctionName="SkyNetModel.Store.sp_mob_ship_loadshow_yesno_confirm" />
+    <FunctionImportMapping FunctionImportName="sp_mob_ship_loadshow_yesno_confirmdetail" FunctionName="SkyNetModel.Store.sp_mob_ship_loadshow_yesno_confirmdetail" />
+    <FunctionImportMapping FunctionImportName="sp_mob_ship_loadshow_yesno_confirmmaster" FunctionName="SkyNetModel.Store.sp_mob_ship_loadshow_yesno_confirmmaster" />
+    <FunctionImportMapping FunctionImportName="sp_mob_ship_viewloaddetails" FunctionName="SkyNetModel.Store.sp_mob_ship_viewloaddetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_ship_viewloaddetails_Result">
+          <ScalarProperty Name="EDIAPPID" ColumnName="EDIAPPID" />
+          <ScalarProperty Name="MBOLVICS" ColumnName="MBOLVICS" />
+          <ScalarProperty Name="CTNCount" ColumnName="CTNCount" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
+          <ScalarProperty Name="TotalCube" ColumnName="TotalCube" />
+          <ScalarProperty Name="FullPickUp" ColumnName="FullPickUp" />
+          <ScalarProperty Name="FailToPickUp" ColumnName="FailToPickUp" />
+          <ScalarProperty Name="PartialPickUp" ColumnName="PartialPickUp" />
+          <ScalarProperty Name="AccountDivName" ColumnName="AccountDivName" />
+          <ScalarProperty Name="ShipTo" ColumnName="ShipTo" />
+          <ScalarProperty Name="MBOLPalletCount" ColumnName="MBOLPalletCount" />
+          <ScalarProperty Name="MBOLShipComments" ColumnName="MBOLShipComments" />
+          <ScalarProperty Name="ChildAPPID" ColumnName="ChildAPPID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_mob_ship_viewloads" FunctionName="SkyNetModel.Store.sp_mob_ship_viewloads">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_ship_viewloads_Result">
+          <ScalarProperty Name="EDIAPPID" ColumnName="EDIAPPID" />
+          <ScalarProperty Name="PickUp_LoadNum" ColumnName="PickUp_LoadNum" />
+          <ScalarProperty Name="IsLTL" ColumnName="IsLTL" />
+          <ScalarProperty Name="WHS" ColumnName="WHS" />
+          <ScalarProperty Name="PUDate" ColumnName="PUDate" />
+          <ScalarProperty Name="PUTime" ColumnName="PUTime" />
+          <ScalarProperty Name="Carrier" ColumnName="Carrier" />
+          <ScalarProperty Name="SCAC" ColumnName="SCAC" />
+          <ScalarProperty Name="SealNumber" ColumnName="SealNumber" />
+          <ScalarProperty Name="CarryOverNextDay" ColumnName="CarryOverNextDay" />
+          <ScalarProperty Name="IsShipped" ColumnName="IsShipped" />
+          <ScalarProperty Name="IsVoided" ColumnName="IsVoided" />
+          <ScalarProperty Name="IsPrint" ColumnName="IsPrint" />
+          <ScalarProperty Name="UPSFedEx" ColumnName="UPSFedEx" />
+          <ScalarProperty Name="AppIDComments" ColumnName="AppIDComments" />
+          <ScalarProperty Name="DepartingDoor" ColumnName="DepartingDoor" />
+          <ScalarProperty Name="LoadPalletCount" ColumnName="LoadPalletCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="View_WHS">
+      <EntityTypeMapping TypeName="SkyNetModel.View_WHS">
+        <MappingFragment StoreEntitySet="View-WHS">
+          <ScalarProperty Name="WHS" ColumnName="WHS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EDIAppTables">
+      <EntityTypeMapping TypeName="SkyNetModel.EDIAppTable">
+        <MappingFragment StoreEntitySet="EDIAppTable">
+          <ScalarProperty Name="LoadPalletCount" ColumnName="LoadPalletCount" />
+          <ScalarProperty Name="DepartingDoor" ColumnName="DepartingDoor" />
+          <ScalarProperty Name="AppIDComments" ColumnName="AppIDComments" />
+          <ScalarProperty Name="UPSFedEx" ColumnName="UPSFedEx" />
+          <ScalarProperty Name="IsPrint" ColumnName="IsPrint" />
+          <ScalarProperty Name="IsVoided" ColumnName="IsVoided" />
+          <ScalarProperty Name="IsShipped" ColumnName="IsShipped" />
+          <ScalarProperty Name="CarryOverNextDay" ColumnName="CarryOverNextDay" />
+          <ScalarProperty Name="SealNumber" ColumnName="SealNumber" />
+          <ScalarProperty Name="SCAC" ColumnName="SCAC" />
+          <ScalarProperty Name="Carrier" ColumnName="Carrier" />
+          <ScalarProperty Name="PUTime" ColumnName="PUTime" />
+          <ScalarProperty Name="PUDate" ColumnName="PUDate" />
+          <ScalarProperty Name="WHS" ColumnName="WHS" />
+          <ScalarProperty Name="IsLTL" ColumnName="IsLTL" />
+          <ScalarProperty Name="PickUp_LoadNum" ColumnName="PickUp_LoadNum" />
+          <ScalarProperty Name="EDIAPPID" ColumnName="EDIAPPID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EDIAppTable_Child">
+      <EntityTypeMapping TypeName="SkyNetModel.EDIAppTable_Child">
+        <MappingFragment StoreEntitySet="EDIAppTable_Child">
+          <ScalarProperty Name="MBOLShipComments" ColumnName="MBOLShipComments" />
+          <ScalarProperty Name="MBOLPalletCount" ColumnName="MBOLPalletCount" />
+          <ScalarProperty Name="POD_DOC_Vics" ColumnName="POD_DOC_Vics" />
+          <ScalarProperty Name="BOLDocumentPath" ColumnName="BOLDocumentPath" />
+          <ScalarProperty Name="ShipTo" ColumnName="ShipTo" />
+          <ScalarProperty Name="AccountDivName" ColumnName="AccountDivName" />
+          <ScalarProperty Name="Void" ColumnName="Void" />
+          <ScalarProperty Name="FailToPickUp" ColumnName="FailToPickUp" />
+          <ScalarProperty Name="PartialPickUp" ColumnName="PartialPickUp" />
+          <ScalarProperty Name="FullPickUp" ColumnName="FullPickUp" />
+          <ScalarProperty Name="TotalCube" ColumnName="TotalCube" />
+          <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="CTNCount" ColumnName="CTNCount" />
+          <ScalarProperty Name="MBOLVICS" ColumnName="MBOLVICS" />
+          <ScalarProperty Name="MBOL" ColumnName="MBOL" />
+          <ScalarProperty Name="EDIAPPID" ColumnName="EDIAPPID" />
+          <ScalarProperty Name="ChildAPPID" ColumnName="ChildAPPID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_mob_ship_viewloads_locations" FunctionName="SkyNetModel.Store.sp_mob_ship_viewloads_locations">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_ship_viewloads_locations_Result">
+          <ScalarProperty Name="PickUp_Load_Num" ColumnName="PickUp_Load_Num" />
+          <ScalarProperty Name="TATTLETALE" ColumnName="TATTLETALE" />
+          <ScalarProperty Name="WAVELocation" ColumnName="WAVELocation" />
+          <ScalarProperty Name="MBOLVics" ColumnName="MBOLVics" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_mob_prod_WOHourDetails" FunctionName="SkyNetModel.Store.sp_mob_prod_WOHourDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_prod_WOHourDetails_Result">
+          <ScalarProperty Name="ReferencePullID" ColumnName="ReferencePullID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="InTimeStamp" ColumnName="InTimeStamp" />
+          <ScalarProperty Name="OutTimeStamp" ColumnName="OutTimeStamp" />
+          <ScalarProperty Name="WOHours" ColumnName="WOHours" />
+          <ScalarProperty Name="WOMinutes" ColumnName="WOMinutes" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="tf_mob_prod_CalcWOHours" FunctionName="SkyNetModel.Store.tf_mob_prod_CalcWOHours">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SkyNetModel.tf_mob_prod_CalcWOHours_Result">
+          <ScalarProperty Name="ReferencePullID" ColumnName="ReferencePullID" />
+          <ScalarProperty Name="EmployeeCount" ColumnName="EmployeeCount" />
+          <ScalarProperty Name="WOHours" ColumnName="WOHours" />
+          <ScalarProperty Name="WOMinutes" ColumnName="WOMinutes" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_mob_TimeTrack_GetClockedInEmployees" FunctionName="SkyNetModel.Store.sp_mob_TimeTrack_GetClockedInEmployees">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SkyNetModel.sp_mob_TimeTrack_GetClockedInEmployees_Result">
+          <ScalarProperty Name="WOEmployeeID" ColumnName="WOEmployeeID" />
+          <ScalarProperty Name="ReferencePullID" ColumnName="ReferencePullID" />
+          <ScalarProperty Name="EmployeeStatus" ColumnName="EmployeeStatus" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EmployeeTime" ColumnName="EmployeeTime" />
+          <ScalarProperty Name="NonCompliant" ColumnName="NonCompliant" />
+          <ScalarProperty Name="InTimeStamp" ColumnName="InTimeStamp" />
+          <ScalarProperty Name="OutTimeStamp" ColumnName="OutTimeStamp" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="logins">
+      <EntityTypeMapping TypeName="SkyNetModel.login">
+        <MappingFragment StoreEntitySet="login">
+          <ScalarProperty Name="login_email" ColumnName="login_email" />
+          <ScalarProperty Name="DESKTOP_Allocation" ColumnName="DESKTOP_Allocation" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="RF_Management" ColumnName="RF_Management" />
+          <ScalarProperty Name="RF_AddedValue" ColumnName="RF_AddedValue" />
+          <ScalarProperty Name="RF_Shipping" ColumnName="RF_Shipping" />
+          <ScalarProperty Name="RF_Production" ColumnName="RF_Production" />
+          <ScalarProperty Name="RF_Inventory" ColumnName="RF_Inventory" />
+          <ScalarProperty Name="RF_Receiving" ColumnName="RF_Receiving" />
+          <ScalarProperty Name="DESKTOP_Management" ColumnName="DESKTOP_Management" />
+          <ScalarProperty Name="DESKTOP_Billing" ColumnName="DESKTOP_Billing" />
+          <ScalarProperty Name="DESKTOP_Shipping" ColumnName="DESKTOP_Shipping" />
+          <ScalarProperty Name="DESKTOP_Production" ColumnName="DESKTOP_Production" />
+          <ScalarProperty Name="DESKTOP_Inventory" ColumnName="DESKTOP_Inventory" />
+          <ScalarProperty Name="DESKTOP_Receiving" ColumnName="DESKTOP_Receiving" />
+          <ScalarProperty Name="DESKTOP" ColumnName="DESKTOP" />
+          <ScalarProperty Name="RF" ColumnName="RF" />
+          <ScalarProperty Name="WHS" ColumnName="WHS" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="INVADJUSTMENTS" ColumnName="INVADJUSTMENTS" />
+          <ScalarProperty Name="ReadWrite" ColumnName="ReadWrite" />
+          <ScalarProperty Name="SUPERVISOR" ColumnName="SUPERVISOR" />
+          <ScalarProperty Name="ECOM" ColumnName="ECOM" />
+          <ScalarProperty Name="ModuleAccess" ColumnName="ModuleAccess" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_mob_TimeTrack_ClockoutAll" FunctionName="SkyNetModel.Store.sp_mob_TimeTrack_ClockoutAll" />
+  </EntityContainerMapping>
+</Mapping>

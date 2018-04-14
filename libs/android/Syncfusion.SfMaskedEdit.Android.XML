@@ -1,0 +1,1034 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfMaskedEdit.Android</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.Android.MaskedEdit.MaskType">
+            <summary>
+             Specifies the mask type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskType.Text">
+            <summary>
+            Represents the basic regular expression mask elements.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskType.RegEx">
+            <summary>
+            Represents the complex regular expression mask elements.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Android.MaskedEdit.InputValidationMode">
+            <summary>
+             Specifies the validation mode.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.InputValidationMode.LostFocus">
+            <summary>
+            Perform validation on lost focus.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.InputValidationMode.KeyPress">
+            <summary>
+            Perform validation on every key press.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Android.MaskedEdit.MaskFormat">
+            <summary>
+             Specifies the mask format.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskFormat.ExcludePromptAndLiterals">
+            <summary>
+            Excludes the prompt character and literals in value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskFormat.IncludeLiterals">
+            <summary>
+            Includes only the literals in value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskFormat.IncludePrompt">
+            <summary>
+            Includes only the prompt character in value.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskFormat.IncludePromptAndLiterals">
+            <summary>
+            Includes the prompt character and literals in value.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Android.MaskedEdit.MaskedTextResultHint">
+            <summary>
+             Enumerated value that describes why the input character was rejected.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskedTextResultHint.AlphanumericCharacterExpected">
+            <summary>
+            Operation failed. An input character was encountered that was not alphanumeric.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskedTextResultHint.DigitExpected">
+            <summary>
+            Operation failed. An input character was encountered that was not a digit.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskedTextResultHint.LetterExpected">
+            <summary>
+            Operation failed. An input character was encountered that was not a letter.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskedTextResultHint.SignedDigitExpected">
+            <summary>
+            Operation failed. An input character was encountered that was not a signed digit.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskedTextResultHint.UnavailableEditPosition">
+            <summary>
+            Operation failed. There were not enough edit positions available to fulfill the request.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Android.MaskedEdit.MaskHelper">
+            <summary>
+            Helper class to access common functionalities of Android/iOS
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskHelper.maskedEdit">
+            <summary>
+            Field which represents the control
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.#ctor(Syncfusion.Android.MaskedEdit.SfMaskedEdit)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Android.MaskedEdit.MaskHelper"/> class
+            </summary>
+            <param name="maskedEdit">masked edit</param>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.OnCutCopy(System.Int32,System.Int32)">
+            <summary>
+            Handled to copy the mask data based on CutCopyMaskFormat to clipboard
+            </summary>
+            <param name="startIndex">Start Index</param>
+            <param name="endIndex">End index</param>
+            <returns>Clipboard data</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.OnTextCutCopy(System.Int32,System.Int32)">
+            <summary>
+            Handled to copy the mask data based on CutCopyMaskFormat to clipboard
+            </summary>
+            <param name="startIndex">Start Index</param>
+            <param name="endIndex">End index</param>
+            <returns>Clipboard data</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.OnRegExCutCopy(System.Int32,System.Int32)">
+            <summary>
+            Handled to copy the mask data based on CutCopyMaskFormat to clipboard
+            </summary>
+            <param name="startIndex">Start Index</param>
+            <param name="endIndex">End index</param>
+            <returns>Clipboard data</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.MatchWithMask(System.Char,System.Boolean,System.Boolean)">
+            <summary>
+            Indicates whether the typed char is matched with mask
+            </summary>
+            <param name="typedChar">the typed char</param>
+            <param name="matchLiteral">boolean indicates value match</param>
+            <returns>returns whether the character is matched</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.SetTextFromValue">
+            <summary>
+            Method to set Text from Value property
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.LoadTextBox">
+            <summary>
+            Loads the edit text with default display text
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.GetMatchingLiteralIndex(System.Int32,System.Char)">
+            <summary>
+            Gets the matching literal
+            </summary>
+            <param name="index">the index</param>
+            <param name="typedChar">the typed character</param>
+            <returns>returns the matching index</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.IsMatch(System.String,System.String)">
+            <summary>
+            Method to check whether the input is matched
+            </summary>
+            <param name="input">the input</param>
+            <param name="pattern">the pattern</param>
+            <returns>indicates it is matched or not</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.GetMaskProperty(System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get the Mask Property of the current caret position
+            </summary>
+            <param name="caretIndex">Current caret position</param>
+            <param name="isSkipLiteral">Boolean indicates whether need to skip literals</param>
+            <param name="findPrevMask">Boolean indicate whether we need to find the previous mask property if current mask is literal</param>
+            <param name="isMoveCursor">Boolean indicate whether we need to move the cursor position</param>
+            <returns>MaskProperty of the current caret position</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.GetNextPromtMask(System.Int32)">
+            <summary>
+            Get the next Promt mask property
+            </summary>
+            <param name="index">Index of current mask property</param>
+            <returns>Next mask property of current index</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.GetPrevPromtMask(System.Int32)">
+            <summary>
+            Get the previous Promt mask property
+            </summary>
+            <param name="index">Index of current mask property</param>
+            <returns>Previous mask property of current index</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.MatchRegExInput(System.Char,Syncfusion.Android.MaskedEdit.MaskProperties,System.Int32)">
+            <summary>
+            Check the current typed character is matched to current position of the mask
+            </summary>
+            <param name="typedChar">Typed character</param>
+            <param name="property">Current mask property</param>
+            <param name="caretIndex">Current caret index</param>
+            <returns>Returns true, if it is matched. Otherwise false.</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.UpdateAdjacentMaskPeoprtyIndex(System.Int32,System.Int32)">
+            <summary>
+            Update the adjacent mask properties start and end index for each keypress or backspace.
+            </summary>
+            <param name="diff">Difference to update</param>
+            <param name="startIndex">Start index of the adjacent mask</param>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.MatchAdjacentMaskWrapper(System.Char,Syncfusion.Android.MaskedEdit.MaskProperties,System.Int32)">
+            <summary>
+            Check whether the typed character is matched in the adjacent mask property
+            </summary>
+            <param name="typedChar">Typed character</param>
+            <param name="property">Current mask property</param>
+            <param name="caretIndex">Current caraet Index</param>
+            <returns>Returns true, if it is matched. Otherwise false.</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.MatchInput(System.Char,Syncfusion.Android.MaskedEdit.MaskProperties,System.Int32)">
+            <summary>
+            Check whether the typed character is matched to current mask
+            </summary>
+            <param name="typedChar">Typed character</param>
+            <param name="property">Current mask property</param>
+            <param name="caretIndex">Current caraet Index</param>
+            <returns>Returns true, if it is matched. Otherwise false.</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.RewriteText(System.String,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Method to remove and update text with prompt char
+            </summary>
+            <param name="originalText">the text</param>
+            <param name="index">the index </param>
+            <param name="count">the count to remove from start index</param>
+            <param name="insertText">insert text</param>
+            <param name="needRemove">indicates to remove and update text</param>
+            <returns>returns the updated text</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.CreateRegExMaskProperties">
+            <summary>
+            Create the RegEx Mask properties
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.CreateTextMaskProperties">
+            <summary>
+            Create the Text Mask propertiess
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.ValidateText(System.Boolean)">
+            <summary>
+            Validates text to ensure whether rendered text has errors
+            </summary>
+            <param name="isFocused">Represents whether control is focused</param>
+            <returns>returns boolean indicating has error</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.RegExBackspace(System.Int32,System.Boolean)">
+            <summary>
+            Remove the character in the caret index for RegEx type
+            </summary>
+            <param name="caretIndex">current caret index</param>
+            <param name="isSkipLiteral">boolean indicates whether we need to skip literals</param>
+            <returns>Returns the next caret position to remove</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.RegExDelete(System.Int32,System.Int32@)">
+            <summary>
+            Remove the character in the caret index for RegEx type
+            </summary>
+            <param name="caretIndex">current caret index</param>
+            <param name="caretEnd">caret end position</param>
+            <returns>Returns the next caret position to remove</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.TextBackspace(System.Int32,System.Boolean)">
+            <summary>
+            Remove the character in the caret index for Text type
+            </summary>
+            <param name="caretIndex">current caret index</param>
+            <param name="isSkipLiteral">boolean indicates whether we need to skip literals</param>
+            <returns>Returns the next caret position to remove</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.TextDelete(System.Int32)">
+            <summary>
+            Remove the character in the caret index for Text type
+            </summary>
+            <param name="caretIndex">current caret index</param>
+            <returns>Returns the next caret position to remove</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.BackSpace(System.Int32,System.Int32)">
+            <summary>
+            Method to handle the backspace
+            </summary>
+            <param name="endIndex">End index</param>
+            <param name="startIndex">Start index</param>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.SetValueFromText">
+            <summary>
+            Method to update Value from Text
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.MoveToPrompt(System.Int32)">
+            <summary>
+            Method to move to next available prompt char
+            </summary>
+            <param name="startIndex">the current position</param>
+            <returns>returns index of next available prompt character</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.BackToPrompt(System.Int32)">
+            <summary>
+            Method to move to next available prompt char while pressing backspace.
+            </summary>
+            <param name="startIndex">the start index</param>
+            <returns>returns index of next available prompt character</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.ModifyPromptOnFocus(System.Boolean)">
+            <summary>
+            Modifies prompt characters according to control focus
+            </summary>
+            <param name="isRemove">indicates whether to remove prompt characters</param>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.OnMaskTypeChanged">
+            <summary>
+            Handles if MaskType changed
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.OnHidePromptOnLeave">
+            <summary>
+            Method handles when hide prompt on leave changed
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.OnMaskChanged">
+            <summary>
+            Handles if Mask Changed
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.OnPromptCharChanged(System.Char)">
+            <summary>
+            Handles when prompt character changed
+            </summary>
+            <param name="prevValue">the prompt character</param>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.OnCultureChanged(System.Globalization.CultureInfo)">
+            <summary>
+            Method handles when culture changed
+            </summary>
+            <param name="prevCulture"></param>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.GenerateDisplayText">
+            <summary>
+            Method to generate display text.
+            </summary>
+            <returns>returns the display text</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.GenerateWrapper">
+            <summary>
+            Method to generate mask wrapper
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.IsASCIIAlphanumeric(System.Char)">
+            <summary>
+            Check is American Standard Code for Information Interchange or Alphanumeric charactor.
+            </summary>
+            <param name="c">input char</param>
+            <returns>true or false</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.IsAlphanumeric(System.Char)">
+            <summary>
+            Check is American Standard Code for Information Interchange charactor.
+            </summary>
+            <param name="c">input char</param>
+            <returns>true or false</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.MaskHelper.IsAsciiLetter(System.Char)">
+            <summary>
+            Check is Alphanumeric charactor.
+            </summary>
+            <param name="c">input char</param>
+            <returns>true or false</returns>
+        </member>
+        <member name="T:Syncfusion.Android.MaskedEdit.MaskProperties">
+            <summary>
+            Class represents mask properties
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskProperties.isLiteral">
+            <summary>
+            Field represents whether it is literal
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskProperties.isDigit">
+            <summary>
+            Field represents whether it is digit
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskProperties.isAlphaNumeric">
+            <summary>
+            Field represents whether it is alpha numeric
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskProperties.isAlphabet">
+            <summary>
+            Field represents whether it is Alphabet
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskProperties.isDigitWithSign">
+            <summary>
+            Field represents whether it is Digit with sign
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskProperties.isPromptChar">
+            <summary>
+            Field represents whether it is Prompt character
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskProperties.isUpperCase">
+            <summary>
+            Field represents whether it is upper case
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskProperties.isOptional">
+            <summary>
+            Field represents whether the mask is optional
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskProperties.splitExpressions">
+            <summary>
+            Field represents the collection of split expressions
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskProperties.maximumrepetition">
+            <summary>
+            Field represents the maximum repetition
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskProperties.minimumrepetition">
+            <summary>
+            Field represents the minimum repetition
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskProperties.currentRepetition">
+            <summary>
+            Field represents the current repetition
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskProperties.inputCount">
+            <summary>
+            Field represents the input count
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskProperties.maxLength">
+            <summary>
+            Field represents the maximum count
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskProperties.regularExpression">
+            <summary>
+            Field represents the regular expression 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskProperties.startIndex">
+            <summary>
+            Field represents the start index of the mask data.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskProperties.endIndex">
+            <summary>
+            Field represents the end index of the mask data.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskProperties.maskData">
+            <summary>
+            Field represents the mask data.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.MaskProperties.isEscapeChar">
+            <summary>
+            Field represents whether the data is escape sequence
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskProperties.IsEscapeChar">
+            <summary>
+            Gets or sets a value indicating whether the mask is escape sequence
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskProperties.StartIndex">
+            <summary>
+            Gets or sets a value indicates the start index of the mask data in MaskText
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskProperties.EndIndex">
+            <summary>
+            Gets or sets a value indicates the end index of the mask data in MaskText
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskProperties.MaskData">
+            <summary>
+            Gets or sets a value indicates the mask data of the current mask property
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskProperties.IsLiteral">
+            <summary>
+            Gets or sets whether the mask is literal
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskProperties.IsPromptChar">
+            <summary>
+            Gets or sets whether the mask is prompt character
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskProperties.IsUpperCase">
+            <summary>
+            Gets or sets whether the mask is upper case
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskProperties.IsOptional">
+            <summary>
+            Gets or sets a value indicating whether mask is Optional
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskProperties.RegularExpression">
+            <summary>
+            Gets or sets the regular expression data
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskProperties.SplitExpressions">
+            <summary>
+            Gets or sets the Split expression
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskProperties.MinimumRepetition">
+            <summary>
+            Gets or sets the minimum repetition count
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskProperties.MaximumRepetition">
+            <summary>
+            Gets or sets the maximum repetition count
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskProperties.CurrentRepetition">
+            <summary>
+            Gets or sets the current repetition
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskProperties.InputCount">
+            <summary>
+            Gets or sets the Input count
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskProperties.MaxLength">
+            <summary>
+            Gets or sets the maximum length
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskProperties.IsDigit">
+            <summary>
+            Gets or sets a value indicating whether the mask is Digit
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskProperties.IsAlphabet">
+            <summary>
+            Gets or sets a value indicating whether the mask is Alphabet
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskProperties.IsAlphaNumeric">
+            <summary>
+            Gets or sets a value indicating whether the mask is Alpha Numeric
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskProperties.IsDigitWithSign">
+            <summary>
+            Gets or sets a value indicating whether  the mask is Digit with sign
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Android.MaskedEdit.MaskInputRejectedEventArgs">
+            <summary>
+             Specifies the mask input Rejected event arguments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskInputRejectedEventArgs.Position">
+            <summary>
+            Gets a value of the input field.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.MaskInputRejectedEventArgs.RejectionHint">
+            <summary>
+            Gets a value of the input field.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Android.MaskedEdit.SfMaskedEdit">
+            <summary>
+            Represents the Masked Edit control
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.hasError">
+            <summary>
+            Indicates whether the control has succeded valiation or not.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.mask">
+            <summary>
+            Represents the mask
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.promptChar">
+            <summary>
+            Represents the prompt char with default value
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.hidePromptOnLeave">
+            <summary>
+            Boolean to indicate prompt character on focus or not
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.value">
+            <summary>
+            Represents the mask value
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.maskType">
+            <summary>
+            Represents the mask type
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.validationMode">
+            <summary>
+            Represents the input validation mode
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.maskedText">
+            <summary>
+            Represents the Mask text 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.maskWrapper">
+            <summary>
+            Represents the mask wrapper collection
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.displayText">
+            <summary>
+            Represents the display text that contains the literls and propmpt characters
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.isLoaded">
+            <summary>
+            Indicates whether control is loaded or not
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.culture">
+            <summary>
+            Represents Culture
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.drawable">
+            <summary>
+            Represents drawable for the control
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.borderColor">
+            <summary>
+            Represents border color
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.isFocussed">
+            <summary>
+            Indicates whether the control is focused or not.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.prevText">
+            <summary>
+            Represents the previous text
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.valueMaskFormat">
+            <summary>
+            Represents mask format for value
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.isInternalChange">
+            <summary>
+            Indicates the internal change
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.isRendered">
+            <summary>
+            Indicates whether the text is started render
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.isTextChanged">
+            <summary>
+            Indicates whether the text is changed
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.window">
+            <summary>
+            Represents view Window
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.inputManager">
+            <summary>
+            Represents the input method
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.maskHelper">
+            <summary>
+            Represents the mask helper
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.isDeletePress">
+            <summary>
+            Indicate whether the delete key pressed or not
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.isBackspacePress">
+            <summary>
+            Indicate whether the backspace key pressed or not
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.cutCopyMaskFormat">
+            <summary>
+            Indicate the cut copy mask format
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.skipLiterals">
+            <summary>
+            Indicate whether the reentering of literls need to be skipped.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.isCustomBorder">
+            <summary>
+            Indicate customer set the custom border
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.hintTextSize">
+            <summary>
+            Represents watermark font size
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.hintTypeface">
+            <summary>
+            Represents watermark font attributes
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.errorBorderColor">
+            <summary>
+            Represents Error Border Color
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.prevMask">
+            <summary>
+            Represents the previous mask.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.textTypeface">
+            <summary>
+            Represents the text Typeface
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.textDefaultSize">
+            <summary>
+            Represents the text sixe
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.isWatermark">
+            <summary>
+            Represents watermark is rendered.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Android.MaskedEdit.SfMaskedEdit.selection">
+            <summary>
+            Represents the current selection
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Android.MaskedEdit.SfMaskedEdit.MaskInputRejectedEventHandler">
+            <summary>
+            Mask rejection event handler
+            </summary>
+            <param name="sender">the sender</param>
+            <param name="e">the MaskInputRejectedEventArgs</param>
+        </member>
+        <member name="E:Syncfusion.Android.MaskedEdit.SfMaskedEdit.MaskInputRejected">
+            <summary>
+            Event handles when mask rejected.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.Android.MaskedEdit.SfMaskedEdit.ValueChangedEventHandler">
+            <summary>
+            Value changed event handler
+            </summary>
+            <param name="sender">the sender</param>
+            <param name="e">valueChangedEventArgs</param>
+        </member>
+        <member name="E:Syncfusion.Android.MaskedEdit.SfMaskedEdit.ValueChanged">
+            <summary>
+            Event handles when value changed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.SfMaskedEdit.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Android.MaskedEdit.SfMaskedEdit"/> class
+            </summary>
+            <param name="context">the application context</param>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.SfMaskedEdit.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Android.MaskedEdit.SfMaskedEdit"/> class
+            </summary>
+            <param name="context">the application context</param>
+            <param name="attrs">the attributes</param>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.SfMaskedEdit.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Android.MaskedEdit.SfMaskedEdit"/> class
+            </summary>
+            <param name="context">application context</param>
+            <param name="attrs">the attributes</param>
+            <param name="defStyleAttr">the default style</param>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.SfMaskedEdit.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Android.MaskedEdit.SfMaskedEdit"/> class
+            </summary>
+            <param name="context">application context</param>
+            <param name="attrs">the attributes</param>
+            <param name="defStyleAttr">the default style</param>
+            <param name="defStyleRes">the default resource</param>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.SfMaskedEdit.#ctor(System.IntPtr,Android.Runtime.JniHandleOwnership)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.Android.MaskedEdit.SfMaskedEdit"/> class
+            </summary>
+            <param name="javaReference">java reference</param>
+            <param name="transfer">the runtime ownership</param>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.IsWatermark">
+            <summary>
+            Represents that the watermark is rendered or not
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.SkipLiterals">
+            <summary>
+            Gets or sets a value indicating whether the user is allowed to reenter literal values.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.IsFocussed">
+            <summary>
+            Gets or sets a value indicating whther the control got the focus or not
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.IsInternalChange">
+            <summary>
+            Gets or sets a value indicating whether change is from text to value.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.CutCopyMaskFormat">
+            <summary>
+            Gets or sets a value that determines whether literals and prompt characters are copied to the clipboard.
+            </summary>
+            <value>The default value is MaskFormat.IncludeLiterals.</value>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.ErrorBorderColor">
+            <summary>
+            Gets or sets the error border color
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.HintTextSize">
+            <summary>
+            Gets or sets the watermark size
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.HintTypeface">
+            <summary>
+            Gets or sets watermark style
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.HasError">
+            <summary>
+            Gets a value indicating whether the mask has error
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.Mask">
+            <summary>
+            Gets or sets the Mask
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.ValueMaskFormat">
+            <summary>
+            Gets or sets the mask format for value
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.MaskType">
+            <summary>
+            Gets or sets the mask type
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.Culture">
+            <summary>
+            Gets or sets the culture
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.BorderColor">
+            <summary>
+            Gets or sets the Border color
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.PromptChar">
+            <summary>
+            Gets or sets the Prompt Character
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.HidePromptOnLeave">
+            <summary>
+            Gets or sets Gets or sets a value indicating whether the prompt characters in the input mask
+            are hidden when the masked text box loses focus.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.ValidationMode">
+            <summary>
+            Gets or sets the ValidationMode.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.Value">
+            <summary>
+            Gets or sets the Value.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.MaskedText">
+            <summary>
+            Gets or sets the masked text
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.MaskWrapper">
+            <summary>
+            Gets or sets the mask properties
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.DisplayText">
+            <summary>
+            Gets or sets the display text
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.SfMaskedEdit.IsRendered">
+            <summary>
+            Gets or sets whether the character is rendered.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.SfMaskedEdit.OnDetachedFromWindow">
+            <summary>
+            Method to release the resources used
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.SfMaskedEdit.OnFocusChanged(System.Boolean,Android.Views.FocusSearchDirection,Android.Graphics.Rect)">
+            <summary>
+            Handles when focus changed
+            </summary>
+            <param name="gainFocus">indicates whether the control gain focus</param>
+            <param name="direction">the direction</param>
+            <param name="previouslyFocusedRect">previous focused position</param>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.SfMaskedEdit.OnSelectionChanged(System.Int32,System.Int32)">
+            <summary>
+            Handles the selection changed event
+            </summary>
+            <param name="selStart">selection start index</param>
+            <param name="selEnd">selection end index</param>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.SfMaskedEdit.OnLoading">
+            <summary>
+            Initializes the events and members
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.SfMaskedEdit.OnValueChanged">
+            <summary>
+            Handles when value is changed
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.SfMaskedEdit.UpdateTextChanged(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Method to Update the text by ensuring the typed character matched with expression.
+            </summary>
+            <param name="typedText">Character typed</param>
+            <param name="beforeCount">before character count</param>
+            <param name="afterCount">after character count</param>
+            <param name="startIndex">start index</param>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.SfMaskedEdit.CheckTextWithExpression(System.Char)">
+            <summary>
+            Method to ensure typed character matched with expression
+            </summary>
+            <param name="typedChar">the typed character</param>
+            <returns>represents whether the character is matched</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.SfMaskedEdit.OnMaskInputRejected(System.Int32,System.Char)">
+            <summary>
+            Handles mask input is rejected.
+            </summary>
+            <param name="position"></param>
+            <param name="typedChar"></param>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.SfMaskedEdit.OnTextContextMenuItem(System.Int32)">
+            <summary>
+            Called when a context menu option for the text view is selected.
+            </summary>
+            <param name="id">To be added.</param>
+            <returns>To be added.</returns>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.SfMaskedEdit.SfMaskedEditText_KeyPress(System.Object,Android.Views.View.KeyEventArgs)">
+            <summary>
+            Handles key pressed event
+            </summary>
+            <param name="sender">the sender</param>
+            <param name="e">event args</param>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.SfMaskedEdit.MaskedEditText_BeforeTextChanged(System.Object,Android.Text.TextChangedEventArgs)">
+            <summary>
+            Handles before text changed event
+            </summary>
+            <param name="sender">the sender</param>
+            <param name="e">the event argument</param>
+        </member>
+        <member name="M:Syncfusion.Android.MaskedEdit.SfMaskedEdit.SfMaskedEdit_TextChanged(System.Object,Android.Text.TextChangedEventArgs)">
+            <summary>
+            Handles text changed event
+            </summary>
+            <param name="sender">the sender</param>
+            <param name="e">the event args</param>
+        </member>
+        <member name="T:Syncfusion.Android.MaskedEdit.ValueChangedEventArgs">
+            <summary>
+             Specifies the value event arguments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Android.MaskedEdit.ValueChangedEventArgs.Value">
+            <summary>
+            Gets a value of the input field.
+            </summary>
+        </member>
+    </members>
+</doc>

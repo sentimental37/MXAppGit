@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SkyNetModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Accounts">
+    <Key>
+      <PropertyRef Name="Vendor #" />
+    </Key>
+    <Property Name="Vendor #" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ModType" Type="int" />
+    <Property Name="Vendor Name" Type="nvarchar" MaxLength="30" />
+    <Property Name="Phone #" Type="nvarchar" MaxLength="13" />
+    <Property Name="Street" Type="nvarchar" MaxLength="35" />
+    <Property Name="City" Type="nvarchar" MaxLength="35" />
+    <Property Name="State" Type="nvarchar" MaxLength="2" />
+    <Property Name="Zip Code" Type="nvarchar" MaxLength="10" />
+    <Property Name="Vendor Manager" Type="nvarchar" MaxLength="35" />
+    <Property Name="WHS" Type="nvarchar" MaxLength="4" />
+    <Property Name="CO" Type="nvarchar" MaxLength="50" />
+    <Property Name="AcctBillingName" Type="varchar" MaxLength="80" />
+    <Property Name="AcctBillingName2" Type="varchar" MaxLength="80" />
+    <Property Name="AcctBillingAddress1" Type="varchar" MaxLength="80" />
+    <Property Name="AcctBillingAddress2" Type="varchar" MaxLength="80" />
+    <Property Name="AcctBillingCity" Type="varchar" MaxLength="80" />
+    <Property Name="AcctBillingState" Type="varchar" MaxLength="8" />
+    <Property Name="AcctBillingPostal" Type="varchar" MaxLength="50" />
+    <Property Name="Manufacturer" Type="varchar" MaxLength="12" />
+    <Property Name="FreezInv" Type="bit" />
+    <Property Name="EDIAccount" Type="bit" />
+    <Property Name="EDIWAVEAccount" Type="bit" />
+    <Property Name="BillingMiscInfo1" Type="varchar" MaxLength="50" />
+    <Property Name="BillingMiscInfo2" Type="varchar" MaxLength="50" />
+    <Property Name="BillingMiscInfo3" Type="varchar" MaxLength="50" />
+    <Property Name="Need944" Type="bit" />
+    <Property Name="Need856" Type="bit" />
+    <Property Name="MapPath944" Type="varchar" MaxLength="400" />
+    <Property Name="MapPath856" Type="varchar" MaxLength="400" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="FilePath944" Type="varchar" MaxLength="400" />
+    <Property Name="FilePath856" Type="varchar" MaxLength="400" />
+    <Property Name="SKUAllocType" Type="varchar" MaxLength="50" />
+    <Property Name="acc_billing_email" Type="varchar" MaxLength="50" />
+    <Property Name="acc_inventory_email" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="EDIAppTable">
+    <Key>
+      <PropertyRef Name="EDIAPPID" />
+    </Key>
+    <Property Name="EDIAPPID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PickUp_LoadNum" Type="varchar" MaxLength="70" />
+    <Property Name="IsLTL" Type="bit" />
+    <Property Name="WHS" Type="varchar" MaxLength="50" />
+    <Property Name="PUDate" Type="datetime" />
+    <Property Name="PUTime" Type="datetime" />
+    <Property Name="Carrier" Type="varchar" MaxLength="50" />
+    <Property Name="SCAC" Type="varchar" MaxLength="50" />
+    <Property Name="SealNumber" Type="varchar" MaxLength="50" />
+    <Property Name="CarryOverNextDay" Type="bit" />
+    <Property Name="IsShipped" Type="bit" />
+    <Property Name="IsVoided" Type="bit" />
+    <Property Name="IsPrint" Type="bit" />
+    <Property Name="UPSFedEx" Type="bit" />
+    <Property Name="AppIDComments" Type="varchar" MaxLength="255" />
+    <Property Name="DepartingDoor" Type="varchar" MaxLength="50" />
+    <Property Name="LoadPalletCount" Type="int" />
+  </EntityType>
+  <EntityType Name="EDIAppTable_Child">
+    <Key>
+      <PropertyRef Name="ChildAPPID" />
+    </Key>
+    <Property Name="ChildAPPID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EDIAPPID" Type="int" Nullable="false" />
+    <Property Name="MBOL" Type="varchar" MaxLength="50" />
+    <Property Name="MBOLVICS" Type="varchar" MaxLength="50" />
+    <Property Name="CTNCount" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Account" Type="varchar" MaxLength="50" />
+    <Property Name="TotalWeight" Type="float" />
+    <Property Name="TotalCube" Type="float" />
+    <Property Name="FullPickUp" Type="bit" />
+    <Property Name="PartialPickUp" Type="bit" />
+    <Property Name="FailToPickUp" Type="bit" />
+    <Property Name="Void" Type="bit" />
+    <Property Name="AccountDivName" Type="varchar" MaxLength="50" />
+    <Property Name="ShipTo" Type="varchar" MaxLength="50" />
+    <Property Name="BOLDocumentPath" Type="varchar" MaxLength="255" />
+    <Property Name="POD_DOC_Vics" Type="varchar" MaxLength="50" />
+    <Property Name="MBOLPalletCount" Type="int" />
+    <Property Name="MBOLShipComments" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="login">
+    <Key>
+      <PropertyRef Name="LoginID" />
+    </Key>
+    <Property Name="LoginID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="80" />
+    <Property Name="Password" Type="nvarchar" MaxLength="80" />
+    <Property Name="ModuleAccess" Type="nvarchar" MaxLength="80" />
+    <Property Name="ECOM" Type="bit" />
+    <Property Name="SUPERVISOR" Type="bit" />
+    <Property Name="ReadWrite" Type="bit" />
+    <Property Name="INVADJUSTMENTS" Type="bit" />
+    <Property Name="FullName" Type="varchar" MaxLength="50" />
+    <Property Name="WHS" Type="varchar" MaxLength="50" />
+    <Property Name="RF" Type="bit" />
+    <Property Name="DESKTOP" Type="bit" />
+    <Property Name="DESKTOP_Receiving" Type="bit" />
+    <Property Name="DESKTOP_Inventory" Type="bit" />
+    <Property Name="DESKTOP_Production" Type="bit" />
+    <Property Name="DESKTOP_Shipping" Type="bit" />
+    <Property Name="DESKTOP_Billing" Type="bit" />
+    <Property Name="DESKTOP_Management" Type="bit" />
+    <Property Name="RF_Receiving" Type="bit" />
+    <Property Name="RF_Inventory" Type="bit" />
+    <Property Name="RF_Production" Type="bit" />
+    <Property Name="RF_Shipping" Type="bit" />
+    <Property Name="RF_AddedValue" Type="bit" />
+    <Property Name="RF_Management" Type="bit" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="DESKTOP_Allocation" Type="bit" />
+    <Property Name="login_email" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="POD_Repository">
+    <Key>
+      <PropertyRef Name="PODID" />
+    </Key>
+    <Property Name="PODID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PODKey" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PODDescription" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PODLink" Type="varchar" MaxLength="777" Nullable="false" />
+    <Property Name="PODBorn" Type="datetime" Nullable="false" />
+    <Property Name="PODCreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RefCode">
+    <Key>
+      <PropertyRef Name="CodeID" />
+    </Key>
+    <Property Name="CodeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReferencePullID" Type="int" />
+    <Property Name="BillCode" Type="int" />
+    <Property Name="QTY" Type="int" />
+    <Property Name="BillComments" Type="nvarchar" MaxLength="255" />
+    <Property Name="Account" Type="nvarchar" MaxLength="50" />
+    <Property Name="CodeByMonthlyBill" Type="bit" />
+    <Property Name="StaticOutboundRate" Type="float" />
+    <Property Name="BillCodeDescription" Type="varchar" MaxLength="50" />
+    <Property Name="RefBillReady" Type="bit" />
+  </EntityType>
+  <EntityType Name="WMS_Explorer">
+    <Key>
+      <PropertyRef Name="WMS_ID" />
+    </Key>
+    <Property Name="WMS_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WMS_Application_Icon" Type="image" />
+    <Property Name="WMS_Application_Backround" Type="image" />
+    <Property Name="WMS_Application_Welcome" Type="varchar" MaxLength="200" />
+    <Property Name="WMS_Warehousemen_TermsConditions" Type="varchar" MaxLength="200" />
+    <Property Name="WMS_PODShareDrivePath" Type="nvarchar(max)" />
+    <Property Name="WMS_Mail_UserEmail" Type="nvarchar" MaxLength="100" />
+    <Property Name="WMS_Mail_Password" Type="nvarchar" MaxLength="100" />
+    <Property Name="WMS_Mail_HostName" Type="nvarchar" MaxLength="100" />
+    <Property Name="WMS_Mail_Port" Type="int" />
+    <Property Name="WMS_Mail_EnableSSL" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SkyNet.dbo.View-WHS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View-WHS">
+    <Key>
+      <PropertyRef Name="WHS" />
+    </Key>
+    <Property Name="WHS" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_EDIAppTable_Child_EDIAppTable">
+    <End Role="EDIAppTable" Type="Self.EDIAppTable" Multiplicity="1" />
+    <End Role="EDIAppTable_Child" Type="Self.EDIAppTable_Child" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EDIAppTable">
+        <PropertyRef Name="EDIAPPID" />
+      </Principal>
+      <Dependent Role="EDIAppTable_Child">
+        <PropertyRef Name="EDIAPPID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="sp_mob_AddProdWODetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Account" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_mob_AppendProdWODetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Account" Type="nvarchar" Mode="In" />
+    <Parameter Name="REFNUM" Type="nvarchar" Mode="In" />
+    <Parameter Name="BILLID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_mob_ConfirmProdWODetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="REFNUM" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_mob_DeleteProdWODetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodeID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_mob_GetWorkOrderReportHeader" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="REFNUM" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_mob_ListProdWODetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="REFNUM" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_mob_OpenProdWO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_mob_prod_WOHourDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="REFNUM" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_mob_ship_loadshow_yesno_confirm" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LOADNUM" Type="varchar" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_mob_ship_loadshow_yesno_confirmdetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MBOLVICS" Type="varchar" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_mob_ship_loadshow_yesno_confirmmaster" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="type" Type="int" Mode="In" />
+    <Parameter Name="EDIAPPID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_mob_ship_viewloaddetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EDIAPPID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_mob_ship_viewloads" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WHS" Type="varchar" Mode="In" />
+    <Parameter Name="DATE" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_mob_ship_viewloads_locations" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LOADNUM" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_mob_TimeTrack_ClockIn_Out_Employee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="REFNUM" Type="int" Mode="In" />
+    <Parameter Name="BADGEID" Type="int" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+    <Parameter Name="temp" Type="int" Mode="In" />
+    <Parameter Name="WoNuMID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_mob_TimeTrack_ClockoutAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="REFNUM" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_mob_TimeTrack_GetClockedInEmployees" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="REFNUM" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_mob_TimeTrack_ListEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_mob_UpdateProdWODetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodeID" Type="int" Mode="In" />
+    <Parameter Name="QTY" Type="int" Mode="In" />
+    <Parameter Name="BillComments" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_mob_UpdateWOStart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="REFNUM" Type="int" Mode="In" />
+  </Function>
+  <Function Name="tf_mob_prod_CalcWOHours" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="REFNUM" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="ReferencePullID" Type="int" />
+          <Property Name="EmployeeCount" Type="int" />
+          <Property Name="WOHours" Type="int" />
+          <Property Name="WOMinutes" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <EntityContainer Name="SkyNetModelStoreContainer">
+    <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EDIAppTable" EntityType="Self.EDIAppTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EDIAppTable_Child" EntityType="Self.EDIAppTable_Child" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="login" EntityType="Self.login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="POD_Repository" EntityType="Self.POD_Repository" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RefCode" EntityType="Self.RefCode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WMS_Explorer" EntityType="Self.WMS_Explorer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="View-WHS" EntityType="Self.View-WHS" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View-WHS].[WHS] AS [WHS]
+    FROM [dbo].[View-WHS] AS [View-WHS]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_EDIAppTable_Child_EDIAppTable" Association="Self.FK_EDIAppTable_Child_EDIAppTable">
+      <End Role="EDIAppTable" EntitySet="EDIAppTable" />
+      <End Role="EDIAppTable_Child" EntitySet="EDIAppTable_Child" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MXApp.Views.LogoutButton"
+             Spacing="0"
+             Orientation="Horizontal"
+             Margin="12">
+    <Image 
+      Source="ic_logout.png"
+      WidthRequest="64"
+      HeightRequest="64"
+      Margin="0,0,14,0">
+        <Image.Source>
+            <OnPlatform x:TypeArguments="ImageSource"
+                  Android="ic_logout.png"
+                  iOS="ic_logout.png"
+                  WinPhone="Assets\ic_logout.png"/>
+        </Image.Source>
+        <Image.Margin>
+            <OnPlatform x:TypeArguments="Thickness"
+                  Android="0,0,14,0"
+                  iOS="0,0,14,0"
+                  WinPhone="0,14,14,14"/>
+        </Image.Margin>
+    </Image>
+    <Label VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+      Text="Logout" FontAttributes="Bold">
+        <Label.Style>
+            <OnPlatform x:TypeArguments="Style"
+                  Android="{StaticResource HeaderLabelStyle}"
+                  iOS="{StaticResource HeaderLabelStyle}"
+                  WinPhone="{StaticResource UwpHeaderLabelStyle}"/>
+        </Label.Style>
+        <Label.Margin>
+            <OnPlatform x:TypeArguments="Thickness"
+                  WinPhone="0,14"/>
+        </Label.Margin>
+    </Label>
+</StackLayout>

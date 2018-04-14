@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfRadialMenu.Android</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.SfRadialMenu.Android.OpeningEventArgs">
+            <summary>
+            Occurs when the first level menu that starts to expanding to open.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.OpenedEventArgs">
+            <summary>
+            Occurs when the first level menu get expanded to opened.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.ClosingEventArgs">
+            <summary>
+            Occurs when the first level menu that starts to collapsing to close.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.ClosedEventArgs">
+            <summary>
+            Occurs when the first level menu get collapsed to Closed.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.NavigatingEventArgs">
+            <summary>
+            Occurs when a Radial Menu item tapped to starts navigating to its next hierarchy level or Center back button is tapped to starts navigating to previous hierarchy level. Its occurs only an item that has children
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.NavigatedEventArgs">
+            <summary>
+            Occurs when a Radial Menu item tapped and navigated to its next hierarchy level or Center back button is tapped to navigated to its previous hierarchy level. Its occurs only an item that has children
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.RadialMenuItemTappedEventArgs">
+            <summary>
+            Occurs when a RadialMenuItem get Tapped. Item can be retrieve and customized
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.CenterButtonText">
+            Gets / Sets the font icon text for center button
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.RadialMenuRenderer.SeparatorThickness">
+            Gets / Sets thickness of the separator 
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.SfRadialMenu">
+            RadialMenu Class
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.#ctor(Android.Content.Context)">
+            Contructor
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonView">
+            <summary>
+            Gets or sets the value indicating view of the center button at first level. Any view can be assigned as center button view.
+            </summary>
+            <value>The center button view.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.Items">
+            <summary>
+            Gets or sets the items.
+            </summary>
+            <value>The items.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.ItemsSource">
+            <summary>
+            Gets or sets a collection of items that can be populated as SfRadialMenuItem and get rendered at run-time based on the Template provided.
+            </summary>
+            <value>The items source.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.Point">
+            <summary>
+            Gets or sets the value indication the position of the center button placement. User can determine the position of the center button while loading.
+            </summary>
+            <value>The point.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.IsOpen">
+            <summary>
+            Gets or sets the value indicating either the control has to be open or closed. Using this property user can load the control with open state.
+            </summary>
+            <value><c>true</c> if is open; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.EnableRotation">
+            <summary>
+            Gets or sets the value that enable or disable the rim rotation with touch gestures.
+            </summary>
+            <value><c>true</c> if enable rotation; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.IsDragEnabled">
+            <summary>
+            Gets or sets the value indicating whether the center button can be drag on the view. It is applicable when the SfRadialMenu in closed state.
+            </summary>
+            <value><c>true</c> if is drag enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.EnableCenterButtonAnimation">
+            <summary>
+            Gets or sets the value that enable and disable Zoom In or Zoom out animation when the RadialMenu getting open or close respectively.
+            </summary>
+            <value><c>true</c> if enable center button animation; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.VisibleSegmentsCount">
+            <summary>
+            Gets or sets the value that splits the available spaces as pie segments. Exceeded items will not shown and beneath items leave empty space on rim. It will be applicable only if the SfRadialMenu in Custom layout type.
+            </summary>
+            <value>The visible segments count.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.AnimationDuration">
+            <summary>
+            Gets or sets the value indicating the speed of opening / closing / navigating animations.
+            </summary>
+            <value>The duration of the animation.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonRadius">
+            <summary>
+            Get or set the value that indicating the size of the center button at first level by adjusting its radius.
+            </summary>
+            <value>The center button radius.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonText">
+            <summary>
+            Get or set the value indicating text of the center button at first level and it can also act as font icon. It will not applicable to custom view assigned through CenterButtonView.
+            </summary>
+            <value>The center button text.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonTextSize">
+            <summary>
+            Gets or sets the value that indicating the size of the text / icon of the center button at first level. It will not applicable to custom view assigned through CenterButtonView
+            </summary>
+            <value>The size of the center button text.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonBackText">
+            <summary>
+            Get or set the value indicating text of the center button when it navigated to next level and not in first level and it can also act as font icon. It will not applicable to custom view assigned through CenterBackButtonView.
+            </summary>
+            <value>The center button back text.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonBackTypeface">
+            <summary>
+            Gets or sets the value that indicating the font family of the text of center button when it navigated to next level and not in first level. Font icon support will achieved through this support. It will not applicable to custom view assigned through CenterBackButtonView
+            </summary>
+            <value>The center button back typeface.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonBackTextSize">
+            <summary>
+            Gets or sets the value that indicating the size of the text / icon of the center button when it navigated to next level and not in first level. It will not applicable to custom view assigned through CenterBackButtonView.
+            </summary>
+            <value>The size of the center button back text.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonBackTextColor">
+            <summary>
+            Get or set the value indicating text/font icon color of the center button when it navigated to next level and not in first level. It will not applicable to custom view assigned through CenterBackButtonView.
+            </summary>
+            <value>The color of the center button back text.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonTypeface">
+            <summary>
+            Gets or sets the value that indicating the font family of the text of center button when it navigated to next level and not in first level. Font icon support will achieved through this support. It will not applicable to custom view assigned through CenterBackButtonView.
+            </summary>
+            <value>The center button typeface.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonBorderThickness">
+            <summary>
+            Gets or sets the value indicating the border thickness of the center button.
+            </summary>
+            <value>The center button border thickness.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.OuterRimThickness">
+            <summary>
+            Gets or sets the outer rim thickness.
+            </summary>
+            <value>The outer rim thickness.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.RimRadius">
+            <summary>
+            Gets or sets the value indicating the size of the rim by adjusting its radius.
+            </summary>
+            <value>The rim radius.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.RimColor">
+            <summary>
+            Gets or sets the value indicating the color of the entire rim.
+            </summary>
+            <value>The color of the rim.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonTextColor">
+            <summary>
+            Get or set the value indicating text/font icon color of the center button at first level. It will not applicable to custom view assigned through CenterButtonView.
+            </summary>
+            <value>The color of the center button text.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonBorderColor">
+            <summary>
+            Gets or sets the value indicating the border color of the center button.
+            </summary>
+            <value>The color of the center button border.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.RimActiveColor">
+            <summary>
+            Gets or sets the color of the rim active.
+            </summary>
+            <value>The color of the rim active.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.OuterRimColor">
+            <summary>
+            Gets or sets the color of the outer rim.
+            </summary>
+            <value>The color of the outer rim.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonBackIcon">
+            <summary>
+            Gets or sets the center button back icon.
+            </summary>
+            <value>The center button back icon.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.SeparatorColor">
+            <summary>
+            Gets or sets the value indicating the color of the separator that appear between two items.
+            </summary>
+            <value>The color of the separator.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.SelectionColor">
+            <summary>
+            Gets or sets the value indicating the back color of each items. Generally its represent as pie. It will not applicable to custom view.
+            </summary>
+            <value>The color of the selection.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.CenterButtonBackground">
+            <summary>
+            Gets or sets the value indicating the back color of the center button at first level. It will not applicable to custom view assigned through CenterButtonView.
+            </summary>
+            <value>The center button background.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.SeparatorThickness">
+            <summary>
+            Gets or sets the value indicating the thickness of the separator that appear between two items.
+            </summary>
+            <value>The separator thickness.</value>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenu.LayoutType">
+            <summary>
+            Gets or sets the value indicating arrangement of items on rim either automatic or user defined.
+            </summary>
+            <value>The type of the layout.</value>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.Show">
+            <summary>
+            Opens the first level items of the Radial Menu by expanding the rim.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRadialMenu.Android.SfRadialMenu.Close">
+            <summary>
+            Closed the items of the Radial Menu by collapsing the rim.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.Image">
+            Gets / sets image name available in resources
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.Text">
+            Gets / sets Text that can be displayed below the icon
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.FontIconText">
+            Gets / sets  font icon Text that can be displayed as the icon
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.View">
+            Gets / sets custom View that can be displayed
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.TextColor">
+            Gets / sets color of the bottom text
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.BackgroundColor">
+            Gets / sets color of the item background
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.FontIconColor">
+            Gets / sets color of the font icon
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.ItemHeight">
+            Gets / sets height of the item
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.ItemWidth">
+            Gets / sets width of the item
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.TextSize">
+            Gets / sets size of the bottom text
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.FontIconSize">
+            Gets / sets size of the font icon
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.IconFont">
+            Gets / sets typeface of the font icon
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.TextTypeFace">
+            Gets / sets type face of the bottom text
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.Items">
+            Gets / sets subitems for every radialmenu item
+        </member>
+        <member name="P:Syncfusion.SfRadialMenu.Android.SfRadialMenuItem.SegmentIndex">
+            Enables the position of the childrens
+        </member>
+        <member name="T:Syncfusion.SfRadialMenu.Android.LayoutType">
+            <summary>
+            Contains values of LayoutType that determines arrangement of items on rim either automatic or user defined
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.LayoutType.Default">
+            <summary>
+            Available items can populated on the rim by sharing the available space in equal ratio. Order of the item based on order of items in the assigned source
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRadialMenu.Android.LayoutType.Custom">
+            <summary>
+            User can split the available spaces using VisibleSegmentCount as segments. Exceeded items will not shown and beneath items leave empty space on rim. User can rearrange or position the items using SegmentIndex property of SfRadialMenuItem
+            </summary>
+        </member>
+    </members>
+</doc>

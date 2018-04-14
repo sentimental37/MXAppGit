@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms"
+        xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+      xmlns:conv="clr-namespace:MXApp.Converters"
+      
+    x:Class="MXApp.Views.EmployeeTrackPopup">
+
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+            <conv:BoolToInvertConverter x:Key="BoolToInvertConverterS"></conv:BoolToInvertConverter>
+        </ResourceDictionary>
+    </pages:PopupPage.Resources>
+    <!--You can set an animation in the xaml file or in the csharp code behind-->
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <!--You can use any elements here which are extended from Xamarin.Forms.View-->
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid
+            HeightRequest="600"
+            WidthRequest="500"
+            RowSpacing="0"
+            HorizontalOptions="Fill"
+            VerticalOptions="Center"
+            BackgroundColor="White"
+            Margin="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackLayout
+                Grid.Row="0">
+                    <Label    
+                    Text="{Binding Title}"  FontSize="18" VerticalOptions="Center" HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <Grid Margin="20"
+                Grid.Row="1" VerticalOptions="Fill" HorizontalOptions="Fill">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="240"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="80"></RowDefinition>
+                        <RowDefinition Height="70"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="0" BackgroundColor="MintCream" HorizontalOptions="Fill" VerticalOptions="Fill">
+                        <ScrollView VerticalOptions="Fill" HorizontalOptions="Fill">
+                            <StackLayout VerticalOptions="Fill" HorizontalOptions="Fill">
+                                <Grid VerticalOptions="Fill" HorizontalOptions="Fill">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Ship To:" Grid.Row="0" Grid.Column="0" ></Label>
+                                    <Label Text="Start Date:" Grid.Row="1" Grid.Column="0" ></Label>
+                                    <Label Text="Cancel Date:" Grid.Row="2" Grid.Column="0" ></Label>
+                                    <Label Text="Account:" Grid.Row="3" Grid.Column="0" ></Label>
+                                    <Label Text="Account Name:" Grid.Row="4" Grid.Column="0" ></Label>
+                                    <Label Text="Author:" Grid.Row="5" Grid.Column="0" ></Label>
+                                    <Label Text="Comments:" Grid.Row="6" Grid.Column="0" ></Label>
+                                    <Label Text="Pull Date:" Grid.Row="7" Grid.Column="0"></Label>
+
+
+                                    <Label Text="{Binding SelectedRef.Ship_To}" Grid.Row="0" Grid.Column="1"  ></Label>
+                                    <Label Text="{Binding SelectedRef.Ship_Date}" Grid.Row="1" Grid.Column="1"  ></Label>
+                                    <Label Text="{Binding SelectedRef.Cancel_Date}" Grid.Row="2" Grid.Column="1"  ></Label>
+                                    <Label Text="{Binding SelectedRef.Account}" Grid.Row="3" Grid.Column="1"  ></Label>
+                                    <Label Text="{Binding SelectedRef.Vendor_Name}" Grid.Row="4" Grid.Column="1"  ></Label>
+                                    <Label Text="{Binding SelectedRef.Author}" Grid.Row="5" Grid.Column="1"  ></Label>
+                                    <Label Text="{Binding SelectedRef.Comments}" Grid.Row="6" Grid.Column="1"  ></Label>
+                                    <Label Text="{Binding SelectedRef.PullDate}" Grid.Row="7" Grid.Column="1"  ></Label>
+                                </Grid>
+                            </StackLayout>
+
+                        </ScrollView>
+                    </StackLayout>
+                    <Grid Grid.Row="1" VerticalOptions="Fill" HorizontalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="70"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <autocomplete:SfAutoComplete HeightRequest="40" x:Name="actEmployees" DataSource="{Binding Employees}" DisplayMemberPath="WOEmployeeID" SelectedValuePath="WOEmployeeID" SelectionChanged="atcRefNum_selectionChanged" Grid.Row="0" Grid.Column="0" ValueChanged="atcRefNum_valueChanged"
+                                     Watermark="Employee Badge ID" Text="{Binding EmployeeIDText}" DropDownCornerRadius="5" FocusChanged="Handle_FocusChanged" MaximumDropDownHeight="150" />
+                        <!--<Button Clicked="btnDone_Clicked" Text="Done" BackgroundColor="Green" TextColor="White" VerticalOptions="Center" HorizontalOptions="Fill" Grid.Row="0" Grid.Column="1">
+                            
+                        </Button>-->
+                        <Image Source="confirmicon.png" 
+                               x:Name="imgConfirm"
+                               HeightRequest="32" 
+                               WidthRequest="32" 
+                               VerticalOptions="Center" 
+                               HorizontalOptions="End" 
+                               Grid.Row="0" 
+                               IsVisible="False"
+                               Grid.Column="0">
+                            
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Done_Tapped"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="modeMultiselect.png" 
+                               HeightRequest="48" 
+                               WidthRequest="48" 
+                               VerticalOptions="Fill" 
+                               HorizontalOptions="Fill" 
+                               Grid.Row="0" 
+                               Grid.Column="1">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="MultiSelect_Tapped"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                    <StackLayout Grid.Row="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                        <Label FontSize="22" IsVisible="{Binding IsMultipleMode,Converter={StaticResource BoolToInvertConverterS}}" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Text="{Binding EmployeeName}"></Label>
+                        <Label FontSize="22" IsVisible="{Binding IsMultipleMode}" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" Text="Multiple Employees Selected"></Label>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="MintCream" Grid.Row="3" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" x:Name="stNumPanel" Margin="10,0,10,0">
+                        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" WidthRequest="100">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="64"></ColumnDefinition>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="userIcon.png" WidthRequest="64" HeightRequest="64" Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"></Image>
+                            <Label Text="Temp Force" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                            <numeric:SfNumericUpDown Value="{Binding TempEmpCount}" Minimum="0" IsEditable="False" BorderColor="Gray" ValueChanged="TempForce_Changed" FontSize="35" Grid.Column="2" x:Name="TempForceCount" MaximumDecimalDigits="0" WidthRequest="230" MinimumHeightRequest="50" TextColor="Black" AllowNull="false" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
+								FormatString="n" SpinButtonAlignment="Both" TextAlignment="Center" />
+                        </Grid>
+                    </StackLayout>
+                    <Grid Grid.Row="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="checking.png" WidthRequest="96" HeightRequest="96" Aspect="AspectFit" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Start">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding CheckinCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="checkout.png" WidthRequest="96" HeightRequest="96" Aspect="AspectFit" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="End">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding CheckoutCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                    <Grid Grid.Row="5">
+                        <Button Text="Close" Clicked="Close_Clicked" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="80" HeightRequest="40" BackgroundColor="Red" TextColor="White" FontAttributes="Bold"></Button>
+                    </Grid>
+                </Grid>
+                <Grid Grid.RowSpan="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" Opacity="0.5" IsVisible="{Binding IsBusy}">
+                    <ActivityIndicator VerticalOptions="Center" HorizontalOptions="Center"
+                        Color="Red"
+                        IsRunning="{Binding IsBusy}" 
+                        IsVisible="{Binding IsBusy}" >
+                        <ActivityIndicator.WidthRequest>
+                            <OnPlatform 
+                    x:TypeArguments="x:Double" 
+                    iOS="200" 
+                    Android="100"
+                    WinPhone="400" />
+                        </ActivityIndicator.WidthRequest>
+                    </ActivityIndicator>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</pages:PopupPage>

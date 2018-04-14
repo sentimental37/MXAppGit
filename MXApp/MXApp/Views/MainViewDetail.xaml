@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:radialMenu="clr-namespace:Syncfusion.SfRadialMenu.XForms;assembly=Syncfusion.SfRadialMenu.XForms"
+             x:Class="MXApp.Views.MainViewDetail"
+             Title="Home">
+    <ContentPage.Content>
+        <radialMenu:SfRadialMenu x:Name="radial_Menu" RimRadius="150" CenterButtonRadius="70"  CenterButtonBorderColor="Transparent" CenterButtonBackgroundColor="Transparent" >
+            <radialMenu:SfRadialMenu.CenterButtonView>
+                <Image Source="radialIcon.png"></Image>
+            </radialMenu:SfRadialMenu.CenterButtonView>
+            <radialMenu:SfRadialMenu.Items>
+                <radialMenu:SfRadialMenuItem Text="R" FontSize="40" FontAttributes="Bold" IsEnabled="False">
+                   
+                </radialMenu:SfRadialMenuItem>
+                <radialMenu:SfRadialMenuItem  Text="P" ItemTapped="Handle_ProdTapped" FontSize="40" FontAttributes="Bold">
+                   
+                </radialMenu:SfRadialMenuItem>
+                <radialMenu:SfRadialMenuItem  Text="S" FontSize="40" FontAttributes="Bold"  IsEnabled="False" ItemTapped="Handle_ShipTapped">
+                    
+                </radialMenu:SfRadialMenuItem>
+                <radialMenu:SfRadialMenuItem  Text="I" FontSize="40" FontAttributes="Bold"  IsEnabled="False">
+                   
+                </radialMenu:SfRadialMenuItem>
+                <radialMenu:SfRadialMenuItem BackgroundColor="Transparent" HeightRequest="45" WidthRequest="45" ItemTapped="Handle_LogoutTapped">
+                    <radialMenu:SfRadialMenuItem.View>
+                        <Image Source="Power.png" />
+                    </radialMenu:SfRadialMenuItem.View>
+                </radialMenu:SfRadialMenuItem>
+            </radialMenu:SfRadialMenu.Items>
+        </radialMenu:SfRadialMenu>
+        <!--<StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Image Source="Logo_Expanded.PNG" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Aspect="AspectFit"></Image>
+        </StackLayout>-->
+    </ContentPage.Content>
+</ContentPage>

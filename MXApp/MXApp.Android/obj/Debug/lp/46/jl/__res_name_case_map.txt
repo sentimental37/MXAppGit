@@ -1,0 +1,2 @@
+Drawable/editTextPageCount.axml;drawable/edittextpagecount.xml
+Values/Strings.xml;values/strings.xml

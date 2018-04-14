@@ -1,0 +1,566 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfImageEditor.XForms</name>
+    </assembly>
+    <members>
+        <member name="F:Syncfusion.SfImageEditor.XForms.PenSettings.ColorProperty">
+            <summary>
+            Gets or sets the Color for the PenSettings. It is a bindable property
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfImageEditor.XForms.PenSettings.Color">
+            <summary>
+            Gets or sets the Color for the PenSettings. It is a bindable property
+            </summary>
+            <example>
+            This sample shows how to set the Color for the annotations
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                var penSettings = new PenSettings(){Color = Color.Red};
+                imageEditor.PenSettings = penSettings;
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="F:Syncfusion.SfImageEditor.XForms.PenSettings.ModeProperty">
+            <summary>
+            Gets or sets the mode of fill for the PenSettings. It is a bindable property
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfImageEditor.XForms.PenSettings.Mode">
+            <summary>
+            Gets or sets the mode of fill for the PenSettings. It is a bindable property
+            </summary>
+            <example>
+            This sample shows how to set the Mode of filling for the annotations. Applicable only for Rectangle and Circle
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                var penSettings  = new PenSettings(){ Mode = Mode.Fill};
+                imageEditor.PenSettings = penSettings;
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="F:Syncfusion.SfImageEditor.XForms.PenSettings.FillColorProperty">
+            <summary>
+            Gets or sets the FillColor for the PenSettings. It is a bindable property
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfImageEditor.XForms.PenSettings.FillColor">
+            <summary>
+            Gets or sets the FillColor for the PenSettings. It is a bindable property
+            </summary>
+            <example>
+            This sample shows how to set the FillColor for the annotations
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                var penSettings  = new PenSettings(){FillColor = Color.Red};
+                imageEditor.PenSettings = penSettings;
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="F:Syncfusion.SfImageEditor.XForms.PenSettings.StrokeWidthProperty">
+            <summary>
+            Gets or sets the stroke width of the path drawings. It is a bindable property
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfImageEditor.XForms.PenSettings.StrokeWidth">
+            <summary>
+            Gets or sets the stroke width of the path drawings. It is a bindable property
+            </summary>
+            <example>
+            This sample shows how to set the StrokeWidth for the path
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                var penSettings = new PenSettings(){StrokeWidth = 10};
+                imageEditor.PenSettings = penSettings;
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="F:Syncfusion.SfImageEditor.XForms.ToolbarSettings.BackgroundColorProperty">
+            <summary>
+            Gets or sets whether the toolbar needs to be visible or not. It is a bindable property
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfImageEditor.XForms.ToolbarSettings.BackgroundColor">
+            <summary>
+            Gets or sets the background color of the toolbar. It is a bindable property
+            </summary>
+            <example>
+            This sample shows how to set the BackgroundColor for the toolbar
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.ToolbarSettings.BackgroundColor = Color.Gray;
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="F:Syncfusion.SfImageEditor.XForms.ToolbarSettings.TextColorProperty">
+            <summary>
+            Gets or sets whether the toolbar needs to be visible or not. It is a bindable property
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfImageEditor.XForms.ToolbarSettings.TextColor">
+            <summary>
+            Gets or sets the background color of the toolbar. It is a bindable property
+            </summary>
+            <example>
+            This sample shows how to set the BackgroundColor for the toolbar
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.ToolbarSettings.TextColor = Color.Gray;
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="F:Syncfusion.SfImageEditor.XForms.ToolbarSettings.IsVisibleProperty">
+            <summary>
+            Gets or sets whether the toolbar needs to be visible or not. It is a bindable property
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfImageEditor.XForms.ToolbarSettings.IsVisible">
+            <summary>
+            Gets or sets whether the toolbar needs to be visible or not. It is a bindable property
+            </summary>
+            <example>
+            This sample shows how to set the IsVisible property for the toolbar
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.ToolbarSettings.IsVisible = false;
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="P:Syncfusion.SfImageEditor.XForms.TextSettings.Color">
+            <summary>
+            Gets or sets color for the text. It is a bindable property
+            </summary>
+            <example>
+            This sample shows how to set the Color property for the text
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.TextSettings= new TextSettings(){Color = Color.Red};
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="P:Syncfusion.SfImageEditor.XForms.TextSettings.FontSize">
+            <summary>
+            Gets or sets font size for the text. It is a bindable property
+            </summary>
+            <example>
+            This sample shows how to set the FontSize property for the text
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.TextSettings= new TextSettings(){FontSize = 14};
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="T:Syncfusion.SfImageEditor.XForms.ImageSavingEventHandler">
+            <summary>
+            ImageSaving event is fired once the saving action is started
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:Syncfusion.SfImageEditor.XForms.ImageSavingEventArgs">
+            <summary>
+            Image saving events args for the ImageSaving event.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfImageEditor.XForms.ImageSavingEventArgs.Stream">
+            <summary>
+            Gets the image stream
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfImageEditor.XForms.ToolbarItemSelectedEventArgs">
+            <summary>
+            Toolbar item selected event event
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Syncfusion.SfImageEditor.XForms.ToolbarItemSelectedEventArgs.#ctor(Syncfusion.SfImageEditor.XForms.ToolbarItem)" -->
+        <member name="P:Syncfusion.SfImageEditor.XForms.ToolbarItemSelectedEventArgs.ToolbarItem">
+            <summary>
+            Gets/Sets stream value
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfImageEditor.XForms.ImageSavedEventHandler">
+            <summary>
+            ImageSaved Event is fired once the image is saved
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:Syncfusion.SfImageEditor.XForms.ImageSavedEventArgs">
+            <summary>
+            ImageSaved event args
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfImageEditor.XForms.ImageSavedEventArgs.Location">
+            <summary>
+            Gets the image saved location
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfImageEditor.XForms.BeginResetEventHandler">
+            <summary>
+            BeginReset Event is fired when reset is started
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:Syncfusion.SfImageEditor.XForms.BeginResetEventArgs">
+            <summary>
+            BeginReset event args for the BeginReset event
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfImageEditor.XForms.EndResetEventHandler">
+            <summary>
+            EndReset event is fired when the reset action is completed
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:Syncfusion.SfImageEditor.XForms.EndResetEventArgs">
+            <summary>
+            EndReset event args for the EndReset event
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfImageEditor.XForms.ItemSelectedEventArgs">
+            <summary>
+            ItemSelected event handler for ItemSelected event
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfImageEditor.XForms.SfImageEditor">
+            <summary>
+            Represents a root class for image editor control to load and edit the images
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfImageEditor.XForms.SfImageEditor.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="N:Syncfusion.SfImageEditor.XForms"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfImageEditor.XForms.SfImageEditor.Source">
+            <summary>
+            to get and set source of the image
+            </summary>
+            <value>This property takes the <see cref="T:Xamarin.Forms.ImageSource"/> as value </value>
+            <example>
+            This sample shows how to set the Source for the image editor
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.Source = */ Your Source /*;
+            }
+            </code> 
+            </example>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Syncfusion.SfImageEditor.XForms.SfImageEditor.ColorPalette" -->
+        <member name="P:Syncfusion.SfImageEditor.XForms.SfImageEditor.EnableZooming">
+            <summary>
+            to get and set EnableZooming
+            </summary>
+            <value>This property takes the <see cref="P:Syncfusion.SfImageEditor.XForms.SfImageEditor.EnableZooming"/> as value </value>
+            <example>
+            This sample shows how to set the EnableZooming for the image editor
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.EnableZooming=false;
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="F:Syncfusion.SfImageEditor.XForms.SfImageEditor.MaximumZoomLevelProperty">
+            <summary>
+            Gets or sets the MaximumZoomLevel for Zooming. It is a bindable property
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfImageEditor.XForms.SfImageEditor.MaximumZoomLevel">
+            <summary>
+            Gets or sets the maximumZoomLevel of the Zooming Image. It is a bindable property
+            </summary>
+            <example>
+            This sample shows how to set the MaximumZoomLevel for Zooming
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.MaximumZoomLevel=4;
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="P:Syncfusion.SfImageEditor.XForms.SfImageEditor.IsSelected">
+            <summary>
+            to check whether any annotations are selected. It is a read-only property
+            </summary>
+            <value>This property takes the <see cref="T:System.Boolean"/> as value </value>
+            <example>
+            This sample shows how to get the IsSelected value for the image editor
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                var isSelected = imageEditor.IsSelected;
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="P:Syncfusion.SfImageEditor.XForms.SfImageEditor.IsImageEdited">
+            <summary>
+            to check whether any editing has been performed in the image. It is a read-only property
+            </summary>
+            <value>This property takes the <see cref="T:System.Boolean"/> as value </value>
+            <example>
+            This sample shows how to get the IsEdited value for the image editor
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                var isEdited = imageEditor.IsEdited;
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="M:Syncfusion.SfImageEditor.XForms.SfImageEditor.Crop(Xamarin.Forms.Rectangle)">
+            <summary>
+            Crops the image to the selected/specified rectangle
+            </summary>
+            <param name="rect">Rectangle is an optional parameter</param>
+            <example>
+            This sample shows how to get the Crop the image
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.Crop();
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="M:Syncfusion.SfImageEditor.XForms.SfImageEditor.Rotate">
+            <summary>
+            Rotates the image to 90 degrees
+            </summary>
+            <example>
+            This sample shows how to Rotate the image
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.Rotate();
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="M:Syncfusion.SfImageEditor.XForms.SfImageEditor.Flip(Syncfusion.SfImageEditor.XForms.FlipDirection)">
+            <summary>
+            Flips the image horizontally/ vertically
+            </summary>
+            <param name="direction">Specfies the FlipDirection</param>
+            <example>
+            This sample shows how to flip the image
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.Flip(FlipDirection.Horizontal);
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="M:Syncfusion.SfImageEditor.XForms.SfImageEditor.ToggleCropping">
+            <summary>
+            Enables / disables the cropping view which helps to choose the area to crop
+            </summary>
+            <example>
+            This sample shows how to enable the cropping view over the image
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.EnableCropping();
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="M:Syncfusion.SfImageEditor.XForms.SfImageEditor.AddText(System.String,Syncfusion.SfImageEditor.XForms.TextSettings)">
+            <summary>
+            Adds text as annotation on top of the image
+            </summary>
+            <param name="text">text is optional. If empty, empty string will be added</param>
+            <param name="settings">TextSettings is optional. If null, default TextSettings is applied</param>
+            <example>
+            This sample shows how to add text over the image
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.AddText("Syncfusion", new TextSettings(){Color = Color.Red});
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="M:Syncfusion.SfImageEditor.XForms.SfImageEditor.AddShape(Syncfusion.SfImageEditor.XForms.ShapeType,Syncfusion.SfImageEditor.XForms.PenSettings)">
+            <summary>
+            Adds shapes as annotations over the image.
+            </summary>
+            <param name="shapeType">ShapeType is optional. Default ShapeType is Path</param>
+            <param name="settings">ShapeSettings is optional. If null, default ShapeSettings is applied</param>
+            <example>
+            This sample shows how to add shape over the image
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.AddShape(ShapeType.Rectangle);
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="M:Syncfusion.SfImageEditor.XForms.SfImageEditor.Save">
+            <summary>
+            Saves the image to a location
+            </summary>
+            <example>
+            This sample shows how to save the image
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.Save();
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="M:Syncfusion.SfImageEditor.XForms.SfImageEditor.Reset">
+            <summary>
+            Resets the changes and initial image is loaded
+            </summary>
+            <example>
+            This sample shows how to reset to the initial image
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.Reset();
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="M:Syncfusion.SfImageEditor.XForms.SfImageEditor.Undo">
+            <summary>
+            Revets the latest change done in the image
+            </summary>
+            <example>
+            This sample shows how Undo the changes in the image
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.Undo();
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="M:Syncfusion.SfImageEditor.XForms.SfImageEditor.Redo">
+            <summary>
+            Reverts the latest Undo operation
+            </summary>
+            <example>
+            This sample shows how to redo the undone change
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.Redo();
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="M:Syncfusion.SfImageEditor.XForms.SfImageEditor.Delete">
+            <summary>
+            Deletes the selected shape on the image
+            </summary>
+            <example>
+            This sample shows how to delete the selected shape over the image
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.Delete();
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="M:Syncfusion.SfImageEditor.XForms.SfImageEditor.GetStream">
+            <summary>
+            Gets the current image stream. Obtained only after saving.
+            </summary>
+            <returns>A Stream</returns>
+            <example>
+            This sample shows how to add shape over the image
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.Save();
+                var stream = imageEditor.GetStream();
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="M:Syncfusion.SfImageEditor.XForms.SfImageEditor.SetToolbarItemVisibility(System.String,System.Boolean)">
+            <summary>
+            To set the toolbar icon visibility based on the icon name
+            </summary>
+            <param name="name">The icon name to be hidden</param>
+            <param name="isVisible">Set the visibility</param>
+            <example>
+            This sample shows how to hide unwanted toolbar items
+            <code>
+            void MyPage()
+            {
+            	SfImageEditor imageEditor = new SfImageEditor();
+                imageEditor.SetToolbarItemVisibility("path,text", false)
+            }
+            </code> 
+            </example>
+        </member>
+        <member name="F:Syncfusion.SfImageEditor.XForms.ToolbarItem.TextProperty">
+            <summary>
+            Gets or sets toolbar text. It is a bindable property
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfImageEditor.XForms.ToolbarItem.IconProperty">
+            <summary>
+            Gets or sets toolbar text. It is a bindable property
+            </summary>
+        </member>
+    </members>
+</doc>
